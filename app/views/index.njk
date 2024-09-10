@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    <p class="govuk-caption-l">
+      Prototypes of features and iterations designed for the FIAT project, during the Beta phase (30th September 2024 onwards).
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    {# Change a DfE contact #}
+    <h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+      Change a DfE contact
+    </h2>
+
+    <p class="govuk-caption-m">
+      A feature to allow users to make a change to data within a "DfE contact" block on the "Contacts" sub-page of a trust.
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      
+      <li>
+        <a href="#" class="govuk-link govuk-!-font-weight-bold">Current here with date</a>
+      </li>
+      
+      <li>
+        <a href="#" class="govuk-link">Previous version here</a>
+      </li>
+
+      <li>
+        <a href="#" class="govuk-link">Previous version here</a>
+      </li>
+
+      <li>
+        <a href="#" class="govuk-link">Previous version here</a>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}
