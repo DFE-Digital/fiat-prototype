@@ -1,0 +1,23 @@
+{% extends "layouts/main.njk" %}
+
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+{% set pageTitle = "Bishop perowne church of England college" %}
+{% set pageHeading = pageTitle %}
+{% set pageCaption = "Single-academy trust" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <aside class="govuk-grid-column-one-third">
+
+    {% include "/parts/side-nav.njk" %} 
+
+  </aside>
+
+  <div class="govuk-grid-column-two-thirds">
+    Main area
+  </div>
+</div>
+
+{% endblock %}
