@@ -22,29 +22,19 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
       "showHeaderActionLinks": "false",
       "logoPath": "public/images",
       "searchAction": "/search/",
-      "searchInputName": "q",
+      "searchInputName": "keywords",
       "logoAltText": "Department for Education",
       "homeHref": "https://gov.uk",
       "selectedNav": view,
       "service": {
         "name": serviceName,
         "serviceUrl": "/"
-      },
-      "headerActionLinks": [
-        {
-          "url"  : "/",
-          "label" : "My account"
-        },
-        {
-          "url"  : "/",
-          "label" : "Sign out"
-        }
-      ]
+      }
     })
   }}
 {% endblock %}
 
-{################################# Blue top #################################}
+{################################# FIAT top #################################}
 {% set containerClasses = "fiat-max-width-0" %}
 {% set mainClasses = "govuk-width-container" %}
 
@@ -65,7 +55,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
   {% if not "index.njk" %}
     <div class="fiat-top-content">
       <h1 class="govuk-heading-l fiat-trust-heading govuk-!-display-inline-block govuk-!-margin-bottom-3">
-        {{pageTitle | default("Abbey academies trust") }}
+        {{pageHeading | default("Abbey academies trust") }}
       </h1>
       <span class="govuk-caption-m">
         {{pageCaption | default("Multi-academy trust") }}
