@@ -38,6 +38,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% set containerClasses = "fiat-max-width-0" %}
 {% set mainClasses = "govuk-width-container" %}
 
+{# The Phase banner must be within a beforeContent block to butt up next to the DfE Header appropriately #}
 {% block beforeContent %}
 <div class="fiat-top">
   <div class="govuk-width-container">
@@ -52,7 +53,8 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
         mainClasses: "govuk-width-container"
     }) }}
 
-  {% if not "index.njk" %}
+  {# A check to see if any page outside of Index is being used. If true, show the Heading and Caption #}
+  {% if currentPageUrl !== '/' %}
     <div class="fiat-top-content">
       <h1 class="govuk-heading-l fiat-trust-heading govuk-!-display-inline-block govuk-!-margin-bottom-3">
         {{pageHeading | default("Abbey academies trust") }}
