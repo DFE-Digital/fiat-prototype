@@ -1,7 +1,5 @@
 {% extends "layouts/main.njk" %}
 
-{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
-
 {% set pageTitle = "Bishop perowne church of England college" %}
 {% set pageHeading = pageTitle %}
 {% set pageCaption = "Single-academy trust" %}
@@ -9,14 +7,26 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <aside class="govuk-grid-column-one-third">
+  <aside class="govuk-grid-column-one-quarter">
 
+    {# Side navigation - TO DO: Make dynamic #}
     {% include "/parts/side-nav.njk" %} 
 
   </aside>
 
-  <div class="govuk-grid-column-two-thirds">
-    Main area
+  <div class="govuk-grid-column-three-quarters">
+    
+    <h2 class="govuk-heading-l">
+      <span class="govuk-caption-m">About the trust</span>
+      Contacts
+    </h2>
+
+    {# DfE Contacts - includes editable TRM and SFSO #}
+    {% include "/parts/contacts-dfe.njk" %}
+
+    {# Trust Contacts - includes Accounting officer, Chair of trustees and Chief financial officer #}
+    {% include "/parts/contacts-trust.njk" %}
+
   </div>
 </div>
 

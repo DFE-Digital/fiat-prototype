@@ -1,10 +1,13 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
 {{ mojSideNavigation({
     label: 'Side navigation',
     classes: 'govuk-!-padding-0',
     sections: [
     {
         heading: {
-        text: 'About the trust'
+        text: 'About the trust',
+        classes: 'govuk-!-padding-top-0'
         },
         items: [{
         text: 'Details',

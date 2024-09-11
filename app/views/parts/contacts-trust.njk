@@ -1,0 +1,84 @@
+<h3 class="govuk-heading-m">
+    Contacts at the trust
+</h3>
+
+{# Accounting officer contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Accounting officer"
+    }
+    },
+    rows: [
+    {
+        key: {
+        text: "Name"
+        },
+        value: {
+        html: "Joe Bloggs"
+        }
+    },
+    {
+        key: {
+        text: "Email address"
+        },
+        value: {
+        html: "<a href='mailto:joe.bloggs@education.gov.uk'>joe.bloggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
+
+{# Chair of trustees contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Chair of trustees"
+    }
+    },
+    rows: [
+    {
+        key: {
+        text: "Name"
+        },
+        value: {
+        html: "Jayne Bloggs"
+        }
+    },
+    {
+        key: {
+        text: "Email address"
+        },
+        value: {
+        html: "<a href='mailto:jayne.bloggs@education.gov.uk'>jayne.bloggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
+
+{# Chief financial officer #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Chief financial officer"
+    }
+    },
+    rows: [
+    {
+        key: {
+        text: "Name"
+        },
+        value: {
+        html: "Jayne Bloggs"
+        }
+    },
+    {
+        key: {
+        text: "Email address"
+        },
+        value: {
+        html: "<a href='mailto:jayne.bloggs@education.gov.uk'>jayne.bloggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
