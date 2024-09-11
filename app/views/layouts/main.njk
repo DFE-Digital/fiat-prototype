@@ -1,0 +1,78 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% set serviceName = "Find information about academies and trusts" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+
+{################################# Page title #################################}
+{% block pageTitle %}
+    {{pageTitle}} - {{serviceName}} - GOV.UK
+{% endblock %} 
+
+{################################# Header #################################}
+{% block header %}
+  {{ header({
+      "showNav": "false",
+      "showSearch": "true",
+      "showHeaderActionLinks": "false",
+      "logoPath": "public/images",
+      "searchAction": "/search/",
+      "searchInputName": "q",
+      "logoAltText": "Department for Education",
+      "homeHref": "https://gov.uk",
+      "selectedNav": view,
+      "service": {
+        "name": serviceName,
+        "serviceUrl": "/"
+      },
+      "headerActionLinks": [
+        {
+          "url"  : "/",
+          "label" : "My account"
+        },
+        {
+          "url"  : "/",
+          "label" : "Sign out"
+        }
+      ]
+    })
+  }}
+{% endblock %}
+
+{################################# Blue top #################################}
+{% set containerClasses = "fiat-max-width-0" %}
+{% set mainClasses = "govuk-width-container" %}
+
+{% block beforeContent %}
+<div class="fiat-top">
+  <div class="govuk-width-container">
+
+    {{ govukPhaseBanner({  
+        tag: {    
+            text: "Beta"  
+        },  
+        html: "This is a new product – your <a href='#' class='govuk-link'>feedback (opens in a new tab)</a> will help us to improve it.",
+        classes: "govuk-width-container",
+        containerClasses: "fiat-top fiat-max-width-0",
+        mainClasses: "govuk-width-container"
+    }) }}
+
+    <div class="fiat-top-content">
+      <h1 class="govuk-heading-l fiat-trust-heading govuk-!-display-inline-block govuk-!-margin-bottom-3">Test h1</h1>
+      <span class="govuk-caption-m">Multi-academy trust</span>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{################################# Bottom of file #################################}
+{% block scripts %}
+  {{ super() }}
+  <script src="/node_modules/dfe-frontend/dist/dfefrontend.min.js"></script>
+{% endblock %}

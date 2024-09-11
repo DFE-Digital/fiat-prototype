@@ -14,7 +14,7 @@ router.use(radioButtonRedirect)
 ////// Vicky Teinaki 
 ////// https://www.vickyteinaki.com/blog/more-efficient-prototyping-with-the-gov-uk-prototype-kit-step-by-step/
 
-// Logging session data  
+// Logging session data and posting it to the console  
 router.use((req, res, next) => {    
     const log = {  
       method: req.method,  

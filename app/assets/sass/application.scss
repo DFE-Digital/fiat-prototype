@@ -5,7 +5,34 @@
 
 @import 'node_modules/dfe-frontend/packages/dfefrontend';
 
-// Add extra styles here
+// Use Inter font
+@import url('https://rsms.me/inter/inter.css');
+$govuk-font-family: 'Inter', sans-serif;
+
+// User Inter in tables (you need to apply the classes too)
+.tableNumbers{
+    font-feature-settings: 'tnum' 1, 'ss01' 1, 'zero' 1;
+}
 
 // Changes the container width from 960px to 1200px
 .govuk-width-container { @include govuk-width-container; }
+
+.fiat-max-width-0 {
+    max-width: none;
+}
+
+// Light blue header
+.fiat-top {
+    background-color: tint($color_dfe-secondary-blue, 90%);
+}
+
+// Container for Trust heading and caption
+.fiat-top-content {
+    padding: 1rem 0 1rem 0;
+}
+
+// Trust heading title
+.fiat-trust-heading {
+    color: $color_dfe-blue;
+    text-transform: uppercase;
+}
