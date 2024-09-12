@@ -1,0 +1,41 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{{ govukDetails({
+  summaryText: "Sources and updates",
+  html: "
+    <p class='govuk-body'>
+        <span class='govuk-!-font-weight-bold'>Trust relationship manager</span><br>
+        Last updated: 11 Sep 2024<br>
+        Next scheduled update: Daily<br>
+        Last updated by: Alex Edwards
+    </p>
+
+    <p class='govuk-body'>
+        <span class='govuk-!-font-weight-bold'>SFSO (Schools financial support and oversight) lead</span><br>
+        Last updated: 21 July 2024<br>
+        Next scheduled update: Daily<br>
+        Last updated by: David Homer
+    </p>
+
+    <p class='govuk-body'>
+        <span class='govuk-!-font-weight-bold'>Accounting officer</span><br>
+        Last updated: 11 Sep 2024<br>
+        Next scheduled update: Daily<br>
+        Last updated by: GIAS (Get information about schools)
+    </p>
+
+    <p class='govuk-body'>
+        <span class='govuk-!-font-weight-bold'>Chair of trustees</span><br>
+        Last updated: 11 Sep 2024<br>
+        Next scheduled update: Daily<br>
+        Last updated by: GIAS (Get information about schools)
+    </p>
+
+    <p class='govuk-body'>
+        <span class='govuk-!-font-weight-bold'>Chief financial officer</span><br>
+        Last updated: 11 Sep 2024<br>
+        Next scheduled update: Daily<br>
+        Last updated by: GIAS (Get information about schools)
+    </p>
+    "
+}) }}
