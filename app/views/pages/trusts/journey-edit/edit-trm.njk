@@ -1,0 +1,70 @@
+{% extends "layouts/main.njk" %}
+
+{% set pageTitle = "Abbey academies trust" %}
+{% set pageHeading = pageTitle %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+
+            <span class="govuk-caption-m">Trust contacts</span>
+
+            {# Start fieldset #}
+            {% call govukFieldset({
+                legend: {
+                    text: "Edit trust relationship manager details",
+                    classes: "govuk-fieldset__legend--l",
+                    isPageHeading: true
+                }
+            }) %}
+
+                {# Name #}
+                {{ govukInput({
+                    label: {
+                        text: "Full name",
+                        classes: "govuk-label--m",
+                        isPageHeading: false
+                    },
+                    classes: "govuk-!-width-two-thirds",
+                    id: "trm-name",
+                    name: "trmName"
+                }) }}
+
+                {# Email address #}
+                {{ govukInput({
+                    label: {
+                        text: "Email address",
+                        classes: "govuk-label--m",
+                        isPageHeading: false
+                    },
+                    hint: {
+                        text: "Only valid DfE email addresses can be used e.g. joe.bloggs@education.gov.uk"
+                    },
+                    classes: "govuk-!-width-two-thirds",
+                    id: "trm-email",
+                    name: "trmEmail"
+                }) }}
+
+                {# Page actions #}
+                <div class="govuk-button-group">
+                    
+                    {# Primary button #}
+                    {{ govukButton({
+                        text: "Save and continue"
+                    }) }}
+
+                    {# Cancel link #}
+                    <a class="govuk-link" href="#">
+                        Cancel
+                    </a>
+
+                </div>
+
+            {# End fieldset #}
+            {% endcall %}
+
+        </div>
+    </div>
+
+{% endblock %}
