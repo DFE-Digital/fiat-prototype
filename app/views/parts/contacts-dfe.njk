@@ -11,7 +11,7 @@
     actions: {
         items: [
         {
-            href: "#",
+            href: "journey-edit/edit-trm.njk",
             text: "Change",
             visuallyHiddenText: "details of this contact"
         }
@@ -21,18 +21,18 @@
     rows: [
     {
         key: {
-        text: "Name"
+            text: "Name"
         },
         value: {
-        html: "Joe Bloggs"
+            html: data['trmName'] | default("Joe Bloggs")
         }
     },
     {
         key: {
-        text: "Email address"
+            text: "Email address"
         },
         value: {
-        html: "<a href='mailto:joe.bloggs@education.gov.uk'>joe.bloggs@education.gov.uk</a>"
+            html: data['trmEmail'] | default("<a href='mailto:joe.bloggs@education.gov.uk'>joe.bloggs@education.gov.uk</a>")
         }
     }
     ]

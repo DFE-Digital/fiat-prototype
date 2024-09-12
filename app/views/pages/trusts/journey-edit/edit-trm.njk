@@ -10,6 +10,8 @@
 
             <span class="govuk-caption-m">Trust contacts</span>
 
+            <form action="../contacts" method="post" novalidate>
+
             {# Start fieldset #}
             {% call govukFieldset({
                 legend: {
@@ -19,50 +21,55 @@
                 }
             }) %}
 
-                {# Name #}
-                {{ govukInput({
-                    label: {
-                        text: "Full name",
-                        classes: "govuk-label--m",
-                        isPageHeading: false
-                    },
-                    classes: "govuk-!-width-two-thirds",
-                    id: "trm-name",
-                    name: "trmName"
+            {# Name #}
+            {{ govukInput({
+                label: {
+                    text: "Full name",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                },
+                id: "trm-name",
+                classes: "govuk-!-width-two-thirds",
+                value: data['trmName'] | default("Joe Bloggs"),
+                name: "trmName",
+                spellcheck: false
+            }) }}
+
+            {# Email address #}
+            {{ govukInput({
+                label: {
+                    text: "Email address",
+                    classes: "govuk-label--m",
+                    isPageHeading: false
+                },
+                hint: {
+                    text: "Only valid DfE email addresses can be used e.g. joe.bloggs@education.gov.uk"
+                },
+                id: "trm-email",
+                classes: "govuk-!-width-two-thirds",
+                value: data['trmEmail'] | default("joe.bloggs@education.gov.uk"),
+                name: "trmEmail"
+            }) }}
+
+            {# Page actions #}
+            <div class="govuk-button-group">
+                
+                {# Primary button #}
+                {{ govukButton({
+                    text: "Save and continue"
                 }) }}
 
-                {# Email address #}
-                {{ govukInput({
-                    label: {
-                        text: "Email address",
-                        classes: "govuk-label--m",
-                        isPageHeading: false
-                    },
-                    hint: {
-                        text: "Only valid DfE email addresses can be used e.g. joe.bloggs@education.gov.uk"
-                    },
-                    classes: "govuk-!-width-two-thirds",
-                    id: "trm-email",
-                    name: "trmEmail"
-                }) }}
+                {# Cancel link #}
+                <a class="govuk-link" href="../contacts.njk">
+                    Cancel
+                </a>
 
-                {# Page actions #}
-                <div class="govuk-button-group">
-                    
-                    {# Primary button #}
-                    {{ govukButton({
-                        text: "Save and continue"
-                    }) }}
-
-                    {# Cancel link #}
-                    <a class="govuk-link" href="#">
-                        Cancel
-                    </a>
-
-                </div>
+            </div>
 
             {# End fieldset #}
             {% endcall %}
+
+            </form>
 
         </div>
     </div>
