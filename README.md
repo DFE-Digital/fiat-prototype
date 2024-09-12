@@ -24,4 +24,4 @@ And on occasion, others (e.g MoJ Design system)
 - Type `npm install` to install the dependencies
 
 ## View online
-Heroku link to come.
+- [View the prototype online](https://fiat-prototype-d2ea58cab555.herokuapp.com/)
