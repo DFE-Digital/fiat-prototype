@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
+    "@ministryofjustice/frontend": "^2.2.0",
     "@x-govuk/govuk-prototype-components": "^3.0.7",
     "@x-govuk/govuk-prototype-filters": "^1.4.2",
     "dfe-frontend": "^2.0.1",

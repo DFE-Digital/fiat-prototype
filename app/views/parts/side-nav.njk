@@ -1,0 +1,35 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+
+{{ mojSideNavigation({
+    label: 'Side navigation',
+    classes: 'govuk-!-padding-0',
+    sections: [
+    {
+        heading: {
+            text: 'About the trust',
+            classes: 'govuk-!-padding-top-0'
+        },
+        items: [{
+            text: 'Details',
+            href: 'details',
+            active: true if navActive == 'details'
+            }, {
+            text: 'Contacts',
+            href: 'contacts',
+            active: true if navActive == 'contacts'
+            }, {
+            text: 'Overview',
+            href: 'overview',
+            active: true if navActive == 'overview'
+            }, {
+            text: 'Academies in this trust (1)',
+            href: 'academies',
+            active: true if navActive == 'academies'
+            }, {
+            text: 'Governance',
+            href: 'governance',
+            active: true if navActive == 'governance'
+        }]
+    }
+    ]
+}) }}

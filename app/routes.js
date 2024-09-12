@@ -11,28 +11,13 @@ router.use(radioButtonRedirect)
 
 // Useful things
 
-////// Vicky Teinaki 
-////// https://www.vickyteinaki.com/blog/more-efficient-prototyping-with-the-gov-uk-prototype-kit-step-by-step/
-
-// Logging session data and posting it to the console  
-router.use((req, res, next) => {    
-    const log = {  
-      method: req.method,  
-      url: req.originalUrl,  
-      data: req.session.data  
-    }  
-    console.log(JSON.stringify(log, null, 2))  
-   
-  next()  
-}) 
-
-router.use('/', (req, res, next) => {  
-    res.locals.currentURL = req.originalUrl; //current screen  
-    res.locals.prevURL = req.get('Referrer'); // previous screen
-
-    console.log('folder : ' + res.locals.folder + ', subfolder : ' + res.locals.subfolder  );
-
-    next();  
-});
-
 // Add your routes here
+
+/////// Get current page URL
+const url = require('url')
+
+router.all('*', function(req, res, next){
+  res.locals.currentPageUrl = url.parse(req.url).pathname
+
+  next()
+}) 
