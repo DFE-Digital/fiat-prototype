@@ -13,11 +13,18 @@ router.use(radioButtonRedirect)
 
 // Add your routes here
 
-/////// Get current page URL
-const url = require('url')
+// GET URLs - useful for relative templates
+router.use('/', (req, res, next) => {
+  res.locals.currentURL = req.originalUrl;
+  res.locals.prevURL = req.get('Referrer') ?? "";
+  res.locals.uriFragments = res.locals.prevURL.split('/');
+  res.locals.uriLastPart = res.locals.uriFragments.slice(-1)[0];
+  
+  req.folder = res.locals.uriFragments[1] ?? "";
+  req.subfolder = res.locals.uriFragments[2] ?? "";
 
-router.all('*', function(req, res, next){
-  res.locals.currentPageUrl = url.parse(req.url).pathname
+  next();
+});
 
-  next()
-}) 
+
+
