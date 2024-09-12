@@ -1,0 +1,28 @@
+{% extends "layouts/main.njk" %}
+
+{% set pageTitle = "Bishop perowne church of England college" %}
+{% set pageHeading = pageTitle %}
+{% set pageCaption = "Single-academy trust" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <aside class="govuk-grid-column-one-quarter">
+
+      {# Side navigation - TO DO: Make dynamic #}
+      {% include "/parts/side-nav.njk" %} 
+
+    </aside>
+
+    <div class="govuk-grid-column-three-quarters">
+
+      {# Start of trust content block #}
+
+      {% block trustContent %}
+        Text goes here, override this by overriding the block
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}

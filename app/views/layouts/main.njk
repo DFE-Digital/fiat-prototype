@@ -11,7 +11,11 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {################################# Page title #################################}
 {% block pageTitle %}
-    {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% if subPage %}
+      {{subPage}} - {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% else %}
+      {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% endif %}
 {% endblock %} 
 
 {################################# Header #################################}

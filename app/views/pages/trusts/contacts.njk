@@ -1,0 +1,30 @@
+{% extends "layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{% set subPage = "Contacts" %}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "contacts" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      <span class="govuk-caption-m">About the trust</span>
+      Contacts
+  </h2>
+
+  {# DfE Contacts - includes editable TRM and SFSO #}
+  {% include "/parts/contacts-dfe.njk" %}
+
+  <hr class="govuk-section-break govuk-section-break--l">
+
+  {# Trust Contacts - includes Accounting officer, Chair of trustees and Chief financial officer #}
+  {% include "/parts/contacts-trust.njk" %}
+
+  <hr class="govuk-section-break govuk-section-break--l">
+
+  {# Sources and updates #}
+  {% include "/parts/sources-updates.njk" %}
+
+{% endblock %}
