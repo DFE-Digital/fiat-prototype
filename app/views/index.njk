@@ -29,15 +29,41 @@
     </h2>
 
     <p class="govuk-caption-m">
-      A feature to allow users to make a change to data within a block under "DfE contacts", block on the "Contacts" sub-page of a trust.
+      A feature to allow users to make a change to contact data within a card on the "Contacts" sub-page of a trust.
     </p>
-    <p class="govuk-body">The prototype begins with the <a href="/pages/trusts/contacts" class="govuk-link govuk-!-font-weight-bold">Contacts</a> page.</p>
+    {# <p class="govuk-body">The prototype begins with the <a href="/pages/trusts/contacts" class="govuk-link govuk-!-font-weight-bold">Contacts</a> page.</p> #}
 
-    {# Change a DfE contact MvP #}
-    {% include "/index-content/change-a-dfe-contact/mvp.njk" %}
+    {% set dfeContactMvPContent %}
+      {# Change a DfE contact MvP #}
+      {% include "/index-content/change-a-dfe-contact/mvp.njk" %}
+    {% endset %}
 
-    {# Change a DfE contact MvP+ #}
-    {% include "/index-content/change-a-dfe-contact/mvp+.njk" %}
+    {% set dfeContactMvPPContent %}
+      {# Change a DfE contact MvP+ #}
+      {% include "/index-content/change-a-dfe-contact/mvp+.njk" %}
+    {% endset %}
+
+    {{ govukAccordion({
+      id: "accordion-dfe-contact-index",
+      items: [
+        {
+          heading: {
+            text: "MvP"
+          },
+          content: {
+            html: dfeContactMvPContent
+          }
+        },
+        {
+          heading: {
+            text: "MvP+"
+          },
+          content: {
+            html: dfeContactMvPPContent
+          }
+        }
+      ]
+    }) }}
 
   </div>
 </div>

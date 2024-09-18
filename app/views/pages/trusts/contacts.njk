@@ -10,8 +10,7 @@
 {% block trustContent %}
 
   {# Success banner. Will show if default values are not being used - 
-  ideally needs fixing to check if user entered data has changed insted.
-  This is also showing if "Cancel" has been pressed - annoying. #}
+  ideally needs fixing to check if user entered data has changed instead. #}
   {% if (uriLastPart == "edit-trm") and (data['trmName']) or (data['trmEmail']) %}
       {% set sucessHTML %}
           <h3 class="govuk-notification-banner__heading">
