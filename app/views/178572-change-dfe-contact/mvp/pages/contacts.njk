@@ -1,0 +1,51 @@
+{% extends "/178572-change-dfe-contact/mvp/layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{% set subPage = "Contacts" %}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "contacts" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  {# Success banner. Will show if default values are not being used - 
+  ideally needs fixing to check if user entered data has changed instead. #}
+  {% if (uriLastPart == "edit-trm") and (data['trmName']) or (data['trmEmail']) %}
+      {% set sucessHTML %}
+          <h3 class="govuk-notification-banner__heading">
+              Changes saved
+          </h3>
+          {% if data['trmName'] != "Joe Bloggs" %} {# Need to check if session data has changed here #}
+              <p class="govuk-body">Changes made to the Trust relationship manager name were successful.</p>
+          {% endif %}
+          {% if data['trmEmail'] != "joe.bloggs@education.gov.uk" %} {# Need to check if session data has changed here #}
+              <p class="govuk-body">Changes made to the Trust relationship manager email address were successful.</p>
+          {% endif %}
+      {% endset %}
+
+      {{ govukNotificationBanner({
+          html: sucessHTML,
+          type: "success"
+      }) }}
+  {% endif %}
+
+  <h2 class="govuk-heading-l">
+      <span class="govuk-caption-m">About the trust</span>
+      Contacts
+  </h2>
+
+  {# DfE Contacts - includes editable TRM and SFSO #}
+  {% include "/178572-change-dfe-contact/mvp/parts/contacts-dfe.njk" %}
+
+  <hr class="govuk-section-break govuk-section-break--l">
+
+  {# Trust Contacts - includes Accounting officer, Chair of trustees and Chief financial officer #}
+  {% include "/178572-change-dfe-contact/mvp/parts/contacts-trust.njk" %}
+
+  <hr class="govuk-section-break govuk-section-break--l">
+
+  {# Sources and updates #}
+  {% include "/178572-change-dfe-contact/mvp/parts/sources-updates.njk" %}
+
+{% endblock %}

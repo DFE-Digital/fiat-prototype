@@ -2,28 +2,6 @@
     Contacts at DfE
 </h3>
 
-{# Success banner. Will show if default values are not being used - 
-ideally needs fixing to check if user entered data has changed insted.
-This is also showing if "Cancel" has been pressed - annoying. #}
-{% if uriLastPart == "edit-trm" %}
-    {% set sucessHTML %}
-        <h3 class="govuk-notification-banner__heading">
-            Changes saved
-        </h3>
-        {% if data['trmName'] != "Joe Bloggs" %} {# Need to check if session data has changed here #}
-            <p class="govuk-body">Changes made to the Trust relationship manager name were successful.</p>
-        {% endif %}
-        {% if data['trmEmail'] != "joe.bloggs@education.gov.uk" %} {# Need to check if session data has changed here #}
-            <p class="govuk-body">Changes made to the Trust relationship manager email address were successful.</p>
-        {% endif %}
-    {% endset %}
-
-    {{ govukNotificationBanner({
-        html: sucessHTML,
-        type: "success"
-    }) }}
-{% endif %}
-
 {# Trust relationship manager contact #}
 {{ govukSummaryList({
     card: {

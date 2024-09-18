@@ -1,19 +1,24 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-{{ govukDetails({
-  summaryText: "Sources and updates",
-  html: "
+{# If a name or email address has been set outside of the default Joe Bloggs, then set a 
+currentData variable of today #}
+{% if (data['trmName']) or (data['trmEmail']) %}
+    {% set currentDate = "today" | govukDate %}
+{% else %}
+    {% set currentDate = "28 July 2024" %}
+{% endif %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
     <p class='govuk-body'>
         <span class='govuk-!-font-weight-bold'>Trust relationship manager</span><br>
-        Last updated: 11 Sep 2024<br>
-        Next scheduled update: Daily<br>
+        Last updated: {{ currentDate }}<br>
         Last updated by: Alex Edwards
     </p>
 
     <p class='govuk-body'>
         <span class='govuk-!-font-weight-bold'>SFSO (Schools financial support and oversight) lead</span><br>
-        Last updated: 21 July 2024<br>
-        Next scheduled update: Daily<br>
+        Last updated: 28 July 2024<br>
         Last updated by: David Homer
     </p>
 
@@ -37,5 +42,10 @@
         Next scheduled update: Daily<br>
         Last updated by: GIAS (Get information about schools)
     </p>
-    "
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "Sources and updates",
+  html: sourceUpdatesContent
 }) }}
