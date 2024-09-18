@@ -1,0 +1,40 @@
+{# Change a DfE contact #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Change a DfE contact
+</h2>
+
+<p class="govuk-caption-m">
+    A feature to allow users to make a change to contact data within a card on the "Contacts" sub-page of a trust.
+</p>
+
+{% set dfeContactMvPContent %}
+    {# Change a DfE contact MvP #}
+    {% include "/178572-change-dfe-contact/index-content/mvp.njk" %}
+{% endset %}
+
+{% set dfeContactMvPPContent %}
+    {# Change a DfE contact MvP+ #}
+    {% include "/178572-change-dfe-contact/index-content/mvp+.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-dfe-contact-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: dfeContactMvPContent
+        }
+    },
+    {
+        heading: {
+        text: "MvP+"
+        },
+        content: {
+        html: dfeContactMvPPContent
+        }
+    }
+    ]
+}) }}

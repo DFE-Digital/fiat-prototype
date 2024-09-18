@@ -1,4 +1,4 @@
-{% extends "layouts/trust_layout.njk" %}
+{% extends "/178572-change-dfe-contact/mvp/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {% set subPage = "Contacts" %}
@@ -36,16 +36,16 @@
   </h2>
 
   {# DfE Contacts - includes editable TRM and SFSO #}
-  {% include "/parts/contacts-dfe.njk" %}
+  {% include "/178572-change-dfe-contact/mvp/parts/contacts-dfe.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--l">
 
   {# Trust Contacts - includes Accounting officer, Chair of trustees and Chief financial officer #}
-  {% include "/parts/contacts-trust.njk" %}
+  {% include "/178572-change-dfe-contact/mvp/parts/contacts-trust.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--l">
 
   {# Sources and updates #}
-  {% include "/parts/sources-updates.njk" %}
+  {% include "/178572-change-dfe-contact/mvp/parts/sources-updates.njk" %}
 
 {% endblock %}
