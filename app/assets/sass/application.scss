@@ -36,3 +36,13 @@ $govuk-font-family: 'Inter', sans-serif;
     color: $color_dfe-blue;
     text-transform: uppercase;
 }
+
+// MoJ Sub nav component
+.moj-sub-navigation__item {
+    margin-bottom: 0;
+}
+
+// Primary navigation
+.govuk-service-navigation__list {
+    font-weight: 600;
+}

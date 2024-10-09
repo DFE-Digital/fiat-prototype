@@ -1,0 +1,27 @@
+{# Navigation UI updates #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Navigation UI updates
+</h2>
+
+<p class="govuk-caption-m">
+    Changes to the IA (Information Architecture) and navigation UI across the product. This prototype uses the "Academies" page as an example.
+</p>
+
+{% set navigationUIUpdatesContent %}
+    {# Navigation UI updates MvP #}
+    {% include "/171804-nav-ui-updates/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-navigationUIupdates-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: navigationUIUpdatesContent
+        }
+    }
+    ]
+}) }}
