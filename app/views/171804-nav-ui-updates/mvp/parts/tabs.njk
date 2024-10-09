@@ -1,0 +1,36 @@
+{% set detailsTable %}
+    {% include "../tables/details.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Details",
+      id: "academy-details-table",
+      panel: {
+        html: detailsTable
+      }
+    },
+    {
+      label: "Past week",
+      id: "past-week",
+      panel: {
+        html: pastWeekHtml
+      }
+    },
+    {
+      label: "Past month",
+      id: "past-month",
+      panel: {
+        html: pastMonthHtml
+      }
+    },
+    {
+      label: "Past year",
+      id: "past-year",
+      panel: {
+        html: pastYearHtml
+      }
+    }
+  ]
+}) }}
