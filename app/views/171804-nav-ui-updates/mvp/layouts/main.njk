@@ -39,13 +39,13 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% endblock %}
 
 {################################# FIAT top #################################}
-{% set containerClasses = "fiat-max-width-0" %}
+{% set containerClasses = "fiat-max-width-0 govuk-!-margin-0" %}
 {% set mainClasses = "govuk-width-container" %}
 
 {# The Phase banner must be within a beforeContent block to butt up next to the DfE Header appropriately #}
 {% block beforeContent %}
   <div class="fiat-top">
-    <div class="govuk-width-container">
+    <div class="govuk-width-container ">
 
       {{ govukPhaseBanner({  
           tag: {    
