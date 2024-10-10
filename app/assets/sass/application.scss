@@ -46,3 +46,12 @@ $govuk-font-family: 'Inter', sans-serif;
 .govuk-service-navigation__list {
     font-weight: 600;
 }
+
+// Phase banner in footer experiment. Used in 171804-nav-ui-updates
+.rsd-footer-phase {
+    border-bottom: 0;
+    
+    .govuk-phase-banner__content {
+        @include govuk-font-size($size: 19);
+    }
+}
