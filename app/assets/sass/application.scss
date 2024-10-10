@@ -37,17 +37,23 @@ $govuk-font-family: 'Inter', sans-serif;
     text-transform: uppercase;
 }
 
-// MoJ Sub nav component
+// 171804 MoJ Sub nav component
 .moj-sub-navigation__item {
     margin-bottom: 0;
 }
+// 171804-breadcrumbs
+.breadcrumbs-171804 {
+    li {
+        @include govuk-font-size($size: 16);
+    }
+}
 
-// Primary navigation
+// 171804 Primary navigation
 .govuk-service-navigation__list {
     font-weight: 600;
 }
 
-// Phase banner in footer experiment. Used in 171804-nav-ui-updates
+// 171804 RSD Footer
 .rsd-footer-phase {
     border-bottom: 0;
     

@@ -44,7 +44,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {# The Phase banner must be within a beforeContent block to butt up next to the DfE Header appropriately #}
 {% block beforeContent %}
-  <div class="fiat-top">
+  <div class="fiat-top govuk-!-padding-top-3">
     <div class="govuk-width-container ">
 
       {# {{ govukPhaseBanner({  
@@ -56,6 +56,8 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
           containerClasses: "fiat-top fiat-max-width-0",
           mainClasses: "govuk-width-container"
       }) }} #}
+
+      {% include "../parts/breadcrumbs.njk" %}
 
       {# A check to see if any page outside of Index is being used. If true, show the Heading and Caption #}
       {% if currentURL !== '/' %}
