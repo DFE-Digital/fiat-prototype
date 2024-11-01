@@ -61,3 +61,18 @@ $govuk-font-family: 'Inter', sans-serif;
         @include govuk-font-size($size: 19);
     }
 }
+
+// 183585 Ofsted
+.ofsted-table--30 {
+    width: 30%;
+}
+
+.ofsted-table--15 {
+    width: 15%;
+}
+
+// .ofsted-table-noDate {
+//     border: 1px solid black;
+//     text-align: center;
+//     padding: 3px 5px;
+// }
