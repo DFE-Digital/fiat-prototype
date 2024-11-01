@@ -1,0 +1,26 @@
+{{ govukServiceNavigation({
+    navigation: [
+        {
+        href: "#",
+        text: "Overview"
+        },
+        {
+        href: "contacts-at-dfe",
+        text: "Contacts",
+        active: true if navActive == "contacts"
+        },
+        {
+        href: "academies",
+        text: "Academies (3)",
+        active: true if navActive == "academies"
+        },
+        {
+        href: "#",
+        text: "Finance"
+        },
+        {
+        href: "#",
+        text: "Governance"
+        }
+    ]
+}) }}

@@ -1,0 +1,27 @@
+{% extends "/171804-nav-ui-updates/mvp/layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "academies" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      Academies
+  </h2>
+
+{# Sub-nav to flick through data sets #}
+{% include "../parts/academies-sub_nav.njk" %} 
+
+{# Tabs to flick through tables #}
+{% include "../parts/tabs.njk" %}
+
+<hr class="govuk-section-break govuk-section-break--s">
+
+{# Sources and updates #}
+{% include "/171804-nav-ui-updates/mvp/parts/sources-updates.njk" %}
+
+{% endblock %}

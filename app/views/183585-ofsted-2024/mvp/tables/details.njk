@@ -1,0 +1,128 @@
+<h3 class="govuk-heading-m">Details</h2>
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "URN",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Local authority",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Type",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Rural or urban",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Bourne Abbey Church of England Primary Academy"
+      },
+      {
+        text: "136354",
+        attributes: {
+          "data-sort-value": "136354"
+        }
+      },
+      {
+        text: "Leeds",
+        attributes: {
+          "data-sort-value": "Leeds"
+        }
+      },
+      {
+        text: "Academy converter",
+        attributes: {
+          "data-sort-value": "Academy converter"
+        }
+      },
+      {
+        text: "Rural town and fringe",
+        attributes: {
+          "data-sort-value": "Rural town and fringe"
+        }
+      }
+    ],
+    [
+      {
+        text: "Bourne Elsea Park Church of England Primary Academy"
+      },
+      {
+        text: "140214",
+        attributes: {
+          "data-sort-value": "140214"
+        }
+      },
+      {
+        text: "London",
+        attributes: {
+          "data-sort-value": "London"
+        }
+      },
+      {
+        text: "Academy sponsor led",
+        attributes: {
+          "data-sort-value": "Academy sponsor led"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "Urban city and town"
+        }
+      }
+    ],
+    [
+      {
+        text: "Colsterworth Church of England Primary School"
+      },
+      {
+        text: "146279",
+        attributes: {
+          "data-sort-value": "146279"
+        }
+      },
+      {
+        text: "Lincolnshire",
+        attributes: {
+          "data-sort-value": "Lincolnshire"
+        }
+      },
+      {
+        text: "Academy sponsor led",
+        attributes: {
+          "data-sort-value": "Academy sponsor led"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "Urban city and town"
+        }
+      }
+    ]
+  ]
+}) }}

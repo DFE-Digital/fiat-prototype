@@ -1,0 +1,27 @@
+{# 183585-ofsted-2024 #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Ofsted changes
+</h2>
+
+<p class="govuk-caption-m">
+    Changes to how Ofsted information is displayed, on the back of policy change to remove SHJ (Single Headline Judgements).
+</p>
+
+{% set ofstedChangesContent %}
+    {# Ofsted changes MvP #}
+    {% include "/183585-ofsted-2024/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-ofstedChanges-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: ofstedChangesContent
+        }
+    }
+    ]
+}) }}
