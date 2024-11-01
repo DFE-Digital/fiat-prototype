@@ -2,11 +2,12 @@
   label: 'Sub navigation',
   items: [{
     text: 'Details',
-    href: '#',
-    active: true
+    href: 'ofsted-details',
+    active: true if subNavActive == "details"
   }, {
     text: 'Sub-judgements',
-    href: '#'
+    href: 'ofsted-subjudgements',
+    active: true if subNavActive == "subjudgements"
   }
   ]
 }) }}
