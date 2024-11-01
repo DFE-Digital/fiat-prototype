@@ -1,0 +1,509 @@
+{# <h3 class="govuk-heading-m">Details</h2> #}
+
+{{ govukTable({
+  caption: "Details",
+  captionClasses: "govuk-table__caption--m",
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "School name",
+      classes: "ofsted-table--30",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Date joined",
+      classes: "ofsted-table--15",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Date of current inspection",
+      classes: "ofsted-table--15",
+      attributes: {
+        "aria-sort": "descending"
+      }
+    },
+    {
+      text: "Date of previous inspection",
+      classes: "ofsted-table--15",
+      attributes: {
+        "aria-sort": "descending"
+      }
+    },
+    {
+      text: "Is safeguarding effective?",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Category of concern",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "School or academy name here"
+      },
+      {
+        text: "1 Aug 2011",
+        attributes: {
+          "data-sort-value": "110801"
+        }
+      },
+      {
+        text: "2 Mar 2024",
+        attributes: {
+          "data-sort-value": "240302"
+        }
+      },
+      {
+        text: "12 Aug 2011",
+        attributes: {
+          "data-sort-value": "110812"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      }
+    ],
+    [
+      {
+        text: "Baking academy"
+      },
+      {
+        text: "9 Aug 2011",
+        attributes: {
+          "data-sort-value": "110809"
+        }
+      },
+      {
+        text: "28 Mar 2024",
+        attributes: {
+          "data-sort-value": "240328" 
+        }
+      },
+      {
+        text: "12 Aug 2011",
+        attributes: {
+          "data-sort-value": "110812" 
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      }
+    ],
+    [
+      {
+        text: "Chocolate academy"
+      },
+      {
+        text: "10 Feb 2011",
+        attributes: {
+          "data-sort-value": "110210" 
+        }
+      },
+      {
+        text: "15 Oct 2024",
+        attributes: {
+          "data-sort-value": "241015" 
+        }
+      },
+      {
+        text: "12 Sep 2020",
+        attributes: {
+          "data-sort-value": "200912" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Fruity academy"
+      },
+      {
+        text: "18 May 2014",
+        attributes: {
+          "data-sort-value": "140518" 
+        }
+      },
+      {
+        text: "25 July 2017",
+        attributes: {
+          "data-sort-value": "170725" 
+        }
+      },
+      {
+        text: "28 Oct 2016",
+        attributes: {
+          "data-sort-value": "161028" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Grunge academy"
+      },
+      {
+        text: "3 Aug 2011",
+        attributes: {
+          "data-sort-value": "110803" 
+        }
+      },
+      {
+        text: "15 Sep 2022",
+        attributes: {
+          "data-sort-value": "220915" 
+        }
+      },
+      {
+        text: "18 Mar 2019",
+        attributes: {
+          "data-sort-value": "190318" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Biscuit academy"
+      },
+      {
+        text: "1 Aug 2011",
+        attributes: {
+          "data-sort-value": "110801" 
+        }
+      },
+      {
+        text: "5 Nov 2024",
+        attributes: {
+          "data-sort-value": "241105" 
+        }
+      },
+      {
+        text: "12 Oct 2011",
+        attributes: {
+          "data-sort-value": "111012"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Strawberry academy"
+      },
+      {
+        text: "1 Apr 2014",
+        attributes: {
+          "data-sort-value": "140401" 
+        }
+      },
+      {
+        text: "5 Nov 2018",
+        attributes: {
+          "data-sort-value": "181105" 
+        }
+      },
+      {
+        text: "12 Oct 2011",
+        attributes: {
+          "data-sort-value": "111012" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Coffee academy"
+      },
+      {
+        text: "12 June 2015",
+        attributes: {
+          "data-sort-value": "150612" 
+        }
+      },
+      {
+        text: "22 Feb 2021",
+        attributes: {
+          "data-sort-value": "210222" 
+        }
+      },
+      {
+        text: "12 March 2017",
+        attributes: {
+          "data-sort-value": "170312" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "A longer name academy"
+      },
+      {
+        text: "3 Aug 2017",
+        attributes: {
+          "data-sort-value": "170803" 
+        }
+      },
+      {
+        text: "25 Oct 2020",
+        attributes: {
+          "data-sort-value": "201025" 
+        }
+      },
+      {
+        text: "12 Oct 2018",
+        attributes: {
+          "data-sort-value": "181012" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Another longer named academy"
+      },
+      {
+        text: "16 May 2012",
+        attributes: {
+          "data-sort-value": "120516" 
+        }
+      },
+      {
+        text: "23 Aug 2023",
+        attributes: {
+          "data-sort-value": "230823" 
+        }
+      },
+      {
+        text: "12 March 2020",
+        attributes: {
+          "data-sort-value": "200312" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "A long name voluntary academy"
+      },
+      {
+        text: "8 Dec 2015",
+        attributes: {
+          "data-sort-value": "151208" 
+        }
+      },
+      {
+        text: "12 Sep 2016",
+        attributes: {
+          "data-sort-value": "160912" 
+        }
+      },
+      {
+        text: "18 Feb 2014",
+        attributes: {
+          "data-sort-value": "140218" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Orange voluntary academy"
+      },
+      {
+        text: "13 March 2013",
+        attributes: {
+          "data-sort-value": "130313"
+        }
+      },
+      {
+        text: "22 Feb 2021",
+        attributes: {
+          "data-sort-value": "210222" 
+        }
+      },
+      {
+        text: "17 Jan 2020",
+        attributes: {
+          "data-sort-value": "200117" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ],
+    [
+      {
+        text: "Another academy with the longest name to test"
+      },
+      {
+        text: "1 Aug 2011",
+        attributes: {
+          "data-sort-value": "110801" 
+        }
+      },
+      {
+        text: "5 Nov 2024",
+        attributes: {
+          "data-sort-value": "241105" 
+        }
+      },
+      {
+        text: "12 Oct 2011",
+        attributes: {
+          "data-sort-value": "111012" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      }
+    ]
+    
+  ]
+}) }}
