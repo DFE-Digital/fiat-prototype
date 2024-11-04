@@ -16,9 +16,6 @@
       Ofsted
   </h2>
 
-{# Sub-nav to flick through data sets #}
-{% include "../parts/ofsted-sub_nav.njk" %}
-
 {# Guidance content #}
 {% set ofstedSubjudgementGuidance %}
   <p class="govuk-body">
@@ -34,6 +31,9 @@
 {{ govukInsetText({
   html: ofstedSubjudgementGuidance
 }) }}
+
+{# Sub-nav to flick through data sets #}
+{% include "../parts/ofsted-sub_nav.njk" %}
 
 {# Tabs to flick through tables #}
 {% include "../tables/details.njk" %}
