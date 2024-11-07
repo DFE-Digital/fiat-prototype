@@ -1,0 +1,14 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set effectiveSafeguarding %}
+    <p class='govuk-body'>
+        "Effective safeguarding" means something something...
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'What does "Effective safeguarding" mean?',
+  html: effectiveSafeguarding
+}) }}
