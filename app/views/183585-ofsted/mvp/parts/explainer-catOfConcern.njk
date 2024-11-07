@@ -1,0 +1,14 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set catOfConcern %}
+    <p class='govuk-body'>
+        A "Category of concern" is something something...
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'What is a "Category of concern"?',
+  html: catOfConcern
+}) }}
