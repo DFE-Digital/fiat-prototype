@@ -1,0 +1,104 @@
+<h3 class="govuk-heading-m">Trust leadership</h2>
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "Name",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Role",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "From",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "To",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Jane Elizabeth Parsons"
+      },
+      {
+        text: "Chief Financial Officer",
+        attributes: {
+          "data-sort-value": "Chief Financial Officer"
+        }
+      },
+      {
+        text: "19 Jul 2010",
+        attributes: {
+          "data-sort-value": "20100719"
+        }
+      },
+      {
+        text: "No date",
+        attributes: {
+          "data-sort-value": "No data"
+        }
+      }
+    ],
+    [
+      {
+        text: "Sarah Jane Moore"
+      },
+      {
+        text: "Accounting Officer",
+        attributes: {
+          "data-sort-value": "Accounting Officer"
+        }
+      },
+      {
+        text: "1 Jan 2016",
+        attributes: {
+          "data-sort-value": "20160101"
+        }
+      },
+      {
+        text: "No data",
+        attributes: {
+          "data-sort-value": "No data"
+        }
+      }
+    ],
+    [
+      {
+        text: "Stephen Alan Haigh"
+      },
+      {
+        text: "Chair of Trustees",
+        attributes: {
+          "data-sort-value": "Chair of Trustees"
+        }
+      },
+      {
+        text: "1 Sep 2022",
+        attributes: {
+          "data-sort-value": "20220901"
+        }
+      },
+      {
+        text: "21 Aug 2026",
+        attributes: {
+          "data-sort-value": "20260821"
+        }
+      }
+    ]
+  ]
+}) }}
