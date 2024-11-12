@@ -58,10 +58,25 @@
     width: 25%;
 }
 
+.ofsted-table--20 {
+    width: 20%;
+}
+
+.ofsted-table--18 {
+    width: 18%;
+}
+
 .ofsted-table--15 {
     width: 15%;
 }
 
 .ofsted-table--10 {
     width: 10%;
+}
+
+.ofsted-currentRating-table {
+    .govuk-tag {
+        width: 85%;
+        text-align: center;
+    }
 }

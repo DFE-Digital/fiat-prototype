@@ -1,35 +1,22 @@
-{# Set before joining tag #}
-{% set beforeJoiningTag %}
-  {{ govukTag({
-    text: "Before joining",
-    classes: "govuk-tag--grey"
-  }) }}
-{% endset %}
-
-{# Set After joining tag #}
-{% set afterJoiningTag %}
-  {{ govukTag({
-    text: "After joining"
-  }) }}
-{% endset %}
+{# <h3 class="govuk-heading-m">Details</h2> #}
 
 {{ govukTable({
   caption: "Current ratings",
   captionClasses: "govuk-table__caption--m",
-  classes: "ofsted-currentRating-table",
   attributes: {
     'data-module': 'moj-sortable-table'
   },
   head: [
     {
       text: "School name",
+      classes: "ofsted-table--25",
       attributes: {
         "aria-sort": "ascending"
       }
     },
     {
       text: "Before or after joining",
-      classes: "ofsted-table--15",
+      classes: "ofsted-table--10",
       attributes: {
         "aria-sort": "none"
       }
@@ -83,7 +70,7 @@
         html: "<a href='#' class='govuk-link'>A long name voluntary academy</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
@@ -130,7 +117,7 @@
         html: "<a href='#' class='govuk-link'>A longer name academy</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
@@ -177,7 +164,7 @@
         html: "<a href='#' class='govuk-link'>Another academy with the longest name to test</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
@@ -224,7 +211,7 @@
         html: "<a href='#' class='govuk-link'>Another longer named academy</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
@@ -271,7 +258,7 @@
         html: "<a href='#' class='govuk-link'>Baking academy</a>"
       },
       {
-        html: afterJoiningTag,
+        text: "After",
         attributes: {
           "data-sort-value": "after"
         }
@@ -318,7 +305,7 @@
         html: "<a href='#' class='govuk-link'>Biscuit academy</a>"
       },
       {
-        html: afterJoiningTag,
+        text: "After",
         attributes: {
           "data-sort-value": "after"
         }
@@ -365,7 +352,7 @@
         html: "<a href='#' class='govuk-link'>Chocolate academy</a>"
       },
       {
-        html: afterJoiningTag,
+        text: "After",
         attributes: {
           "data-sort-value": "after"
         }
@@ -412,7 +399,7 @@
         html: "<a href='#' class='govuk-link'>Coffee academy</a>"
       },
       {
-        html: afterJoiningTag,
+        text: "After",
         attributes: {
           "data-sort-value": "after"
         }
@@ -459,7 +446,7 @@
         html: "<a href='#' class='govuk-link'>Fruity academy</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
@@ -506,7 +493,7 @@
         html: "<a href='#' class='govuk-link'>Grunge academy</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
@@ -553,7 +540,7 @@
         html: "<a href='#' class='govuk-link'>Orange voluntary academy</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
@@ -600,7 +587,7 @@
         html: "<a href='#' class='govuk-link'>School or academy name here</a>"
       },
       {
-        html: afterJoiningTag,
+        text: "After",
         attributes: {
           "data-sort-value": "after"
         }
@@ -647,7 +634,7 @@
         html: "<a href='#' class='govuk-link'>Strawberry academy</a>"
       },
       {
-        html: beforeJoiningTag,
+        text: "Before",
         attributes: {
           "data-sort-value": "before"
         }
