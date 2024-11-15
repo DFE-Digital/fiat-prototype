@@ -29,9 +29,12 @@
 {% endset %}
 
 {# Guidance content #}
-{{ govukInsetText({
+{# {{ govukInsetText({
   html: ofstedSubjudgementGuidance
-}) }}
+}) }} #}
+
+{# Effective safeguarding and Category of concern explainers #}
+{% include "/183585-ofsted/mvp/parts/explainer-COCandES.njk" %}
 
 {# Sub-nav to flick through data sets #}
 {% include "../parts/ofsted-sub_nav.njk" %}
@@ -47,8 +50,11 @@
 {# Effective safeguarding #}
 {# {% include "/183585-ofsted/mvp/parts/explainer-effectiveSafeguarding.njk" %} #}
 
-{# Effective safeguarding and Category of concern explainers #}
-{% include "/183585-ofsted/mvp/parts/explainer-COCandES.njk" %}
+{{ govukButton({
+    text: "Download Ofsted data",
+    classes: "govuk-button--secondary",
+    href: "#"
+  }) }}
 
 {# Sources and updates #}
 {% include "/183585-ofsted/mvp/parts/sources-updates.njk" %}
