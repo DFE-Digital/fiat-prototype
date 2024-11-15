@@ -1,7 +1,7 @@
 {# Set before joining tag #}
 {% set beforeJoiningTag %}
   {{ govukTag({
-    text: "Before joining",
+    text: "Before",
     classes: "govuk-tag--grey"
   }) }}
 {% endset %}
@@ -9,7 +9,7 @@
 {# Set After joining tag #}
 {% set afterJoiningTag %}
   {{ govukTag({
-    text: "After joining"
+    text: "After"
   }) }}
 {% endset %}
 
@@ -24,12 +24,11 @@
     {
       text: "School name",
       attributes: {
-        "aria-sort": "ascending"
+        "aria-sort": "none"
       }
     },
     {
       text: "Before or after joining",
-      classes: "ofsted-table--15",
       attributes: {
         "aria-sort": "none"
       }

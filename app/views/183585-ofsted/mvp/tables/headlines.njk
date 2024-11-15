@@ -1,13 +1,28 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before",
+    classes: "govuk-tag--grey"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After"
+  }) }}
+{% endset %}
+
 {{ govukTable({
   attributes: {
     'data-module': 'moj-sortable-table'
   },
   caption: "Headlines",
   captionClasses: "govuk-table__caption--m",
+  classes: "ofsted-headlines-table",
   head: [
     {
       text: "School name",
-      classes: "ofsted-table--50",
       attributes: {
         "aria-sort": "none"
       }
@@ -29,6 +44,12 @@
     {
       text: "Category of concern",
       classes: "ofsted-table--15",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Before or after joining",
       attributes: {
         "aria-sort": "none"
       }
@@ -56,6 +77,12 @@
         attributes: {
           "data-sort-value": "Not available"
         }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
       }
     ],
     [
@@ -78,6 +105,12 @@
         text: "Not available",
         attributes: {
           "data-sort-value": "Not available"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
         }
       }
     ],
@@ -102,6 +135,12 @@
         attributes: {
           "data-sort-value": "Special measures"
         }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
       }
     ],
     [
@@ -124,6 +163,12 @@
         text: "No",
         attributes: {
           "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
         }
       }
     ],
@@ -148,6 +193,12 @@
         attributes: {
           "data-sort-value": "No"
         }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
       }
     ],
     [
@@ -170,6 +221,12 @@
         text: "Not available",
         attributes: {
           "data-sort-value": "Not available"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
         }
       }
     ],
@@ -194,6 +251,12 @@
         attributes: {
           "data-sort-value": "Serious weakness"
         }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
       }
     ],
     [
@@ -216,6 +279,12 @@
         text: "Serious weakness",
         attributes: {
           "data-sort-value": "Serious weakness"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
         }
       }
     ],
@@ -240,6 +309,12 @@
         attributes: {
           "data-sort-value": "No"
         }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
       }
     ],
     [
@@ -262,6 +337,12 @@
         text: "No",
         attributes: {
           "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
         }
       }
     ],
@@ -286,6 +367,12 @@
         attributes: {
           "data-sort-value": "Serious weakness"
         }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
       }
     ],
     [
@@ -309,6 +396,12 @@
         attributes: {
           "data-sort-value": "No"
         }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
       }
     ],
     [
@@ -331,6 +424,12 @@
         text: "No",
         attributes: {
           "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
         }
       }
     ]
