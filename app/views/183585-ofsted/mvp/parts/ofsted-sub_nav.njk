@@ -1,6 +1,12 @@
 {{ mojSubNavigation({
   label: 'Sub navigation',
-  items: [{
+  items: [
+  {
+    text: 'Headlines',
+    href: 'ofsted-headlines',
+    active: true if subNavActive == "headlines"
+  },
+  {
     text: 'Important dates',
     href: 'ofsted-dates',
     active: true if subNavActive == "dates"
