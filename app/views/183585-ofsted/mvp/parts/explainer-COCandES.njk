@@ -1,7 +1,7 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {# Set up a bunch of content #}
-{% set catOfConcern %}
+{% set COCandES %}
     <p class='govuk-body'>
       <span class="govuk-!-font-weight-bold">'Category of concern'</span> means that a school has been judged as inadequate for any key or provision judgement. The school either has serious weaknesses or requires special measures.
     </p>
@@ -12,6 +12,6 @@
 
 {# Display it all in a details component #}
 {{ govukDetails({
-  summaryText: 'What does "Effective safeguarding" and "Category of concern" mean?',
-  html: catOfConcern
+  summaryText: 'What this information means',
+  html: COCandES
 }) }}
