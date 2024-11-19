@@ -1,0 +1,27 @@
+{# 176279-pipelines #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Pipeline academies
+</h2>
+
+<p class="govuk-caption-m">
+    Pipeline academies are academies which are going to be joining a trust but have not joined just yet. TRAMS provided this information, which users now want to see in FIAT as they make the transition.
+</p>
+
+{% set pipelinesContent %}
+    {# Ofsted changes MvP #}
+    {% include "/176279-pipelines/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-pipelines-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: pipelinesContent
+        }
+    }
+    ]
+}) }}

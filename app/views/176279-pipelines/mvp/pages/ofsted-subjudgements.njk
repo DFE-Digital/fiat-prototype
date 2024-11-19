@@ -1,0 +1,58 @@
+{% extends "/176279-pipelines/mvp/layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set navActive = "ofsted" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "subjudgements" %}
+
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      Ofsted
+  </h2>
+
+{# Guidance content set #}
+{# {% set ofstedSubjudgementGuidance %}
+  <p class="govuk-body">
+    You can download a spreadsheet containing this information and ratings from the previous inspection if the academy has had one.
+  </p>
+  {{ govukButton({
+    text: "Download Ofsted data",
+    classes: "govuk-button--secondary",
+    href: "#"
+  }) }}
+{% endset %} #}
+
+{# Guidance content #}
+{# {{ govukInsetText({
+  html: ofstedSubjudgementGuidance
+}) }} #}
+
+{# Sub-nav to flick through data sets #}
+{% include "../parts/ofsted-sub_nav.njk" %}
+
+<p class="govuk-body">Click on a school's name to open its Ofsted page in a new tab.</p>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+{# Tabs to flick through tables #}
+{% include "../tables/subjudgements.njk" %}
+
+<hr class="govuk-section-break govuk-section-break--s">
+
+{{ govukButton({
+    text: "Download all Ofsted data",
+    classes: "govuk-button--secondary",
+    href: "#"
+  }) }}
+
+{# Sources and updates #}
+{% include "/176279-pipelines/mvp/parts/sources-updates.njk" %}
+
+{% endblock %}
