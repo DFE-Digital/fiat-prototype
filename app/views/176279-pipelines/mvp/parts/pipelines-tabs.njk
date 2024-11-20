@@ -1,0 +1,37 @@
+{% set preAdvisoryTable %}
+    {% include "../tables/pre-advisory.njk" %}
+{% endset -%}
+
+{% set postAdvisoryTable %}
+    {% include "../tables/post-advisory.njk" %}
+{% endset -%}
+
+{% set freeSchoolsTable %}
+    {% include "../tables/free-schools.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Pre advisory board (6)",
+      id: "pipelines-pre-advisory-table",
+      panel: {
+        html: preAdvisoryTable
+      }
+    },
+    {
+      label: "Post advisory board (3)",
+      id: "pipelines-post-advisory-table",
+      panel: {
+        html: postAdvisoryTable
+      }
+    },
+    {
+      label: "Free schools (3)",
+      id: "pipelines-free-schools-table",
+      panel: {
+        html: freeSchoolsTable
+      }
+    }
+  ]
+}) }}

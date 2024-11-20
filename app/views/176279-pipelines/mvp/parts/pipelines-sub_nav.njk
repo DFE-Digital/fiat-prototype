@@ -1,0 +1,21 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [{
+    text: 'In this trust',
+    href: '',
+    active: true if subNavActive == "in the trust"
+  }, {
+    text: 'Pipeline academies',
+    href: 'pipelines-pre-pipeline',
+    active: true if subNavActive == "pipeline"
+  }, {
+    text: 'Past academies',
+    href: '',
+    active: true if subNavActive == "past academies"
+  }, {
+    text: 'Free schools',
+    href: '',
+    active: true if subNavActive == "free schools"
+  }
+  ]
+}) }}
