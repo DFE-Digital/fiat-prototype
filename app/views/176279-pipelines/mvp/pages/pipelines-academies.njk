@@ -24,7 +24,11 @@
   {# Tabs to flick through tables #}
   {% include "../parts/pipelines-tabs.njk" %}
 
-  <hr class="govuk-section-break govuk-section-break--s">
+  {{ govukButton({
+    text: "Download all academy data",
+    classes: "govuk-button--secondary",
+    href: "#"
+  }) }}
 
   {# Sources and updates #}
   {% include "/176279-pipelines/mvp/parts/sources-updates.njk" %}
