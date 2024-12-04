@@ -10,15 +10,29 @@ currentData variable of today #}
 
 {# Set up a bunch of source and updates content #}
 {% set sourceUpdatesContent %}
-    <p class='govuk-body'>
-        <span class='govuk-!-font-weight-bold'>Ofsted</span><br>
-        Last updated: {{ currentDate }}<br>
-        Information from: Place...
+    <ul class="govuk-list govuk-list--bullet">
+
+        <li class="">
+            <span class='govuk-!-font-weight-bold'>Pre advisory board </span>information was taken from Get information about schools on 31 October 2023.
+        </li>
+
+        <li class="">
+            <span class='govuk-!-font-weight-bold'>Post advisory board </span>information was taken from Get information about schools on 31 October 2023.
+        </li>
+
+        <li class="">
+            <span class='govuk-!-font-weight-bold'>Free schools </span>information was taken from Get information about schools on 31 October 2023.
+        </li>
+
+    </ul>
+
+    <p class="govuk-body">
+        More recent information may have been made available since this data was captured.
     </p>
 {% endset %}
 
 {# Display it all in a details component #}
 {{ govukDetails({
-  summaryText: "Sources and updates",
+  summaryText: "Where this information came from",
   html: sourceUpdatesContent
 }) }}
