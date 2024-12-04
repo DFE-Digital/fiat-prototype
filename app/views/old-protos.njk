@@ -1,0 +1,48 @@
+{% extends "layouts/main.njk" %}
+
+{% set pageTitle = "Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }} prototype archive
+    </h1>
+
+    <p class="govuk-caption-l">
+      Older feature prototypes for the FIAT project, which were iterated and tested before being built and released to the live product.
+    </p>
+
+    <p class="govuk-body-m govuk-!-margin-top-5">
+      View current FIAT prototypes which are being iterated and built, ready for the live product.
+    </p>
+
+    {{ govukButton({
+      text: "View current prototypes",
+      classes: "govuk-button--secondary",
+      href: "index"
+    }) }}
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">    
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    {# 183585-ofsted #}
+    {% include "/183585-ofsted/index-content/content.njk" %}
+
+    {# 171804-nav-ui-updates #}
+    {% include "/171804-nav-ui-updates/index-content/content.njk" %}
+
+    {# 178572-change-dfe-contact #}
+    {% include "/178572-change-dfe-contact/index-content/content.njk" %}
+
+  </div>
+</div>
+
+{% endblock %}

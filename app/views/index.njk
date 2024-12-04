@@ -8,12 +8,22 @@
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+      {{ serviceName }} current prototypes
     </h1>
 
     <p class="govuk-caption-l">
       Prototypes of features and iterations designed for the FIAT project, during the Beta phase (30th September 2024 onwards).
     </p>
+
+    <p class="govuk-body-m govuk-!-margin-top-5">
+      View the FIAT prototype archive to see prototypes which were taken through to development and released to the live product.
+    </p>
+
+    {{ govukButton({
+      text: "View the prototype archive",
+      classes: "govuk-button--secondary",
+      href: "old-protos"
+    }) }}
 
   </div>
 </div>
@@ -21,19 +31,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">    
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     
     {# 176279-pipelines #}
     {% include "/176279-pipelines/index-content/content.njk" %}
-
-    {# 183585-ofsted #}
-    {% include "/183585-ofsted/index-content/content.njk" %}
-
-    {# 171804-nav-ui-updates #}
-    {% include "/171804-nav-ui-updates/index-content/content.njk" %}
-
-    {# 178572-change-dfe-contact #}
-    {% include "/178572-change-dfe-contact/index-content/content.njk" %}
 
   </div>
 </div>
