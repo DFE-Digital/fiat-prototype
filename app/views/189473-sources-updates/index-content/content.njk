@@ -1,0 +1,27 @@
+{# 189473-sources-updates #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Sources and updates
+</h2>
+
+<p class="govuk-caption-m">
+    XXX
+</p>
+
+{% set sourcesUpdatesContent %}
+    {# Soruces and updates MvP #}
+    {% include "/189473-sources-updates/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-sources-updates-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: sourcesUpdatesContent
+        }
+    }
+    ]
+}) }}
