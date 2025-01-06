@@ -1,0 +1,268 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--grey govuk-!-margin-top-2"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining",
+    classes: "govuk-!-margin-top-2"
+  }) }}
+{% endset %}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Single Headline Grades (SHG)",
+  captionClasses: "govuk-table__caption--m",
+  classes: "ofsted-shg-table",
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Previous rating",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Current rating",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='#' class='govuk-link'>School or academy name here</a>"
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: "Requires improvement" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Baking academy</a>"
+      },
+      {
+        html: "Outstanding" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Chocolate academy</a>"
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: "Good" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Fruity academy</a>"
+      },
+      {
+        html: "Good" + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: "Inadequate" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Grunge academy</a>"
+      },
+      {
+        html: "Inadequate" + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      },
+      {
+        html: "Outstanding" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Biscuit academy</a>"
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: "Outstanding" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Strawberry academy</a>"
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: "Inadequate" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Coffee academy</a>"
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: "Requires improvement" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>A longer name academy</a>"
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected" 
+        }
+      },
+      {
+        html: "Good" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Another longer named academy</a>"
+      },
+      {
+        html: "Good" + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: "Good" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>A long name voluntary academy</a>"
+      },
+      {
+        html: "Requires improvement" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      },
+      {
+        html: "Good" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Orange voluntary academy</a>"
+      },
+      {
+        html: "Good" + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: "Outstanding" + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Another academy with the longest name to test</a>"
+      },
+      {
+        html: "Good" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: "Outstanding" + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      }
+    ]
+    
+  ]
+}) }}

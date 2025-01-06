@@ -1,4 +1,4 @@
-{% extends "/193768-ofsted/mvp/layouts/trust_layout.njk" %}
+{% extends "/193768-ofsted-shg/mvp/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -17,7 +17,7 @@
   </h2>
 
 {# Guidance content set #}
-{% set ofstedSubjudgementGuidance %}
+{# {% set ofstedSubjudgementGuidance %}
   <p class="govuk-body">
     You can download a spreadsheet containing this information and ratings from the previous inspection if the academy has had one.
   </p>
@@ -26,12 +26,7 @@
     classes: "govuk-button--secondary",
     href: "#"
   }) }}
-{% endset %}
-
-{# Guidance content #}
-{# {{ govukInsetText({
-  html: ofstedSubjudgementGuidance
-}) }} #}
+{% endset %} #}
 
 {# Sub-nav to flick through data sets #}
 {% include "../parts/ofsted-sub_nav.njk" %}
@@ -39,7 +34,7 @@
 <p class="govuk-body">Click on a school's name to open its Ofsted page in a new tab.</p>
 
 {# Effective safeguarding and Category of concern explainers #}
-{% include "/193768-ofsted/mvp/parts/explainer-COCandES.njk" %}
+{% include "/193768-ofsted-shg/mvp/parts/explainer-COCandES.njk" %}
 
 <hr class="govuk-section-break govuk-section-break--m">
 
@@ -48,12 +43,6 @@
 
 <hr class="govuk-section-break govuk-section-break--s">
 
-{# Category of concern #}
-{# {% include "/193768-ofsted/mvp/parts/explainer-catOfConcern.njk" %} #}
-
-{# Effective safeguarding #}
-{# {% include "/193768-ofsted/mvp/parts/explainer-effectiveSafeguarding.njk" %} #}
-
 {{ govukButton({
     text: "Download all Ofsted data",
     classes: "govuk-button--secondary",
@@ -61,6 +50,6 @@
   }) }}
 
 {# Sources and updates #}
-{% include "/193768-ofsted/mvp/parts/sources-updates.njk" %}
+{% include "/193768-ofsted-shg/mvp/parts/sources-updates.njk" %}
 
 {% endblock %}

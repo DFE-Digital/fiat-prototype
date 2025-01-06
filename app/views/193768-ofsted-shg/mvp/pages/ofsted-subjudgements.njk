@@ -1,4 +1,4 @@
-{% extends "/193768-ofsted/mvp/layouts/trust_layout.njk" %}
+{% extends "/193768-ofsted-shg/mvp/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -16,23 +16,6 @@
   <h2 class="govuk-heading-l">
       Ofsted
   </h2>
-
-{# Guidance content set #}
-{# {% set ofstedSubjudgementGuidance %}
-  <p class="govuk-body">
-    You can download a spreadsheet containing this information and ratings from the previous inspection if the academy has had one.
-  </p>
-  {{ govukButton({
-    text: "Download Ofsted data",
-    classes: "govuk-button--secondary",
-    href: "#"
-  }) }}
-{% endset %} #}
-
-{# Guidance content #}
-{# {{ govukInsetText({
-  html: ofstedSubjudgementGuidance
-}) }} #}
 
 {# Sub-nav to flick through data sets #}
 {% include "../parts/ofsted-sub_nav.njk" %}
@@ -53,6 +36,6 @@
   }) }}
 
 {# Sources and updates #}
-{% include "/193768-ofsted/mvp/parts/sources-updates.njk" %}
+{% include "/193768-ofsted-shg/mvp/parts/sources-updates.njk" %}
 
 {% endblock %}
