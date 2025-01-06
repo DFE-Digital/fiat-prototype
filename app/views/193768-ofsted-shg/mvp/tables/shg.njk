@@ -2,15 +2,14 @@
 {% set beforeJoiningTag %}
   {{ govukTag({
     text: "Before joining",
-    classes: "govuk-tag--grey govuk-!-margin-top-2"
+    classes: "govuk-tag--grey"
   }) }}
 {% endset %}
 
 {# Set After joining tag #}
 {% set afterJoiningTag %}
   {{ govukTag({
-    text: "After joining",
-    classes: "govuk-!-margin-top-2"
+    text: "After joining"
   }) }}
 {% endset %}
 
@@ -66,7 +65,7 @@
         }
       },
       {
-        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Requires improvement"
         }
@@ -83,7 +82,7 @@
         }
       },
       {
-        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Outstanding" 
         }
@@ -112,10 +111,11 @@
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Good"
-        }
+        },
+        classes: ""
       }
     ],
     [
@@ -129,13 +129,13 @@
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + beforeJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
         attributes: {
           "data-sort-value": "Good"
         }
       },
       {
-        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Inadequate"
         }
@@ -152,13 +152,13 @@
         }
       },
       {
-        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + beforeJoiningTag,
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
         attributes: {
           "data-sort-value": "Inadequate"
         }
       },
       {
-        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Outstanding" 
         }
@@ -181,7 +181,7 @@
         }
       },
       {
-        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Outstanding" 
         }
@@ -204,7 +204,7 @@
         }
       },
       {
-        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Inadequate"
         }
@@ -227,7 +227,7 @@
         }
       },
       {
-        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Requires improvement"
         }
@@ -250,7 +250,7 @@
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Good"
         }
@@ -267,13 +267,13 @@
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + beforeJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
         attributes: {
           "data-sort-value": "Good"
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Good"
         }
@@ -290,13 +290,13 @@
         }
       },
       {
-        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Requires improvement"
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Good"
         }
@@ -313,13 +313,13 @@
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + beforeJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
         attributes: {
           "data-sort-value": "Good"
         }
       },
       {
-        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + beforeJoiningTag,
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
         attributes: {
           "data-sort-value": "Outstanding"
         }
@@ -336,13 +336,13 @@
         }
       },
       {
-        html: '<strong>' + 'Good' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Good"
         }
       },
       {
-        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + afterJoiningTag,
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
         attributes: {
           "data-sort-value": "Outstanding"
         }
