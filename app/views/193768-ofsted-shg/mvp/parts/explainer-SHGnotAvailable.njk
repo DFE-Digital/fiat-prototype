@@ -1,0 +1,15 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set catOfConcern %}
+    <p class='govuk-body'>
+        <p class="govuk-body">Single Headline Grades (SHG) were no longer awarded from <strong>2nd September 2024</strong>.</p>
+        <p class="govuk-body">Ofsted inspections completed since then provide a series of sub-judgements, provided on the current and previous ratings pages.</p>
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'Why is an SHG not available?',
+  html: catOfConcern
+}) }}
