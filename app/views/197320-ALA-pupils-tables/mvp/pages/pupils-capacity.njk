@@ -1,36 +1,34 @@
-{% extends "/189473-sources-updates/mvp/layouts/trust_layout.njk" %}
+{% extends "/197320-ALA-pupils-tables/mvp/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
 
 {# Set an active state on the appropraite side nav item #}
-{% set navActive = "academies" %}
+{% set navActive = "pupils" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "pipeline" %}
+{% set subNavActive = "capacity" %}
 
 {# Custom block for the main content area of a trust page #}
-{% block trustContent %}
+{% block schoolContent %}
 
   <h2 class="govuk-heading-l">
-      Academies
+      Pupils
   </h2>
 
   {# Sub-nav to flick through data sets #}
-  {% include "../parts/pipelines-sub_nav.njk" %}
-
-  <h3 class="govuk-heading-m">Pipeline academies</h3>
+  {% include "../parts/pupils-sub_nav.njk" %}
 
   {# Tabs to flick through tables #}
-  {% include "../parts/pipelines-tabs.njk" %}
+  {% include "../tables/pupil-capacity.njk" %}
 
   {{ govukButton({
-    text: "Download all academy data",
+    text: "Download all pupil data",
     classes: "govuk-button--secondary",
     href: "#"
   }) }}
 
   {# Sources and updates #}
-  {% include "/189473-sources-updates/mvp/parts/sources-updates.njk" %}
+  {% include "/197320-ALA-pupils-tables/mvp/parts/sources-updates.njk" %}
 
 {% endblock %}
