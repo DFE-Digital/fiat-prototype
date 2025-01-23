@@ -1,0 +1,27 @@
+{# 197320-ALA-pupils-tables #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Pupils tables
+</h2>
+
+<p class="govuk-caption-m">
+    Table mocks to display pupil related data, taken from various censuses and SCAP databases.
+</p>
+
+{% set pupilsTablesContent %}
+    {# Pupils tables MvP #}
+    {% include "/197320-ALA-pupils-tables/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-pupils-tables-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: pupilsTablesContent
+        }
+    }
+    ]
+}) }}
