@@ -1,259 +1,104 @@
-{{ govukTable({
-  attributes: {
-    'data-module': 'moj-sortable-table'
-  },
-  caption: "Pupil capacity",
-  captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-2",
-  head: [
-    {
-      text: "School name",
-      attributes: {
-        "aria-sort": "none"
-      }
-    },
-    {
-      text: "URN",
-      attributes: {
-        "aria-sort": "none"
-      }
-    },
-    {
-      text: "Age range",
-      attributes: {
-        "aria-sort": "none"
-      }
-    },
-    {
-      text: "Local authority ",
-      attributes: {
-        "aria-sort": "none"
-      }
-    },
-    {
-      text: "Project type",
-      attributes: {
-        "aria-sort": "none"
-      }
-    },
-    {
-      text: "Proposed conversion or transfer date",
-      classes: "table-col--20",
-      attributes: {
-        "aria-sort": "none"
-      }
-    }
-  ],
-  rows: [
-    [
-      {
-        html: "School or academy name here"
-      },
-      {
-        text: "12453",
-        attributes: {
-          "data-sort-value": "12453"
-        }
-      },
-      {
-        text: "4-16",
-        attributes: {
-          "data-sort-value": "4-16"
-        }
-      },
-      {
-        text: "Sheffield",
-        attributes: {
-          "data-sort-value": "Sheffield"
-        }
-      },
-      {
-        text: "Conversion",
-        attributes: {
-          "data-sort-value": "Conversion"
-        }
-      },
-      {
-        text: "12 Aug 2011",
-        attributes: {
-          "data-sort-value": "110812"
-        }
-      }
-    ],
-    [
-      {
-        html: "Baking academy"
-      },
-      {
-        text: "47835",
-        attributes: {
-          "data-sort-value": "47835"
-        }
-      },
-      {
-        text: "4-16",
-        attributes: {
-          "data-sort-value": "4-16"
-        }
-      },
-      {
-        text: "Bristol",
-        attributes: {
-          "data-sort-value": "Bristol"
-        }
-      },
-      {
-        text: "Conversion",
-        attributes: {
-          "data-sort-value": "Conversion" 
-        }
-      },
-      {
-        text: "12 Aug 2011",
-        attributes: {
-          "data-sort-value": "110812" 
-        }
-      }
-    ],
-    [
-      {
-        html: "Chocolate academy"
-      },
-      {
-        text: "37834",
-        attributes: {
-          "data-sort-value": "37834" 
-        }
-      },
-      {
-        text: "4-16",
-        attributes: {
-          "data-sort-value": "4-16"
-        }
-      },
-      {
-        text: "Birmingham",
-        attributes: {
-          "data-sort-value": "Birmingham"
-        }
-      },
-      {
-        text: "Transfer",
-        attributes: {
-          "data-sort-value": "Transfer" 
-        }
-      },
-      {
-        text: "12 Sep 2020",
-        attributes: {
-          "data-sort-value": "200912" 
-        }
-      }
-    ],
-    [
-      {
-        html: "Fruity academy"
-      },
-      {
-        text: "86546",
-        attributes: {
-          "data-sort-value": "86546" 
-        }
-      },
-      {
-        text: "4-16",
-        attributes: {
-          "data-sort-value": "4-16"
-        }
-      },
-      {
-        text: "Sheffield",
-        attributes: {
-          "data-sort-value": "Sheffield"
-        }
-      },
-      {
-        text: "Transfer",
-        attributes: {
-          "data-sort-value": "Transfer" 
-        }
-      },
-      {
-        text: "Unconfirmed",
-        attributes: {
-          "data-sort-value": "Unconfirmed" 
-        }
-      }
-    ],
-    [
-      {
-        html: "Grunge academy"
-      },
-      {
-        text: "74636",
-        attributes: {
-          "data-sort-value": "74636" 
-        }
-      },
-      {
-        text: "5-11",
-        attributes: {
-          "data-sort-value": "5-11"
-        }
-      },
-      {
-        text: "Leeds",
-        attributes: {
-          "data-sort-value": "Leeds"
-        }
-      },
-      {
-        text: "Conversion",
-        attributes: {
-          "data-sort-value": "Conversion" 
-        }
-      },
-      {
-        text: "18 Mar 2019",
-        attributes: {
-          "data-sort-value": "190318" 
-        }
-      }
-    ],
-    [
-      {
-        html: "Biscuit academy"
-      },
-      {
-        text: "37472",
-        attributes: {
-          "data-sort-value": "37472" 
-        }
-      },
-      {
-        text: "5-11",
-        attributes: {
-          "data-sort-value": "5-11"
-        }
-      },
-      {
-        text: "Manchester",
-        attributes: {
-          "data-sort-value": "Manchester"
-        }
-      },
-      {
-        text: "Transfer",
-        attributes: {
-          "data-sort-value": "Transfer" 
-        }
-      },
-      {
-        text: "Unconfirmed",
-        attributes: {
-          "data-sort-value": "Unconfirmed"
-        }
-      }
-    ]
+<table class="govuk-table pupil-capacity--table">
     
-  ]
-}) }}
+    <caption class="govuk-table__caption govuk-table__caption--m">Pupil capacity</caption>
+    
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+                <span class="govuk-visually-hidden">Data type</span>
+            </th>
+            <th colspan="3" scope="col" class="govuk-table__header govuk-!-text-align-centre border--start year">2025</th>
+            <th scope="col" class="govuk-table__header border--end year">2024</th>
+            <th scope="col" class="govuk-table__header year">2023</th>
+            <th scope="col" class="govuk-table__header year">2022</th>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+                <span class="govuk-visually-hidden">Census</span>
+            </th>
+            <th scope="col" class="govuk-table__header border--start">Autumn</th>
+            <th scope="col" class="govuk-table__header">Summer</th>
+            <th scope="col" class="govuk-table__header ">Spring</th>
+            <th scope="col" class="govuk-table__header border--end">Autumn</th>
+            <th scope="col" class="govuk-table__header">Autumn</th>
+            <th scope="col" class="govuk-table__header">Autumn</th>
+        </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+
+        {# Number of pupils on role (NOR) #}
+        <tr class="govuk-table__row">
+            {# Data type #}
+            <th class="govuk-table__cell ">Number of pupils on role (NOR)</th>
+
+            {# 2025 Autumn #}
+            <td class="govuk-table__cell border--start">Not yet submitted</td>
+
+            {# 2025 Summer #}
+            <td class="govuk-table__cell">127</td>
+
+            {# 2025 Spring #}
+            <td class="govuk-table__cell govuk-table__cell--numeric ">123</td>
+
+            {# 2024 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric border--end">106</td>
+
+            {# 2023 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric">102</td>
+
+            {# 2022 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric">102</td>
+        </tr>
+
+        {# Capacity #}
+        <tr class="govuk-table__row">
+            {# Data type #}
+            <th class="govuk-table__cell ">Capacity</th>
+
+            {# 2025 Autumn #}
+            <td class="govuk-table__cell border--start" >Not yet submitted</td>
+
+            {# 2025 Summer #}
+            <td class="govuk-table__cell">268</td>
+
+            {# 2025 Spring #}
+            <td class="govuk-table__cell govuk-table__cell--numeric ">268</td>
+
+            {# 2024 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric border--end">246</td>
+
+            {# 2023 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric">102</td>
+
+            {# 2022 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric">102</td>
+        </tr>
+
+        {# % Full #}
+        <tr class="govuk-table__row">
+            {# Data type #}
+            <th class="govuk-table__cell ">% Full</th>
+
+            {# 2025 Autumn #}
+            <td class="govuk-table__cell border--start" >Not yet submitted</td>
+
+            {# 2025 Summer #}
+            <td class="govuk-table__cell">47%</td>
+
+            {# 2025 Spring #}
+            <td class="govuk-table__cell govuk-table__cell--numeric ">45%</td>
+
+            {# 2024 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric border--end">43%</td>
+
+            {# 2023 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric">41%</td>
+            
+            {# 2022 #}
+            <td class="govuk-table__cell govuk-table__cell--numeric">41%</td>
+        </tr>
+
+    </tbody>
+</table>
