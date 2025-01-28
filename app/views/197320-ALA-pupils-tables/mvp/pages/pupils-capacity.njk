@@ -19,8 +19,10 @@
   {# Sub-nav to flick through data sets #}
   {% include "../parts/pupils-sub_nav.njk" %}
 
-  {# Tabs to flick through tables #}
-  {% include "../tables/pupil-capacity.njk" %}
+  <h3 class="govuk-heading-m">Pupil capacity</h3>
+
+  {# Tabs to flick through data sets #}
+  {% include "../parts/pupils-capacity-tabs.njk" %}
 
   {{ govukButton({
     text: "Download all pupil data",

@@ -1,4 +1,4 @@
-{% extends "/197320-ALA-pupils-tables/mvp/layouts/trust_layout.njk" %}
+{% extends "/197320-ALA-pupils-tables/mvp-a/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -19,10 +19,8 @@
   {# Sub-nav to flick through data sets #}
   {% include "../parts/pupils-sub_nav.njk" %}
 
-  <h3 class="govuk-heading-m">Pupil attendance</h3>
-
-  {# Tabs to flick through data sets #}
-  {% include "../parts/pupils-attendance-tabs.njk" %}
+  {# Tabs to flick through tables #}
+  {% include "../tables/pupil-attendance.njk" %}
 
   {{ govukButton({
     text: "Download all pupil data",
@@ -31,6 +29,6 @@
   }) }}
 
   {# Sources and updates #}
-  {% include "/197320-ALA-pupils-tables/mvp/parts/sources-updates.njk" %}
+  {% include "/197320-ALA-pupils-tables/mvp-a/parts/sources-updates.njk" %}
 
 {% endblock %}
