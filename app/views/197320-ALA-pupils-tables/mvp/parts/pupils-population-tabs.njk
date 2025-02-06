@@ -1,0 +1,59 @@
+{% set overviewTable %}
+    {% include "../tables/population-overview.njk" %}
+{% endset -%}
+
+{% set 2024table %}
+    {% include "../tables/population-2024.njk" %}
+{% endset -%}
+
+{% set 2023table %}
+    {% include "../tables/population-2023.njk" %}
+{% endset -%}
+
+{% set 2022table %}
+    {% include "../tables/population-2022.njk" %}
+{% endset -%}
+
+{% set 2021table %}
+    {% include "../tables/population-2021.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Overview",
+      id: "population-overview-table",
+      panel: {
+        html: overviewTable
+      }
+    },
+    {
+      label: "2024",
+      id: "population-2024-table",
+      panel: {
+        html: 2024table
+      }
+    },
+    {
+      label: "2023",
+      id: "population-2023-table",
+      panel: {
+        html: 2023table
+      }
+    },
+    {
+      label: "2022",
+      id: "population-2022-table",
+      panel: {
+        html: 2022table
+      }
+    },
+    {
+      label: "2021",
+      id: "population-2021-table",
+      panel: {
+        html: 2021table
+      }
+    }
+  ]
+}) }}

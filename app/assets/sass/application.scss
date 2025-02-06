@@ -91,3 +91,26 @@
         line-height: 1.7;
     }
 }
+
+// 197320-ALA-pupils-tables
+.pupil-capacity--table {
+    th, td {
+        text-align: left;
+    }
+
+    // th.year {
+    //     @include govuk-font($size: 24);
+    //     font-weight: bold;
+    // }
+
+    .border--start {
+        @include govuk-responsive-padding(3, "left");
+        border-left: 1px solid $govuk-border-colour;
+    }
+
+    .border--end {
+        @include govuk-responsive-padding(3, "left");
+        border-left: 1px solid $govuk-border-colour;
+    }
+
+}
