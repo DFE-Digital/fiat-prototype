@@ -1,0 +1,18 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set docNotExpected %}
+    <p class='govuk-body'>
+        <p class="govuk-body">A document might not be expected to have been supplied by a trust for reasons.</p>
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'Why a document might not be expected',
+  html: docNotExpected
+}) }}
+
+
+
+
