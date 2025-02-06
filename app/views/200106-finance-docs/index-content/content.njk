@@ -1,0 +1,27 @@
+{# 200106-finance-docs #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Finance documents
+</h2>
+
+<p class="govuk-caption-m">
+    Sub-pages with short lists of clickable links to finance documents, held in Trust Sharepoint's.
+</p>
+
+{% set financeDocsContent %}
+    {# Finance docs MvP #}
+    {% include "/200106-finance-docs/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-finance-docs-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: financeDocsContent
+        }
+    }
+    ]
+}) }}

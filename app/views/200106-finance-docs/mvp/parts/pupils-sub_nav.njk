@@ -1,0 +1,17 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [{
+    text: 'Capacity',
+    href: 'pupils-capacity',
+    active: true if subNavActive == "capacity"
+  }, {
+    text: 'Attendance',
+    href: 'pupils-attendance',
+    active: true if subNavActive == "attendance"
+  }, {
+    text: 'Population',
+    href: 'pupils-population',
+    active: true if subNavActive == "population"
+  }
+  ]
+}) }}
