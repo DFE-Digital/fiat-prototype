@@ -45,10 +45,10 @@
   {# What is this document #}
   {{ explainerLetters | safe }}
 
-  {# Doc not expected guidance #}
+  {# Why a document might not be available #}
   {# {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %} #}
   {{ govukDetails({
-    summaryText: 'Why a document might not be expected',
+    summaryText: 'Why a document might not be available',
     html: docNotExpected
   }) }}
 
