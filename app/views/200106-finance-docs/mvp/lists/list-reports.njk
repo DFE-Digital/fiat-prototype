@@ -13,6 +13,11 @@
     }) }}
 {% endset %}
 
+{# Set text for not expected for easy reuse #}
+{% set documentNotExpected %}
+    <p class="govuk-body">Not expected</p>
+{% endset %}
+
 {{ govukSummaryList({
   classes: "govuk-!-margin-bottom-0",
   rows: [
@@ -37,15 +42,7 @@
         text: "2023 to 2024"
       },
       value: {
-        html: documentLink
-      }
-    },
-    {
-      key: {
-        text: "2022 to 2023"
-      },
-      value: {
-        html: '<p class="govuk-body">Not expected</p>'
+        html: documentNotExpected
       }
     }
   ]
