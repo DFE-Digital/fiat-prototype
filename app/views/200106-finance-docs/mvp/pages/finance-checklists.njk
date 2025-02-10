@@ -9,6 +9,23 @@
 {# Set an active state on the appropraite secondary nav item #}
 {% set subNavActive = "checklists" %}
 
+{# Set guidance content variable #}
+{% set explainerChecklists %}
+  <p class="govuk-body">Trusts must submit a completed copy of the school resource management self-assessment checklist (SRMSAC) every year.</p>
+  <p class="govuk-body">We use this to check the trust's financial management and performance against the needs set out in the 
+    <a href="https://www.gov.uk/guidance/academy-trust-handbook" target="_blank">Academy trust handbook</a>.
+  </p>
+{% endset %}
+
+{# Set guidance for document not expected #}
+{% set docNotExpected %}
+  <p class="govuk-body">We include links to any financial documents we have received in the last 3 years.</p>
+  <p class="govuk-body">If a trust <strong>does not</strong> submit a document before the deadline we show this as 'not submitted' until we receive it.</p>
+  <p class="govuk-body">If a document <strong>could not have been</strong> submitted, for example because a trust had not formed until after that year, we say that it was 'not expected'.</p>
+  <p class="govuk-body">SRMSACs cover one year from 1 September to 31 August.</p>
+  <p class="govuk-body">The deadline for submission is the following 31 March.</p>
+{% endset %}
+
 {# Custom block for the main content area of a trust page #}
 {% block trustContent %}
 
@@ -21,10 +38,15 @@
 
   <h3 class="govuk-heading-m">School resource management self-assessment checklists</h3>
 
-  <p class="govuk-body">A short explainer of what a SRMSA checklist is.</p>
+  {# What is this document #}
+  {{ explainerChecklists | safe }}
 
   {# Doc not expected guidance #}
-  {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %}
+  {# {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %} #}
+  {{ govukDetails({
+    summaryText: 'Why a document might not be expected',
+    html: docNotExpected
+  }) }}
 
   {# <hr class="govuk-section-break govuk-section-break--m"> #}
 
@@ -40,7 +62,6 @@
     </div>
   </div>
 
-  {# <hr class="govuk-section-break govuk-section-break--s"> #}
   <hr class="govuk-section-break govuk-section-break--m">
 
   {# Sources and updates #}
