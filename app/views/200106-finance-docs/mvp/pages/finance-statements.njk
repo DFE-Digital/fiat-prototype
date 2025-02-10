@@ -9,6 +9,19 @@
 {# Set an active state on the appropraite secondary nav item #}
 {% set subNavActive = "statements" %}
 
+{# Set guidance content variable #}
+{% set explainerStatements %}
+  <p class="govuk-body">Trusts must submit a financial statement to us every year.</p>
+  <p class="govuk-body">It includes information and independent reports on:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>governance</li>
+    <li>trustees</li>
+    <li>balance</li>
+    <li>financial activity</li>
+  </ul>
+  
+{% endset %}
+
 {# Custom block for the main content area of a trust page #}
 {% block trustContent %}
 
@@ -21,7 +34,8 @@
 
   <h3 class="govuk-heading-m">Financial statements</h3>
 
-  <p class="govuk-body">A short explainer of what a financial statement is.</p>
+  {# What is this document #}
+  {{ explainerStatements | safe }}
 
   {# Doc not expected guidance #}
   {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %}
