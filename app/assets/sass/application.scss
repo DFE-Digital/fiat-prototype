@@ -118,8 +118,8 @@
 .fiat-warning-banner-a {
     @include govuk-responsive-padding(2, "left");
     @include govuk-responsive-padding(2, "right");
-    @include govuk-responsive-padding(1, "top");
-    @include govuk-responsive-padding(1, "bottom");
+    @include govuk-responsive-padding(2, "top");
+    @include govuk-responsive-padding(2, "bottom");
     @include govuk-responsive-margin(6, "bottom");
     background-color: govuk-colour("black");
 
