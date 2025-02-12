@@ -1,0 +1,49 @@
+{# Set link text variable for easy reuse #}
+{% set documentLink %}
+    <a href="#">
+        View management letter (opens in a new tab)
+    </a>
+{% endset %}
+
+{# Set coloured tag for not yet submitted for easy reuse #}
+{% set documentNotSubmitted %}
+    {{ govukTag({
+        text: "Not yet submitted",
+        classes: "govuk-tag--yellow"
+    }) }}
+{% endset %}
+
+{# Set text for not expected for easy reuse #}
+{% set documentNotExpected %}
+    <p class="govuk-body">Not expected</p>
+{% endset %}
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-0",
+  rows: [
+    {
+      key: {
+        text: "2025 to 2026"
+      },
+      value: {
+        html: documentNotSubmitted
+      }
+    },
+    {
+      key: {
+        text: "2024 to 2025"
+      },
+      value: {
+        html: documentLink
+      }
+    },
+    {
+      key: {
+        text: "2023 to 2024"
+      },
+      value: {
+        html: documentNotExpected
+      }
+    }
+  ]
+}) }}

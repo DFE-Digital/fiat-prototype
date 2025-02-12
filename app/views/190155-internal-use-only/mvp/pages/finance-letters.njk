@@ -1,0 +1,75 @@
+{% extends "/200106-finance-docs/mvp/layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "finance" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "letters" %}
+
+{# Set guidance content variable #}
+{% set explainerLetters %}
+  <p class="govuk-body">As part of a trust's yearly financial audit, the auditor must send the trust a 'management letter'.</p>
+  <p class="govuk-body">This:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>says what the auditor will be responsible for</li>
+    <li>allows the auditor to ask the trust for more information </li>
+    <li>can be used to higlight useful observations</li>
+    <li>shows communication between both parties</li>
+  </ul>
+{% endset %}
+
+{# Set guidance for document not expected #}
+{% set docNotExpected %}
+  <p class="govuk-body">We include links to any financial documents we have received in the last 3 years.</p>
+  <p class="govuk-body">If a trust <strong>does not</strong> submit a document before the deadline we show this as 'not submitted' until we receive it.</p>
+  <p class="govuk-body">The deadline for submitting a management letter is 31 March.</p>
+  <p class="govuk-body">If a document <strong>could not have been</strong> submitted, for example because a trust had not formed until after that year, we say that it was 'not expected'.</p>
+  <p class="govuk-body">Financial statements cover one year from 1 September to 31 August.</p>
+{% endset %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      Financial documents
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/finance-sub_nav.njk" %}
+
+  <h3 class="govuk-heading-m">Management letters</h3>
+
+  {# What is this document #}
+  {# {{ explainerLetters | safe }} #}
+
+  {# Why a document might not be available #}
+  {# {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %} #}
+  {{ govukDetails({
+    summaryText: 'Why a document might not be available',
+    html: docNotExpected
+  }) }}
+
+  {# <hr class="govuk-section-break govuk-section-break--m"> #}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    {# Internal use only warning #}
+    {% include "/200106-finance-docs/mvp/parts/warning-InternalOnly.njk" %}
+
+    {# List of docs #}
+    {% include "/200106-finance-docs/mvp/lists/list-letters.njk" %}
+
+    </div>
+  </div>
+
+  {# <hr class="govuk-section-break govuk-section-break--s"> #}
+  <hr class="govuk-section-break govuk-section-break--m">
+
+  {# Sources and updates #}
+  {% include "/200106-finance-docs/mvp/parts/sourcesUpdates-letters.njk" %}
+
+{% endblock %}

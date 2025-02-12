@@ -1,0 +1,13 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [{
+    text: 'In DfE',
+    href: 'contacts-at-dfe',
+    active: true if subNavActive == "contacts-dfe"
+  }, {
+    text: 'In the trust',
+    href: 'contacts-at-trust',
+    active: true if subNavActive == "contacts-trust"
+  }
+  ]
+}) }}

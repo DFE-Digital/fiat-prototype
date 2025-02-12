@@ -1,0 +1,84 @@
+<h3 class="govuk-heading-m">
+    Contacts in the trust
+</h3>
+
+{# Accounting officer contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Accounting officer"
+    }
+    },
+    rows: [
+    {
+        key: {
+        text: "Name"
+        },
+        value: {
+        html: "Sarah Armitage"
+        }
+    },
+    {
+        key: {
+        text: "Email address"
+        },
+        value: {
+        html: "<a href='mailto:sarah.armitage@education.gov.uk'>sarah.armitage@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
+
+{# Chair of trustees contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Chair of trustees"
+    }
+    },
+    rows: [
+    {
+        key: {
+        text: "Name"
+        },
+        value: {
+        html: "Chimmene Gaius-Assor"
+        }
+    },
+    {
+        key: {
+        text: "Email address"
+        },
+        value: {
+        html: "<a href='mailto:chimmene.gaius-assor@education.gov.uk'>chimmene.gaius-assor@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
+
+{# Chair of trustees contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Chief financial officer"
+    }
+    },
+    rows: [
+    {
+        key: {
+        text: "Name"
+        },
+        value: {
+        html: "Otto Normalverbraucher"
+        }
+    },
+    {
+        key: {
+        text: "Email address"
+        },
+        value: {
+        html: "<a href='mailto:otto.normalverbraucher@education.gov.uk'>otto.normalverbraucher@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
