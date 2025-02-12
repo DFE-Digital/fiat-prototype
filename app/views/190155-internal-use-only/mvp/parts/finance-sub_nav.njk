@@ -1,0 +1,21 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [{
+    text: 'Financial statements',
+    href: 'finance-statements',
+    active: true if subNavActive == "statements"
+  }, {
+    text: 'Management letters',
+    href: 'finance-letters',
+    active: true if subNavActive == "letters"
+  }, {
+    text: 'Internal scrutiny reports',
+    href: 'finance-reports',
+    active: true if subNavActive == "reports"
+  }, {
+    text: 'Self assessment-checklist',
+    href: 'finance-checklists',
+    active: true if subNavActive == "checklists"
+  }
+  ]
+}) }}

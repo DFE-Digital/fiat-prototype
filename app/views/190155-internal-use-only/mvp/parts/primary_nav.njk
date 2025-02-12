@@ -1,0 +1,25 @@
+{{ govukServiceNavigation({
+    navigation: [
+        {
+        href: "#",
+        text: "Overview"
+        }, {
+        href: "#",
+        text: "Contacts"
+        }, {
+        href: "#",
+        text: "Academies (13)"
+        }, {
+        href: "#",
+        text: "Ofsted",
+        active: true if navActive == "ofsted"
+        }, {
+        href: "finance-statements",
+        text: "Financial documents",
+        active: true if navActive == "finance"
+        }, {
+        href: "#",
+        text: "Governance"
+        }
+    ]
+}) }}

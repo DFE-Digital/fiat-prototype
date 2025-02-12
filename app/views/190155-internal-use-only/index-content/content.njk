@@ -1,0 +1,27 @@
+{# 190155-internal-use-only #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Internal use only iteration
+</h2>
+
+<p class="govuk-caption-m">
+    Examples of a warning component iteration for our "Internal use only" messaging.
+</p>
+
+{% set internalUseOnlyContent %}
+    {# Internal use only iteration MvP #}
+    {% include "/190155-internal-use-only/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-finance-docs-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: internalUseOnlyContent
+        }
+    }
+    ]
+}) }}

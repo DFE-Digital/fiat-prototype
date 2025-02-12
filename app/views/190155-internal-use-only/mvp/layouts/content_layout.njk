@@ -1,0 +1,23 @@
+{% extends "/190155-internal-use-only/mvp/layouts/content_main.njk" %}
+
+{% set pageTitle = "Where our data comes from and when" %}
+{% set pageHeading = pageTitle %}
+{% set pageCaption = "" %}
+
+{% block content %} 
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      {# Start of trust content block #}
+
+      {% block contentContent %}
+        Text goes here, override this by overriding the block
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
