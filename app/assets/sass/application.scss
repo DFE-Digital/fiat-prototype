@@ -112,5 +112,32 @@
         @include govuk-responsive-padding(3, "left");
         border-left: 1px solid $govuk-border-colour;
     }
+}
 
+// 190155-internal-use-only
+.fiat-warning-banner-a {
+    @include govuk-responsive-padding(2, "left");
+    @include govuk-responsive-padding(2, "right");
+    @include govuk-responsive-padding(1, "top");
+    @include govuk-responsive-padding(1, "bottom");
+    @include govuk-responsive-margin(6, "bottom");
+    background-color: govuk-colour("black");
+
+    .govuk-warning-text__icon {
+        border: 3px solid govuk-colour("white");
+        background-color: govuk-colour("white");
+        color: govuk-colour("black");
+    }
+
+    .govuk-warning-text__text {
+        color: govuk-colour("white");
+    }
+}
+
+.fiat-warning-banner-b {
+    @include govuk-responsive-padding(2, "left");
+    @include govuk-responsive-padding(2, "right");
+    @include govuk-responsive-padding(1, "top");
+    @include govuk-responsive-padding(1, "bottom");
+    @include govuk-responsive-margin(6, "bottom");
 }

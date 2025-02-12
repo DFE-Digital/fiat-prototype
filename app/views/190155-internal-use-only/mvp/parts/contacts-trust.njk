@@ -1,6 +1,15 @@
+{# Bring in warning component and set as variable #}
+{% set warning %}
+  {% include "/190155-internal-use-only/mvp/parts/warning-InternalOnly.njk" %}
+{% endset %}
+
 <h3 class="govuk-heading-m">
     Contacts in the trust
 </h3>
+
+<div class="fiat-warning-banner-a">
+    {{ warning | safe }}
+</div>
 
 {# Accounting officer contact #}
 {{ govukSummaryList({
