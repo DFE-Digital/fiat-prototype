@@ -1,0 +1,27 @@
+{# 197710-ALA-overview #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Academy and Schools overview
+</h2>
+
+<p class="govuk-caption-m">
+    Sub-page mocks for level 2 pages "Details", "Federation details" and "Reference numbers", within "Overview" for a school or academy.
+</p>
+
+{% set ALAOverviewContent %}
+    {# ALA Overview MvP #}
+    {% include "/197710-ALA-overview/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-ala-overview-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: ALAOverviewContent
+        }
+    }
+    ]
+}) }}
