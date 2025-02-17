@@ -23,11 +23,12 @@
 
 {# Set guidance for document not expected #}
 {% set docNotExpected %}
-  <p class="govuk-body">We include links to any financial documents we have received in the last 3 years.</p>
+  {# <p class="govuk-body">We include links to any financial documents we have received in the last 3 years.</p>
   <p class="govuk-body">If a trust <strong>does not</strong> submit a document before the deadline we show this as 'not submitted' until we receive it.</p>
   <p class="govuk-body">The deadline for submitting a management letter is 31 March.</p>
   <p class="govuk-body">If a document <strong>could not have been</strong> submitted, for example because a trust had not formed until after that year, we say that it was 'not expected'.</p>
-  <p class="govuk-body">Financial statements cover one year from 1 September to 31 August.</p>
+  <p class="govuk-body">Financial statements cover one year from 1 September to 31 August.</p> #}
+  For years where a document could not have been submitted, for example, because a trust had not formed yet, we say that it was ‘not expected’.
 {% endset %}
 
 {# Custom block for the main content area of a trust page #}
@@ -45,17 +46,17 @@
   {# What is this document #}
   {# {{ explainerLetters | safe }} #}
 
-  {# Why a document might not be available #}
-  {# {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %} #}
-  {{ govukDetails({
-    summaryText: 'Why a document might not be available',
-    html: docNotExpected
-  }) }}
-
   {# <hr class="govuk-section-break govuk-section-break--m"> #}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+    {# Why a document might not be available #}
+    {# {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %} #}
+    {{ govukDetails({
+      summaryText: 'Why we might not expect a document',
+      html: docNotExpected
+    }) }}
 
     {# Internal use only warning #}
     <div class="fiat-warning-banner-a">
@@ -65,13 +66,13 @@
     {# List of docs #}
     {% include "/200106-finance-docs/mvp/lists/list-letters.njk" %}
 
+    {# <hr class="govuk-section-break govuk-section-break--s"> #}
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    {# Sources and updates #}
+    {% include "/200106-finance-docs/mvp/parts/sourcesUpdates-letters.njk" %}
+
     </div>
   </div>
-
-  {# <hr class="govuk-section-break govuk-section-break--s"> #}
-  <hr class="govuk-section-break govuk-section-break--m">
-
-  {# Sources and updates #}
-  {% include "/200106-finance-docs/mvp/parts/sourcesUpdates-letters.njk" %}
 
 {% endblock %}
