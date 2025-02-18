@@ -1,68 +1,27 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-{# If a name or email address has been set outside of the default Joe Bloggs, then set a 
-currentData variable of today #}
-{% if (data['trmName']) or (data['trmEmail']) %}
-    {% set currentDate = "today" | govukDate %}
-{% else %}
-    {% set currentDate = "28 July 2024" %}
-{% endif %}
-
 {# Set up a bunch of source and updates content #}
 {% set sourceUpdatesContent %}
-    {# <ul class="govuk-list govuk-list--bullet">
-        <li class="">
-            <span class='govuk-!-font-weight-bold'>Pre advisory board </span>information was taken from Get information about schools on 31 October 2023.
-        </li>
-
-        <li class="">
-            <span class='govuk-!-font-weight-bold'>Post advisory board </span>information was taken from Get information about schools on 31 October 2023.
-        </li>
-    </ul> #}
-
     <p class="govuk-body">
-        <span class='govuk-!-font-weight-bold'>Pre advisory board:</span>
+        <span class='govuk-!-font-weight-bold'>Academy details:</span>
     </p>
 
     <ul class="govuk-list govuk-list--bullet">
         <li class="">
-            All information was taken from Get information about schools on 31 October 2023.
+            All information was taken from Get information about schools on 17 February 2025.
         </li>
     </ul>
 
     <p class="govuk-body">
-        <span class='govuk-!-font-weight-bold'>Post advisory board:</span>
+        <span class='govuk-!-font-weight-bold'>Reference numbers:</span>
     </p>
 
     <ul class="govuk-list govuk-list--bullet">
         <li class="">
-            All information was taken from Get information about schools on 31 October 2023.
+            All information was taken from Get information about schools on 17 February 2025.
         </li>
     </ul>
 
-    <p class="govuk-body">
-        <span class='govuk-!-font-weight-bold'>Free schools:</span>
-    </p>
-
-    <ul class="govuk-list govuk-list--bullet">
-        <li class="">
-            Pupils eligibile for free school meals was taken from Get information about schools on 31 October 2023.
-        </li>
-
-        <li class="">
-            Local authority average 2023/24 was taken from Explore education statistics on 6 August 2024.
-        </li>
-
-        <li class="">
-            National average 2023/24 was taken from Explore education statistics on 6 August 2024.
-        </li>
-    </ul>
-
-
-
-    {# <p class="govuk-body">
-        More recent information may have been made available since this data was captured.
-    </p> #}
 {% endset %}
 
 {# Display it all in a details component #}

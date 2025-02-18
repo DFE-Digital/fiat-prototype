@@ -1,0 +1,13 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [{
+    text: 'Academy details',
+    href: 'academy-details',
+    active: true if subNavActive == "details"
+  }, {
+    text: 'Reference numbers',
+    href: 'academy-reference-numbers',
+    active: true if subNavActive == "reference-numbers"
+  }
+  ]
+}) }}
