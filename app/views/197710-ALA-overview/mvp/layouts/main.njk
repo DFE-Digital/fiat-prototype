@@ -63,9 +63,11 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
           <span class="govuk-caption-m">
             {{ pageCaption | default("Multi-academy trust") }}
           </span>
-          <span class="govuk-caption-m govuk-!-margin-top-2">
-            Trust: {{ trustLink | safe | default("ABBEY ACADEMIES TRUST") }}
-          </span>
+          {% if (uriLastPart == "ala-academy-details") or (uriLastPart == "ala-academy-reference-numbers") %}
+            <span class="govuk-caption-m govuk-!-margin-top-2">
+              Trust: {{ trustLink | safe | default("ABBEY ACADEMIES TRUST") }}
+            </span>
+          {% endif %}
         </div>
       {% endif %}
 

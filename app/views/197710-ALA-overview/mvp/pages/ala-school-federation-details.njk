@@ -1,4 +1,4 @@
-{% extends "/197710-ALA-overview/mvp/layouts/academy_layout.njk" %}
+{% extends "/197710-ALA-overview/mvp/layouts/school_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -7,7 +7,7 @@
 {% set navActive = "overview" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "reference-numbers" %}
+{% set subNavActive = "federation" %}
 
 {# Custom block for the main content area of a trust page #}
 {% block schoolContent %}
@@ -17,15 +17,20 @@
   </h2>
 
   {# Sub-nav to flick through data sets #}
-  {% include "../parts/ala-sub_nav-academy.njk" %}
+  {% include "../parts/ala-sub_nav-school.njk" %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-    <h3 class="govuk-heading-m">Reference numbers</h3>
+    <h3 class="govuk-heading-m">Federation details</h3>
 
     {# List of details #}
-    {% include "/197710-ALA-overview/mvp/lists/ala-list-academy-reference-numbers" %}
+    {% include "/197710-ALA-overview/mvp/lists/ala-list-school-federation-details" %}
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    {# Schools in federation #}
+    {% include "/197710-ALA-overview/mvp/parts/ala-content-federation-schools" %}
 
     <hr class="govuk-section-break govuk-section-break--m">
 
