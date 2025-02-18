@@ -1,0 +1,23 @@
+{% extends "/197710-ALA-overview/mvp/layouts/main.njk" %}
+
+{% set pageTitle = "Electronic and hip hop school" %}
+{% set pageHeading = pageTitle %}
+{% set pageCaption = "LA Maintained school" %}
+
+{% block content %} 
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      {# Start of school content block #}
+
+      {% block schoolContent %}
+        Text goes here, override this by overriding the block
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
