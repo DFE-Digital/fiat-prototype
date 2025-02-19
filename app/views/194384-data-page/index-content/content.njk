@@ -1,0 +1,27 @@
+{# 193768-ofsted #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Ofsted SHG (Single Headline Grades) readdition
+</h2>
+
+<p class="govuk-caption-m">
+    The re-addition of SHGs to Ofsted data on a per academy basis.
+</p>
+
+{% set ofstedSHGContent %}
+    {# Ofsted SHG readdition MvP #}
+    {% include "/194384-data-page/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-ofstedSHG-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: ofstedSHGContent
+        }
+    }
+    ]
+}) }}

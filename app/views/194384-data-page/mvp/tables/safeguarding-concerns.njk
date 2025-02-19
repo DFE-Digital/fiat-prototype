@@ -1,0 +1,354 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before",
+    classes: "govuk-tag--grey"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After"
+  }) }}
+{% endset %}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Safeguarding and concerns",
+  captionClasses: "govuk-table__caption--m",
+  classes: "ofsted-headlines-table",
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Effective safeguarding",
+      classes: "table-col--18",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Category of concern",
+      classes: "table-col--18",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Before or after joining",
+      classes: "table-col--18",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "School or academy name here"
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Baking academy"
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Chocolate academy"
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes" 
+        }
+      },
+      {
+        text: "Special measures",
+        attributes: {
+          "data-sort-value": "Special measures"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Fruity academy"
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Grunge academy"
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Biscuit academy"
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes" 
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Strawberry academy"
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No" 
+        }
+      },
+      {
+        text: "Special measures",
+        attributes: {
+          "data-sort-value": "Serious weakness"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Coffee academy"
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes" 
+        }
+      },
+      {
+        text: "Serious weakness",
+        attributes: {
+          "data-sort-value": "Serious weakness"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "A longer name academy"
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Another longer named academy"
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "A long name voluntary academy"
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected" 
+        }
+      },
+      {
+        text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+       text: "Not yet inspected",
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "Orange voluntary academy"
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Another academy with the longest name to test"
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes" 
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ]
+    
+  ]
+}) }}

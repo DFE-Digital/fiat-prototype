@@ -1,0 +1,14 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set effectiveSafeguarding %}
+    <p class='govuk-body'>
+         Inspectors will examine how a school is implementing its safeguarding policies and processes effectively and how it keeps them under review.
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'What does "Effective safeguarding" mean?',
+  html: effectiveSafeguarding
+}) }}

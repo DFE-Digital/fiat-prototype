@@ -1,0 +1,353 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--grey"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining"
+  }) }}
+{% endset %}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Single Headline Grades (SHG)",
+  captionClasses: "govuk-table__caption--m",
+  classes: "ofsted-shg-table",
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date joined",
+      classes: "table-col--18",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Previous rating",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Current rating",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "School or academy name here"
+      },
+      {
+        text: "1 Aug 2021",
+        attributes: {
+          "data-sort-value": "210801"
+        }
+      },
+      {
+        html: '<strong>' + 'Not yet inspected' + '</strong>',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      }
+    ],
+    [
+      {
+        html: "Baking academy"
+      },
+      {
+        text: "1 Aug 2021",
+        attributes: {
+          "data-sort-value": "210801"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      },
+      {
+        html: '<strong>' + 'Not yet inspected' + '</strong>',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "Chocolate academy"
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        html: '<strong>' + 'Not yet inspected' + '</strong>',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        },
+        classes: ""
+      }
+    ],
+    [
+      {
+        html: "Fruity academy"
+      },
+      {
+        text: "21 Oct 2023",
+        attributes: {
+          "data-sort-value": "231021"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      }
+    ],
+    [
+      {
+        html: "Grunge academy"
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      }
+    ],
+    [
+      {
+        html: "Biscuit academy"
+      },
+      {
+        text: "21 Oct 2023",
+        attributes: {
+          "data-sort-value": "231021"
+        }
+      },
+      {
+        html: '<strong>' + 'Not yet inspected' + '</strong>',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      }
+    ],
+    [
+      {
+        html: "Strawberry academy"
+      },
+      {
+        text: "21 Oct 2023",
+        attributes: {
+          "data-sort-value": "231021"
+        }
+      },
+      {
+        html: '<strong>' + 'Not yet inspected' + '</strong>',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      }
+    ],
+    [
+      {
+        html: "Coffee academy"
+      },
+      {
+        text: "1 Aug 2011",
+        attributes: {
+          "data-sort-value": "110801"
+        }
+      },
+      {
+        html: '<strong>' + 'Not yet inspected' + '</strong>',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      }
+    ],
+    [
+      {
+        html: "A longer name academy"
+      },
+      {
+        text: "18 Mar 2023",
+        attributes: {
+          "data-sort-value": "230319"
+        }
+      },
+      {
+        html: '<strong>' + 'Not yet inspected' + '</strong>',
+        attributes: {
+          "data-sort-value": "Not yet inspected" 
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      }
+    ],
+    [
+      {
+        html: "Another longer named academy"
+      },
+      {
+        text: "18 Mar 2023",
+        attributes: {
+          "data-sort-value": "230319"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      }
+    ],
+    [
+      {
+        html: "A long name voluntary academy"
+      },
+      {
+        text: "1 Aug 2011",
+        attributes: {
+          "data-sort-value": "110801"
+        }
+      },
+      {
+        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      }
+    ],
+    [
+      {
+        html: "Orange voluntary academy"
+      },
+      {
+        text: "14 Feb 2022",
+        attributes: {
+          "data-sort-value": "220214"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      }
+    ],
+    [
+      {
+        html: "Another academy with the longest name to test"
+      },
+      {
+        text: "14 Feb 2022",
+        attributes: {
+          "data-sort-value": "220214"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + '15 Jan 2022' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      }
+    ]
+    
+  ]
+}) }}
