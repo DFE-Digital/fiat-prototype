@@ -1,24 +1,75 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 
-{# If a name or email address has been set outside of the default Joe Bloggs, then set a 
-currentData variable of today #}
-{% if (data['trmName']) or (data['trmEmail']) %}
-    {% set currentDate = "today" | govukDate %}
-{% else %}
-    {% set currentDate = "28 July 2024" %}
-{% endif %}
-
 {# Set up a bunch of source and updates content #}
 {% set sourceUpdatesContent %}
-    <p class='govuk-body'>
-        <span class='govuk-!-font-weight-bold'>Ofsted</span><br>
-        Last updated: {{ currentDate }}<br>
-        Information from: Place...
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Single headline grades:</span>
     </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            Date joined trust taken from Get information about schools on 19 Feb 2025
+        </li>
+        <li class="">
+            All single headline grades taken from State-funded school inspections and outcomes: management information on 15 Feb 2025
+        </li>
+        <li class="">
+            All inspection dates taken from State-funded school inspections and outcomes: management information on 15 Feb 2025        
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Current ratings:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            Current Ofsted rating taken from State-funded school inspections and outcomes: management information on 15 Feb 2025
+        </li>
+        <li class="">
+            Date of current inspection taken from State-funded school inspections and outcomes: management information on 15 Feb 2025
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Previous ratings:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            Previous Ofsted rating taken from State-funded school inspections and outcomes: management information on 15 Feb 2025
+        </li>
+        <li class="">
+            Date of previous inspection taken from State-funded school inspections and outcomes: management information on 15 Feb 2025
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Safeguarding and concerns:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            Effective safeguarding taken from State-funded school inspections and outcomes: management information on 15 Feb 2025
+        </li>
+        <li class="">
+            Category of concern taken from State-funded school inspections and outcomes: management information on 15 Feb 2025
+        </li>
+        <li class="">
+            Date of current inspection taken from State-funded school inspections and outcomes: management information on 15 Feb 2025    
+        </li>
+    </ul>
+
+    {# Link to complimentary explainer page #}
+    <a href="fiat-information" class="govuk-link">
+        Appropriately worded link text here
+    </a>
+
 {% endset %}
 
 {# Display it all in a details component #}
 {{ govukDetails({
-  summaryText: "Sources and updates",
+  summaryText: "Where this information came from",
   html: sourceUpdatesContent
 }) }}
