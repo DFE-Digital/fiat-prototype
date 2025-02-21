@@ -1,0 +1,23 @@
+{% extends "/194384-data-page/mvp/layouts/content_main.njk" %}
+
+{% set pageTitle = "About the data we use" %}
+{% set pageHeading = pageTitle %}
+{% set pageCaption = "" %}
+
+{% block content %} 
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {# Start of basic content page block #}
+
+      {% block contentContent %}
+        Text goes here, override this by overriding the block
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
