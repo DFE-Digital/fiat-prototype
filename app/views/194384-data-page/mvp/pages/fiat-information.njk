@@ -1,42 +1,118 @@
-{% extends "/189473-sources-updates/mvp/layouts/content_layout.njk" %}
+{% extends "/194384-data-page/mvp/layouts/content_layout.njk" %}
 
 {# Custom block for the main content area of this page #}
 {% block contentContent %}
 
-<p class="govuk-body">
-    Some new copy RIGHT HERE.
+<!--Intro copy-->
+<p>
+    Find information about academies and trusts (FIAT) brings together data from different places. 
+  </p>
+
+  <p>
+    We do not own the information we show from other services. 
+  </p>
+  
+  <p>
+    This means we cannot:
+  </p>
+
+<!--Bullets - what this means-->
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      control its quality
+    </li>
+    <li>
+      make changes to it
+    </li>
+    <li>
+      remove or replace it
+    </li>
+  </ul>
+
+<!--Intro copy 2 -->
+
+<p>
+To report a problem with data taken from another source, you must contact the service responsible for it. 
 </p>
 
-<p class="govuk-body">
-    The information you see on FIATs pages gets updated at different times depending on the type of data and when it becomes available.
+
+<!--h2 When we fetch data-->
+
+<h2 class="govuk-heading-m">How FIAT gets updated</h2>
+
+
+<!--Inset text-->
+
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+text: 'When we talk about updating FIAT, we mean replacing the data currently being shown with a new copy from whoever maintains it.'
+}) }}
+
+
+<!--When we fetch data para -->
+
+<p>
+If there are changes that FIAT needs to reflect, providing the place we take the data from has been updated, you should see them the next time we take a copy.
+</p> 
+
+<p>
+We do this as often as we can so that the information you see is as up to date as possible. 
 </p>
 
-<p class="govuk-body">
-    For example, we update the information we take from Get information about schools once per day, but we only update Ofsted information once per year, after the latest inspection.
+
+<!--h3 daily-->
+
+<h3 class="govuk-heading-s">Things we update daily</h3>
+
+<!--Daily paras -->
+
+<p>
+Most FIAT information comes from <a href="https://educationgovuk.sharepoint.com/sites/lvewp00299/SitePages/RSD.aspx">Regions Group tools and systems</a> or <a href="https://get-information-schools.service.gov.uk/">Get information about schools (GIAS)</a> and gets updated <strong>every morning</strong>. 
 </p>
 
-<h2 class="govuk-heading-m">
-    Checking FIAT's data
-</h2>
-
-<p class="govuk-body">
-    Pages that contain information FIAT takes from other places include an option to see where it came from.
+<p>
+This includes:
 </p>
 
-<p class="govuk-body">
-    Clicking this will show you:
-</p>
+<!--Daily morning bullets-->
 
 <ul class="govuk-list govuk-list--bullet">
 
-    <li>
-        the original source of the data
-    </li>
-
-    <li>
-        when it was last taken from there
-    </li>
-
+<li>
+names, addresses and reference numbers
+</li>
+<li>
+current academies in a trust 
+</li>
+<li>
+details of any academies in the pipeline
+</li>
 </ul>
+
+
+<!--h3 Ofsted data-->
+
+<h3 class="govuk-heading-s">Ofsted reports</h3>
+
+<!--Ofsted data para -->
+
+
+<p>
+We take Ofsted information from the <a href="https://www.gov.uk/government/collections/maintained-schools-and-academies-inspections-and-outcomes-official-statistics">state-funded schools statistics: management information</a> report, which gets updated <strong>every month</strong>.
+</p>
+
+<p>
+Adding data from the report is a manual process. This means we cannot give an exact date for when FIAT will show it. 
+</p>
+
+<!--h3 Other data-->
+
+<h3 class="govuk-heading-s">Other data</h3>
+
+<p>
+FIAT also takes some information from <a href="https://explore-education-statistics.service.gov.uk/">Explore education statistics</a> which is published <strong>each year.</strong>
+</p>
 
 {% endblock %}
