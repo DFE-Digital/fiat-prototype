@@ -1,0 +1,45 @@
+{% extends "/197710-ALA-overview/mvp/layouts/academy_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "overview" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "sen" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block schoolContent %}
+
+  <h2 class="govuk-heading-l">
+      Overview
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/ala-sub_nav-academy.njk" %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+    <h3 class="govuk-heading-m">SEN resource</h3>
+
+    {# List of SEN resource #}
+    {% include "/197710-ALA-overview/mvp/lists/ala-list-academy-sen-resource" %}
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <h3 class="govuk-heading-m">SEN provision</h3>
+
+    {# List of SEN provision #}
+    {% include "/197710-ALA-overview/mvp/lists/ala-list-academy-sen-provision" %}
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    {# Sources and updates #}
+    {% include "/197710-ALA-overview/mvp/parts/ala-component-academy-sources-updates" %}
+
+    </div>
+  </div>
+
+{% endblock %}
