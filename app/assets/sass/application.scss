@@ -17,6 +17,11 @@
     background-color: tint($color_dfe-secondary-blue, 90%);
 }
 
+.fiat-top--ala {
+    background-color: tint(govuk-colour("purple"), 90%);
+    // background-color: govuk-colour("purple");
+}
+
 // Container for Trust heading and caption
 .fiat-top-content {
     padding: 1rem 0 1rem 0;
