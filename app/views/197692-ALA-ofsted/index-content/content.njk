@@ -1,0 +1,27 @@
+{# 197692-ALA-ofsted #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Academy and Schools Ofsted
+</h2>
+
+<p class="govuk-caption-m">
+    Sub-page mocks for level 2 pages within "Ofsted" for a school or academy.
+</p>
+
+{% set ALAOfstedContent %}
+    {# ALA Ofsted MvP #}
+    {% include "/197692-ALA-ofsted/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-ala-Ofsted-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: ALAOfstedContent
+        }
+    }
+    ]
+}) }}

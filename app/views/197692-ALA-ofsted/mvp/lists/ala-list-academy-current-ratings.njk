@@ -1,0 +1,70 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--grey"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining"
+  }) }}
+{% endset %}
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-0",
+  rows: [
+    {
+      key: {
+        text: "Quality of education"
+      },
+      value: {
+        text: "Good"
+      }
+    },{
+      key: {
+        text: "Behaviour and attitudes"
+      },
+      value: {
+        text: "Outstanding"
+      }
+    },{
+      key: {
+        text: "Personal development"
+      },
+      value: {
+        text: "Outstanding"
+      }
+    },{
+      key: {
+        text: "Leadership and management"
+      },
+      value: {
+        text: "Good"
+      }
+    },{
+      key: {
+        text: "Early years provision"
+      },
+      value: {
+        text: "Not available"
+      }
+    },{
+      key: {
+        text: "Sixth form provision"
+      },
+      value: {
+        text: "Good"
+      }
+    },{
+      key: {
+        html: "Before or after joining <br> the trust"
+      },
+      value: {
+        html: afterJoiningTag
+      }
+    }
+  ]
+}) }}
