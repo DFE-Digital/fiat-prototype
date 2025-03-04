@@ -1,0 +1,24 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content for this component #}
+{% set sourceUpdatesContent %}
+       <p class="govuk-heading-s">Requesting access or reporting a problem</p>
+    <p class="govuk-body">Financial documents are maintained by the Education and Skills Funding Agency (ESFA)’s Data Science team.
+    </p>
+    <p class="govuk-body"><strong>Do not</strong> contact a trust about documents that are missing or in the wrong format.</p>
+    <p class="govuk-body">To report a problem with a document, or if you have a  <strong>business need</strong> to be granted access, email the team at:</p>
+    <p class="govuk-body"><a href="#">AcademiesFinancialMonitoring.EFA@education.gov.uk</a>.</p>
+    <p class="govuk-heading-s">Why a document might not be expected</p>
+    <p class="govuk-body">If a trust could not have submitted a document, for example because it had not formed yet, we say that it was ‘not expected’.</p>
+   
+    
+
+
+
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "About these documents",
+  html: sourceUpdatesContent
+}) }}

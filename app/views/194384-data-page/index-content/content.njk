@@ -1,0 +1,27 @@
+{# 194384-data-page #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Data sources 'explainer page'
+</h2>
+
+<p class="govuk-caption-m">
+    A content page used to help explain why and how FIAT uses data from various sources in the way that it does.
+</p>
+
+{% set dataSourcesContent %}
+    {# Data sources content page #}
+    {% include "/194384-data-page/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-dataSources-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: dataSourcesContent
+        }
+    }
+    ]
+}) }}

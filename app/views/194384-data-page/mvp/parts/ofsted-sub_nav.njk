@@ -1,0 +1,24 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'Single headline grades',
+    href: '#',
+    active: true if subNavActive == "shg"
+  },
+  {
+    text: 'Current ratings',
+    href: '#',
+    active: true if subNavActive == "subjudgements"
+  },
+  {
+    text: 'Previous ratings',
+    href: '#'
+  },
+  {
+    text: 'Safeguarding and concerns',
+    href: '#',
+    active: true if subNavActive == "safeguarding and concerns"
+  }
+  ]
+}) }}

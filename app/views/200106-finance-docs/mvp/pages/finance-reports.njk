@@ -43,16 +43,18 @@
 
   <h3 class="govuk-heading-m">Internal scrutiny reports</h3>
 
+<p>You must have permission to view these documents.</p>
+
+<!--
   {# What is this document #}
   {# {{ explainerReports | safe }} #}
 
   {# <hr class="govuk-section-break govuk-section-break--m"> #}
+-->
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-    {# Links might not work! Guidance #}
-    <p class="govuk-body">Bla bla bla what does it look like here.</p>
 
     {# Why a document might not be available #}
     {# {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %} #}
@@ -60,6 +62,7 @@
       summaryText: 'Why we might not expect a document',
       html: docNotExpected
     }) }}
+-->
 
     {# Internal use only warning #}
     <div class="fiat-warning-banner-a">
@@ -73,7 +76,7 @@
     <hr class="govuk-section-break govuk-section-break--m">
 
     {# Sources and updates #}
-    {% include "/200106-finance-docs/mvp/parts/sourcesUpdates-reports.njk" %}
+    {% include "/200106-finance-docs/mvp/parts/aboutTheseDocs.njk" %}
 
     </div>
   </div>
