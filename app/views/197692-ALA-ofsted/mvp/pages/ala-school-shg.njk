@@ -4,16 +4,16 @@
 {# {% set subPage = "Academies details" %} #}
 
 {# Set an active state on the appropraite side nav item #}
-{% set navActive = "overview" %}
+{% set navActive = "ofsted" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "details" %}
+{% set subNavActive = "shg" %}
 
 {# Custom block for the main content area of a trust page #}
 {% block schoolContent %}
 
   <h2 class="govuk-heading-l">
-      Overview
+      Ofsted
   </h2>
 
   {# Sub-nav to flick through data sets #}
@@ -22,15 +22,15 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-    <h3 class="govuk-heading-m">School details</h3>
+    <h3 class="govuk-heading-m">Single headline grades</h3>
 
-    {# List of details #}
-    {% include "/197692-ALA-ofsted/mvp/lists/ala-list-school-details" %}
+    {# No SHG guidance #}
+    {% include "/197692-ALA-ofsted/mvp/parts/explainer-SHGnotAvailable.njk" %}
 
-    <hr class="govuk-section-break govuk-section-break--m">
+    {# <hr class="govuk-section-break govuk-section-break--m"> #}
 
-    {# Information from other services #}
-    {% include "/197692-ALA-ofsted/mvp/parts/ala-content-information-other-services" %}
+    {# List of ratings #}
+    {% include "/197692-ALA-ofsted/mvp/lists/ala-list-school-shg" %}
 
     <hr class="govuk-section-break govuk-section-break--m">
 
