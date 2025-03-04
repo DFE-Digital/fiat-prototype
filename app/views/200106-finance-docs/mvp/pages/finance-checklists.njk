@@ -39,20 +39,24 @@
 
   <h3 class="govuk-heading-m">Self-assessment checklists</h3>
 
+<p>You must have permission to view these documents.</p>
+
+<!--
   {# What is this document #}
   {# {{ explainerChecklists | safe }} #}
 
   {# <hr class="govuk-section-break govuk-section-break--m"> #}
+-->
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
     {# Why a document might not be available #}
-    {# {% include "/200106-finance-docs/mvp/parts/explainer-notExpected.njk" %} #}
-    {{ govukDetails({
+    {# {% include "/200106-finance-docs/mvp/parts/aboutTheseDocs.njk" %} #}
+    {# {{ govukDetails({
       summaryText: 'Why we might not expect a document',
       html: docNotExpected
-    }) }}
+    }) }} #}
 
     {# Internal use only warning #}
     <div class="fiat-warning-banner-a">
@@ -64,8 +68,8 @@
 
     <hr class="govuk-section-break govuk-section-break--m">
 
-    {# Sources and updates #}
-    {% include "/200106-finance-docs/mvp/parts/sourcesUpdates-checklists.njk" %}
+    {# About these documents #}
+    {% include "/200106-finance-docs/mvp/parts/aboutTheseDocs.njk" %}
 
     </div>
   </div>
