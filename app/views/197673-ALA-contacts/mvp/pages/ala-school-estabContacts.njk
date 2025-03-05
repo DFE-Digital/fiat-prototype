@@ -1,41 +1,36 @@
-{% extends "/197673-ALA-contacts/mvp/layouts/academy_layout.njk" %}
+{% extends "/197673-ALA-contacts/mvp/layouts/school_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
 
 {# Set an active state on the appropraite side nav item #}
-{% set navActive = "ofsted" %}
+{% set navActive = "contacts" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "shg" %}
+{% set subNavActive = "estab" %}
 
 {# Custom block for the main content area of a trust page #}
 {% block schoolContent %}
 
   <h2 class="govuk-heading-l">
-      Ofsted
+      Contacts
   </h2>
 
   {# Sub-nav to flick through data sets #}
-  {% include "../parts/ala-sub_nav-academy.njk" %}
+  {% include "../parts/ala-sub_nav-school.njk" %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-    <h3 class="govuk-heading-m">Single headline grades</h3>
+    <h3 class="govuk-heading-m">Contacts in DfE</h3>
 
-    {# No SHG guidance #}
-    {% include "/197673-ALA-contacts/mvp/parts/explainer-SHGnotAvailable.njk" %}
-
-    {# <hr class="govuk-section-break govuk-section-break--m"> #}
-
-    {# List of ratings #}
-    {% include "/197673-ALA-contacts/mvp/lists/ala-list-academy-shg" %}
+    {# Contact card(s) #}
+    {% include "/197673-ALA-contacts/mvp/contacts/ala-card-estabContacts-school" %}
 
     <hr class="govuk-section-break govuk-section-break--m">
 
     {# Sources and updates #}
-    {% include "/197673-ALA-contacts/mvp/parts/ala-component-academy-sources-updates" %}
+    {% include "/197673-ALA-contacts/mvp/parts/ala-component-school-sources-updates" %}
 
     </div>
   </div>

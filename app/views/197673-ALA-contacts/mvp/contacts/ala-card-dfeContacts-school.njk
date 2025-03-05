@@ -1,0 +1,35 @@
+{# Regions group local authority lead #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Regions group local authority lead"
+    },
+    actions: {
+        items: [
+        {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "details of the regions group local authority lead"
+        }
+        ]
+    }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            html: "Joe Bloggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='#'>joe.bloggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
