@@ -1,0 +1,25 @@
+{# Head teacher #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Head teacher"
+    } },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            html: "Janet Bleggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='#'>janet.bleggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}

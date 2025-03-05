@@ -1,0 +1,35 @@
+{# Regions group local authority lead #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Regions group local authority lead"
+    },
+    actions: {
+        items: [
+        {
+            href: "../edit-journey/ala-edit-trm-school",
+            text: "Change",
+            visuallyHiddenText: "details of the regions group local authority lead"
+        }
+        ]
+    }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            html: "Joe Blaggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='#'>joe.blaggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}

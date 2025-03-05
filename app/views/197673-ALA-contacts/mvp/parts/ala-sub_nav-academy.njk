@@ -1,0 +1,15 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'Contacts in DfE',
+    href: 'ala-academy-dfeContacts',
+    active: true if subNavActive == "in-dfe"
+  },
+  {
+    text: 'In this academy',
+    href: 'ala-academy-estabContacts',
+    active: true if subNavActive == "estab"
+  }
+  ]
+}) }}

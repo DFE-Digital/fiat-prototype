@@ -1,0 +1,35 @@
+{# Trust relationship manager contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Trust relationship manager"
+    },
+    actions: {
+        items: [
+        {
+            href: "../edit-journey/ala-edit-trm-academy",
+            text: "Change",
+            visuallyHiddenText: "details of the trust relationship manager"
+        }
+        ]
+    }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            html: "Joe Blaggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='#'>joe.blaggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
