@@ -1,0 +1,14 @@
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+  <h3 class="govuk-notification-banner__heading">
+    Changes made to the Regions group local authority lead name were successful.
+  </h3>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html,
+  type: "success"
+}) }}
+
+{# <p class="govuk-body">Changes made to the Regions group local authority lead email address were successful.</p> #}
