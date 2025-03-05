@@ -1,0 +1,38 @@
+{% extends "/197673-ALA-contacts/mvp/layouts/school_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "ofsted" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "previous-ratings" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block schoolContent %}
+
+  <h2 class="govuk-heading-l">
+      Ofsted
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/ala-sub_nav-school.njk" %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+    <h3 class="govuk-heading-m">Previous ratings</h3>
+
+    {# List of ratings #}
+    {% include "/197673-ALA-contacts/mvp/lists/ala-list-school-previous-ratings" %}
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    {# Sources and updates #}
+    {% include "/197673-ALA-contacts/mvp/parts/ala-component-school-sources-updates" %}
+
+    </div>
+  </div>
+
+{% endblock %}

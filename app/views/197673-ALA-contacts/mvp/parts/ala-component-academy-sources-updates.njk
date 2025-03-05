@@ -1,0 +1,66 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Single headline grades:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All single headline grades taken from State-funded school inspections and outcomes: management information on 03 Mar 2025.
+        </li>
+        <li>
+            All inspection dates taken from State-funded school inspections and outcomes: management information on 03 Mar 2025.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Current ratings:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            Current Ofsted rating taken from State-funded school inspections and outcomes: management information on 03 Mar 2025.
+        </li>
+        <li class="">
+            Date of current inspection taken from State-funded school inspections and outcomes: management information on 03 Mar 2025.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Previous ratings:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            Previous Ofsted rating taken from State-funded school inspections and outcomes: management information on 03 Mar 2025.
+        </li>
+        <li class="">
+            Date of previous inspection taken from State-funded school inspections and outcomes: management information on 03 Mar 2025
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Safeguarding and concerns:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            Effective safeguarding taken from State-funded school inspections and outcomes: management information on 03 Mar 2025.
+        </li>
+        <li class="">
+            Category of concern taken from State-funded school inspections and outcomes: management information on 03 Mar 2025.
+        </li>
+        <li class="">
+            Date of current inspection taken from State-funded school inspections and outcomes: management information on 03 Mar 2025
+        </li>
+    </ul>
+
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "Where this information came from",
+  html: sourceUpdatesContent
+}) }}

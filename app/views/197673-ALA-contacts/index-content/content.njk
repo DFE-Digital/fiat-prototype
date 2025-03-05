@@ -1,0 +1,27 @@
+{# 197673-ALA-contacts #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Academy and Schools contacts
+</h2>
+
+<p class="govuk-caption-m">
+    Sub-page mocks for level 2 pages within "Contacts" for a school or academy.
+</p>
+
+{% set ALAcontactsContent %}
+    {# ALA Contacts MvP #}
+    {% include "/197673-ALA-contacts/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-ala-contacts-index",
+    items: [
+    {
+        heading: {
+        text: "MvP"
+        },
+        content: {
+        html: ALAcontactsContent
+        }
+    }
+    ]
+}) }}

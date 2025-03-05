@@ -1,0 +1,25 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'Single headline grades',
+    href: 'ala-academy-shg',
+    active: true if subNavActive == "shg"
+  },
+  {
+    text: 'Current ratings',
+    href: 'ala-academy-current-ratings',
+    active: true if subNavActive == "current-ratings"
+  },
+  {
+    text: 'Previous ratings',
+    href: 'ala-academy-previous-ratings',
+    active: true if subNavActive == "previous-ratings"
+  },
+  {
+    text: 'Safeguarding and concerns',
+    href: 'ala-academy-safeguarding-concerns',
+    active: true if subNavActive == "safeguarding-concerns"
+  }
+  ]
+}) }}
