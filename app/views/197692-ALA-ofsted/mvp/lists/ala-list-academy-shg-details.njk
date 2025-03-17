@@ -1,0 +1,28 @@
+<h3 class="govuk-heading-m">Additional details</h3>
+
+{% set academySHGdetailsList %}
+  <a href="#">https://reports.ofsted.gov.uk/provider/25/139974</a>
+{% endset %}
+
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-0",
+  rows: [
+    {
+      key: {
+        text: "Date joined",
+        classes: "govuk-!-width-one-quarter"
+      },
+      value: {
+        text: "11 August 2018"
+      }
+    },{
+      key: {
+        text: "Ofsted page",
+        classes: "govuk-!-width-one-quarter"
+      },
+      value: {
+        html: academySHGdetailsList
+      }
+    }
+  ]
+}) }}
