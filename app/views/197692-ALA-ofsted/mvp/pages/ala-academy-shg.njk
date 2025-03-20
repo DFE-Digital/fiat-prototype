@@ -27,17 +27,21 @@
     {# Details #}
     {# {% include "/197692-ALA-ofsted/mvp/lists/ala-list-academy-shg-details" %} #}
     <p class="govuk-body">This academy joined the trust on the <strong>11th August 2018</strong></p>
-    <p class="govuk-body">You can view previous inspection reports by visiting the <a href="#">Ofsted page for this academy</a>.</p>
 
+    <hr class="govuk-section-break govuk-section-break--m">
+  
     {# No SHG guidance #}
     {% include "/197692-ALA-ofsted/mvp/parts/explainer-SHGnotAvailable.njk" %}
 
-    <hr class="govuk-section-break govuk-section-break--m">
-
+  
     {# Table of ratings #}
     {% include "/197692-ALA-ofsted/mvp/tables/ala-table-academy-shg" %}
 
     <hr class="govuk-section-break govuk-section-break--m">
+
+    <p class="govuk-body"><a href="#">See the inspection reports at Ofsted</a>.</p>
+  
+  <hr class="govuk-section-break govuk-section-break--m">
 
     {{ govukButton({
       text: "Download all Ofsted data",
