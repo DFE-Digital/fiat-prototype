@@ -24,22 +24,22 @@
       
     <h3 class="govuk-heading-m">Single headline grades</h3>
 
+    {# Details #}
+    {# {% include "/197692-ALA-ofsted/mvp/lists/ala-list-academy-shg-details" %} #}
+    <p class="govuk-body">This academy joined the trust on the <strong>11th August 2018</strong>.</p>
+  
     {# No SHG guidance #}
     {% include "/197692-ALA-ofsted/mvp/parts/explainer-SHGnotAvailable.njk" %}
 
     {# <hr class="govuk-section-break govuk-section-break--m"> #}
-
-    {# List of ratings #}
-    {# {% include "/197692-ALA-ofsted/mvp/lists/ala-list-academy-shg" %} #}
-
+  
     {# Table of ratings #}
     {% include "/197692-ALA-ofsted/mvp/tables/ala-table-academy-shg" %}
 
     <hr class="govuk-section-break govuk-section-break--m">
 
-    {# Details #}
-    {% include "/197692-ALA-ofsted/mvp/lists/ala-list-academy-shg-details" %}
-
+    <p class="govuk-body"><a href="#">See the inspection reports at Ofsted</a>.</p>
+  
     <hr class="govuk-section-break govuk-section-break--m">
 
     {{ govukButton({
