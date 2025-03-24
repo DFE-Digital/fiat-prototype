@@ -33,3 +33,39 @@
     }
     ]
 }) }}
+
+{# SFSO (Schools financial support and oversight) lead #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "SFSO (Schools financial support and oversight) lead"
+    },
+    actions: {
+        items: [
+        {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "details of this contact"
+        }
+        ]
+    }
+    },
+    rows: [
+    {
+        key: {
+        text: "Name"
+        },
+        value: {
+        html: "Jayne Bloggs"
+        }
+    },
+    {
+        key: {
+        text: "Email address"
+        },
+        value: {
+        html: "<a href='mailto:jayne.bloggs@education.gov.uk'>jayne.bloggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
