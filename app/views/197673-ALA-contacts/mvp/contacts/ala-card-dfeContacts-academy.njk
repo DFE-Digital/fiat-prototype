@@ -52,8 +52,16 @@
     ]
 }) }}
 
+{# Set guidance text #}
+{% set guidanceEdit %}
+    <p class="govuk-body">
+        You must update <a href="#">the DfE contacts for the trust</a> to change these details.
+    </p>
+{% endset %}
+
+
 {# Guidance for if a change needs to be made to either card #}
 {{ govukInsetText({
-  text: "Changes to the SFSO or TRM can be made at the trust level."
+  html: guidanceEdit
 }) }}
 
