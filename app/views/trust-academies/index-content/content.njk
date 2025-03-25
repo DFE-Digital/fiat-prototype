@@ -1,0 +1,27 @@
+{# trust-academies #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Academies in this trust
+</h2>
+
+<p class="govuk-caption-m">
+    Sub-pages and tables included in the level 1 page "Academies" at a trust level.
+</p>
+
+{% set 205668dateJoined %}
+    {# 205668-date-joined #}
+    {% include "/trust-academies/index-content/205668-date-joined.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-trust-academies-index",
+    items: [
+    {
+        heading: {
+        text: "Relocation of 'Date joined'"
+        },
+        content: {
+        html: 205668dateJoined
+        }
+    }
+    ]
+}) }}
