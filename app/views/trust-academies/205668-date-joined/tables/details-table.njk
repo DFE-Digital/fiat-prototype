@@ -1,0 +1,208 @@
+{# Set GIAS link example #}
+{% set giasLink %}
+  <a href="#" class="govuk-link">More information</a>
+{% endset %}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Details",
+  captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-2",
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "URN",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date joined trust",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Local authority",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Type",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Rural or urban",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Get information about schools"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Super sweet biscuit academy"
+      },
+      {
+        text: "12453",
+        attributes: {
+          "data-sort-value": "12453"
+        }
+      },
+      {
+        text: "1 Dec 2021",
+        attributes: {
+          "data-sort-value": "211201"
+        }
+      },
+      {
+        text: "Sheffield",
+        attributes: {
+          "data-sort-value": "Sheffield"
+        }
+      },
+      {
+        text: "Academy converter",
+        attributes: {
+          "data-sort-value": "Academy converter"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "110812"
+        }
+      },
+      {
+        html: giasLink
+      }
+    ],
+    [
+      {
+        text: "Crunchy ginger nut school"
+      },
+      {
+        text: "36483",
+        attributes: {
+          "data-sort-value": "36483"
+        }
+      },
+      {
+        text: "14 Jan 2022",
+        attributes: {
+          "data-sort-value": "211201"
+        }
+      },
+      {
+        text: "Sheffield",
+        attributes: {
+          "data-sort-value": "Sheffield"
+        }
+      },
+      {
+        text: "Academy sponser led",
+        attributes: {
+          "data-sort-value": "Academy sponser led"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "110812"
+        }
+      },
+      {
+        html: giasLink
+      }
+    ],
+    [
+      {
+        text: "Double chocolate bourbon academy"
+      },
+      {
+        text: "53762",
+        attributes: {
+          "data-sort-value": "53762"
+        }
+      },
+      {
+        text: "24 Mar 2018",
+        attributes: {
+          "data-sort-value": "211201"
+        }
+      },
+      {
+        text: "Sheffield",
+        attributes: {
+          "data-sort-value": "Sheffield"
+        }
+      },
+      {
+        text: "Academy sponser led",
+        attributes: {
+          "data-sort-value": "Academy sponser led"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "110812"
+        }
+      },
+      {
+        html: giasLink
+      }
+    ],
+    [
+      {
+        text: "Scottish shortbread school"
+      },
+      {
+        text: "35162",
+        attributes: {
+          "data-sort-value": "35162"
+        }
+      },
+      {
+        text: "7 Feb 2021",
+        attributes: {
+          "data-sort-value": "211201"
+        }
+      },
+      {
+        text: "Sheffield",
+        attributes: {
+          "data-sort-value": "Sheffield"
+        }
+      },
+      {
+        text: "Academy sponser led",
+        attributes: {
+          "data-sort-value": "Academy sponser led"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "110812"
+        }
+      },
+      {
+        html: giasLink
+      }
+    ]
+    
+  ]
+}) }}

@@ -1,5 +1,5 @@
-{% set preAdvisoryTable %}
-    {% include "../tables/pre-advisory.njk" %}
+{% set detailsTable %}
+    {% include "../tables/details-table.njk" %}
 {% endset -%}
 
 {# {% set postAdvisoryTable %}
@@ -13,10 +13,24 @@
 {{ govukTabs({
   items: [
     {
-      label: "Pre advisory board (6)",
-      id: "pipelines-pre-advisory-table",
+      label: "Details",
+      id: "details",
       panel: {
-        html: preAdvisoryTable
+        html: detailsTable
+      }
+    },
+    {
+      label: "Pupil numbers",
+      id: "pupil-numbers",
+      panel: {
+        text: "X"
+      }
+    },
+    {
+      label: "Free school meals",
+      id: "free-schools",
+      panel: {
+        text: "X"
       }
     }
   ]
