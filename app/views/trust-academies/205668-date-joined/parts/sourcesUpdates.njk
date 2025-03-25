@@ -1,0 +1,16 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+    <p class="govuk-body">Financial documents are held and maintained by the Education and Skills Funding Agency (ESFA)’s Data Science team.</p>
+    <p class="govuk-body"><strong>Do not</strong> contact the trust about documents that are missing or in the wrong format.</p>
+    <p class="govuk-body">To report a problem, email:<br>
+      <a href="#">AcademiesFinancialMonitoring.EFA@education.gov.uk</a>
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "Where this information came from",
+  html: sourceUpdatesContent
+}) }}

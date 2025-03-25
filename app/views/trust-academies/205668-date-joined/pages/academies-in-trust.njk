@@ -1,0 +1,36 @@
+{% extends "/trust-academies/205668-date-joined/layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "academies" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "in-trust" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      Academies
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/sub_nav.njk" %}
+
+  <h3 class="govuk-heading-m">Pipeline academies</h3>
+
+  {# Tabs to flick through tables #}
+  {% include "../parts/academies-tabs.njk" %}
+
+  {{ govukButton({
+    text: "Download all academy data",
+    classes: "govuk-button--secondary",
+    href: "#"
+  }) }}
+
+  {# Sources and updates #}
+  {% include "/trust-academies/205668-date-joined/parts/sourcesUpdates.njk" %}
+
+{% endblock %}
