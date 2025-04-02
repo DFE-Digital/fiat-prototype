@@ -1,4 +1,4 @@
-{% extends "/ala-governance/197684-governance-structure/layouts/school_layout.njk" %}
+{% extends "/ala-governance/197684-governance-structure/layouts/academy_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -7,7 +7,7 @@
 {% set navActive = "governance" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "current" %}
+{% set subNavActive = "historic" %}
 
 {# Custom block for the main content area of a trust page #}
 {% block schoolContent %}
@@ -17,12 +17,12 @@
   </h2>
 
   {# Sub-nav to flick through data sets #}
-  {% include "../parts/ala-sub_nav-school.njk" %}
+  {% include "../parts/ala-sub_nav-academy.njk" %}
 
   {# Current governors table #}
-  {% include "/ala-governance/197684-governance-structure/tables/school-current-governors" %}
+  {% include "/ala-governance/197684-governance-structure/tables/academy-historic-governors" %}
 
   {# Sources and updates #}
-  {% include "/ala-governance/197684-governance-structure/parts/ala-component-school-sources-updates" %}
+  {% include "/ala-governance/197684-governance-structure/parts/ala-component-academy-sources-updates" %}
 
 {% endblock %}

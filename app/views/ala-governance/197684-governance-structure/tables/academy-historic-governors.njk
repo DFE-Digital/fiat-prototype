@@ -1,6 +1,6 @@
-<h3 class="govuk-heading-m">Trust leadership</h3>
-
 {{ govukTable({
+  caption: "Current governors",
+  captionClasses: "govuk-table__caption--m",
   attributes: {
     'data-module': 'moj-sortable-table'
   },
@@ -13,6 +13,12 @@
     },
     {
       text: "Role",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Appointed by",
       attributes: {
         "aria-sort": "none"
       }
@@ -33,70 +39,117 @@
   rows: [
     [
       {
-        text: "Jane Elizabeth Parsons"
+        text: "Rich Tea"
       },
       {
-        text: "Chief Financial Officer",
+        text: "Chair of local governing body",
         attributes: {
-          "data-sort-value": "Chief Financial Officer"
+          "data-sort-value": "Chair of local governing body"
         }
       },
       {
-        text: "19 Jul 2010",
+        text: "Elected by school staff",
         attributes: {
-          "data-sort-value": "20100719"
+          "data-sort-value": "Elected by school staff"
         }
       },
       {
-        text: "No date",
+        text: "11 Dec 2022",
         attributes: {
-          "data-sort-value": "No data"
-        }
-      }
-    ],
-    [
-      {
-        text: "Sarah Jane Moore"
-      },
-      {
-        text: "Accounting Officer",
-        attributes: {
-          "data-sort-value": "Accounting Officer"
+          "data-sort-value": "221211"
         }
       },
       {
-        text: "1 Jan 2016",
+        text: "10 Dec 2026",
         attributes: {
-          "data-sort-value": "20160101"
-        }
-      },
-      {
-        text: "No data",
-        attributes: {
-          "data-sort-value": "No data"
+          "data-sort-value": "261210"
         }
       }
     ],
     [
       {
-        text: "Stephen Alan Haigh"
+        text: "Barry Bourbon"
       },
       {
-        text: "Chair of Trustees",
+        text: "Governor",
         attributes: {
-          "data-sort-value": "Chair of Trustees"
+          "data-sort-value": "Governor"
         }
       },
       {
-        text: "1 Sep 2022",
+        text: "Appointed by board",
         attributes: {
-          "data-sort-value": "20220901"
+          "data-sort-value": "Appointed by board"
         }
       },
       {
-        text: "21 Aug 2026",
+        text: "4 Feb 2022",
         attributes: {
-          "data-sort-value": "20260821"
+          "data-sort-value": "220204"
+        }
+      },
+      {
+        text: "3 Feb 2026",
+        attributes: {
+          "data-sort-value": "220203"
+        }
+      }
+    ],
+    [
+      {
+        text: "Carol Cream"
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "Appointed by board",
+        attributes: {
+          "data-sort-value": "Appointed by board"
+        }
+      },
+      {
+        text: "14 Nov 2022",
+        attributes: {
+          "data-sort-value": "221114"
+        }
+      },
+      {
+        text: "17 Nov 2026",
+        attributes: {
+          "data-sort-value": "261117"
+        }
+      }
+    ],
+    [
+      {
+        text: "Jenny Dodger"
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "Appointed by board",
+        attributes: {
+          "data-sort-value": "Appointed by board"
+        }
+      },
+      {
+        text: "21 Nov 2022",
+        attributes: {
+          "data-sort-value": "221121"
+        }
+      },
+      {
+        text: "25 Nov 2026",
+        attributes: {
+          "data-sort-value": "261125"
         }
       }
     ]
