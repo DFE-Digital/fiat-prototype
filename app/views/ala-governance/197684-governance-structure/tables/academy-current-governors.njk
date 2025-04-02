@@ -1,0 +1,157 @@
+{{ govukTable({
+  caption: "Current governors",
+  captionClasses: "govuk-table__caption--m",
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "Name",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Role",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Appointed by",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "From",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "To",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Jane Doe"
+      },
+      {
+        text: "Chair of local governing body",
+        attributes: {
+          "data-sort-value": "Chair of local governing body"
+        }
+      },
+      {
+        text: "Elected by school staff",
+        attributes: {
+          "data-sort-value": "Elected by school staff"
+        }
+      },
+      {
+        text: "19 Dec 2022",
+        attributes: {
+          "data-sort-value": "221219"
+        }
+      },
+      {
+        text: "21 Dec 2026",
+        attributes: {
+          "data-sort-value": "261221"
+        }
+      }
+    ],
+    [
+      {
+        text: "John Poe"
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "Appointed by board",
+        attributes: {
+          "data-sort-value": "Appointed by board"
+        }
+      },
+      {
+        text: "4 Feb 2022",
+        attributes: {
+          "data-sort-value": "220204"
+        }
+      },
+      {
+        text: "3 Feb 2026",
+        attributes: {
+          "data-sort-value": "220204"
+        }
+      }
+    ],
+    [
+      {
+        text: "Mandy Moe"
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "Appointed by board",
+        attributes: {
+          "data-sort-value": "Appointed by board"
+        }
+      },
+      {
+        text: "13 Nov 2022",
+        attributes: {
+          "data-sort-value": "221113"
+        }
+      },
+      {
+        text: "16 Nov 2026",
+        attributes: {
+          "data-sort-value": "261113"
+        }
+      }
+    ],
+    [
+      {
+        text: "Hugo Gloe"
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "Appointed by board",
+        attributes: {
+          "data-sort-value": "Appointed by board"
+        }
+      },
+      {
+        text: "21 Nov 2022",
+        attributes: {
+          "data-sort-value": "221121"
+        }
+      },
+      {
+        text: "21 Nov 2026",
+        attributes: {
+          "data-sort-value": "261121"
+        }
+      }
+    ]
+  ]
+}) }}

@@ -1,0 +1,28 @@
+{% extends "/ala-governance/197684-governance-structure/layouts/academy_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite side nav item #}
+{% set navActive = "governance" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "current" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block schoolContent %}
+
+  <h2 class="govuk-heading-l">
+      Governance
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/ala-sub_nav-academy.njk" %}
+
+  {# Current governors table #}
+  {% include "/ala-governance/197684-governance-structure/tables/academy-current-governors" %}
+
+  {# Sources and updates #}
+  {% include "/ala-governance/197684-governance-structure/parts/ala-component-academy-sources-updates" %}
+
+{% endblock %}
