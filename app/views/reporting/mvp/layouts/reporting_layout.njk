@@ -53,7 +53,11 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
   <div class="fiat-top--reporting govuk-!-padding-top-3">
     <div class="govuk-width-container ">
 
-      {% include "../parts/reporting-breadcrumbs.njk" %}
+      {% if currentURL == '/reporting/mvp/pages/reporting' %}
+        {% include "../parts/reporting-breadcrumbs.njk" %}
+      {% else %}
+        {% include "../parts/breadcrumbs.njk" %}
+      {% endif %}
 
         <div class="fiat-top-content">
           <h1 class="govuk-heading-l fiat-trust-heading govuk-!-display-inline-block govuk-!-margin-bottom-3" style="text-transform: none;">
