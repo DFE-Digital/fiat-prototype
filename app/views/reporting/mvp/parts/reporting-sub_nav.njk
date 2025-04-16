@@ -1,0 +1,15 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'Current governors (4)',
+    href: 'ala-school-current-governors',
+    active: true if subNavActive == "current"
+  },
+  {
+    text: 'Historic governors (4)',
+    href: 'ala-school-historic-governors',
+    active: true if subNavActive == "historic"
+  }
+  ]
+}) }}

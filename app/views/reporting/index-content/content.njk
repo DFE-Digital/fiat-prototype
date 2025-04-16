@@ -1,0 +1,27 @@
+{# mvp #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Reporting
+</h2>
+
+<p class="govuk-caption-m">
+    Providing users with a way of accessing groupings of data known as a "report".
+</p>
+
+{% set reportingMvP %}
+    {# mvp #}
+    {% include "/reporting/index-content/mvp.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-reporting-index",
+    items: [
+    {
+        heading: {
+        text: "Pre-defined reports"
+        },
+        content: {
+        html: reportingMvP
+        }
+    }
+    ]
+}) }}
