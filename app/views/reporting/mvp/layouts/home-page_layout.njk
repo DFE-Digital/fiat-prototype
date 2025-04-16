@@ -49,14 +49,21 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% set mainClasses = "govuk-width-container" %}
 
 {% block beforeContent %}
+  
+  {# Blue bit #}
   <div class="fiat-top govuk-!-padding-top-3">
     <div class="govuk-width-container">
 
+      {# Content #}
       {% include "/reporting/mvp/parts/home/hero.njk" %}
 
     </div>
   </div>
 
+{% endblock %}
+
+{% block content %}
+  {% block homeContent %} Space for signposts - custom block {% endblock %}
 {% endblock %}
 
 {# RSD Footer #}

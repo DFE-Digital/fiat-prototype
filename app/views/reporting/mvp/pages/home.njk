@@ -3,8 +3,10 @@
 {# Custom block for the main content area of a trust page #}
 {% block homeContent %}
 
-  <h2 class="govuk-heading-l">
-      Governance
-  </h2>
+<div class="govuk-width-container">
 
+{# Signposts #}
+    {% include "/reporting/mvp/parts/home/signposts.njk" %}
+
+</div>
 {% endblock %}
