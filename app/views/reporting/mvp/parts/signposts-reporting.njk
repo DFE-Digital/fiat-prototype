@@ -1,0 +1,18 @@
+{# Set up the macro by including the recurring bits for each item. HTMl may be easier than Nunjucks here. #}
+{% macro signpostItem(title="'title'", description="'description'", link="'#'") %} 
+
+<div class="dfe-card" style="flex-grow: 1; max-width: none;">
+    <div class="dfe-card-container">
+        <h3 class="govuk-heading-m">
+            <a href={{link}} class="govuk-link govuk-link--no-visited-state dfe-card-link--header">{{title}}</a>
+        </h3>
+        <p>{{description}}</p>
+    </div>
+</div>
+
+{% endmacro %}
+
+<div style="display: flex; justify-content: space-between; gap: 30px;">
+    {{signpostItem(title="By region", description="Filter by region to view data something something something.", link="reporting-region")}}
+    {{signpostItem(title="By local authority", description="Filter by local authority to view data something something something.", link="reporting-la")}}
+</div>
