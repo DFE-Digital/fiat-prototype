@@ -155,3 +155,16 @@
     padding-bottom: 1em;
     border-left: solid 3px tint(govuk-colour("yellow"), 50%); 
 }
+
+.report-table {
+    border: 1px solid #b1b4b6;
+
+    .govuk-table__header, .govuk-table__cell {
+        padding: 10px 20px 10px 10px;
+    }
+}
+
+.report-table-th {
+    background-color: govuk-colour("light-grey");
+    min-width: 150px;
+}

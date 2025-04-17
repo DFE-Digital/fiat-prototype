@@ -1,0 +1,22 @@
+{# Set up the macro by including the recurring bits for each item #}
+{% macro singleReport(title="'title'", description="'description'", linktext="'linktext'", link="'#'") %} 
+
+<div class="single-report">
+    <h3 class="govuk-heading-s">{{title}}</h3>
+    <p>{{description}}</p>
+    {{ govukButton({
+        text: linktext,
+        href: link,
+        classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+    }) }}
+</div>
+
+{% endmacro %}
+
+<h2 class="govuk-heading-m">School and academy information</h2>
+
+{{singleReport(title="School and academy overview", description="Description about what is in this report (and maybe what isn't).", link="#", linktext="View school and academy overview report")}}
+{{singleReport(title="Contacts", description="Description about what is in this report (and maybe what isn't).", link="../reports/region/report-region-ala-contacts", linktext="View contacts report")}}
+{{singleReport(title="Ofsted", description="Description about what is in this report (and maybe what isn't).", link="#", linktext="View Ofsted report")}}
+{{singleReport(title="Pupils (current year only)", description="Description about what is in this report (and maybe what isn't).", link="#", linktext="View pupils report")}}
+{{singleReport(title="Governance", description="Description about what is in this report (and maybe what isn't).", link="#", linktext="View governance report")}}
