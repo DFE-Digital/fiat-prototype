@@ -23,7 +23,7 @@
 }
 
 .fiat-top--reporting {
-    background-color: tint(govuk-colour("yellow"), 75%);
+    background-color: tint(govuk-colour("yellow"), 70%);
 }
 
 // Container for Trust heading and caption
@@ -141,4 +141,13 @@
     .govuk-warning-text__text {
         color: govuk-colour("white");
     }
+}
+
+// reporting
+.single-report {
+    margin: 1.5em 0;
+    padding-left: 1em; 
+    padding-top: .5em; 
+    padding-bottom: 1em;
+    border-left: solid 3px tint(govuk-colour("yellow"), 50%); 
 }

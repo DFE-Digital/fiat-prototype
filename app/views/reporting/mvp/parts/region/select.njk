@@ -1,0 +1,41 @@
+<form class="form" action="../pages/reporting-region--trust-level" method="post">
+{{ govukSelect({
+  id: "region",
+  name: "region",
+  label: {
+    text: "Choose a region",
+    classes: "govuk-label--m"
+  },
+  hint: {
+    text: "Do we need text here to say find a region something something."
+  },
+  items: [
+    {
+      value: "choose",
+      text: "Choose region",
+      selected: true
+    },
+    {
+      value: "westyorkshire",
+      text: "West Yorkshire"
+    },
+    {
+      value: "westmidlands",
+      text: "West Midlands"
+    },
+    {
+      value: "northeast",
+      text: "North East"
+    },
+    {
+      value: "greaterlondon",
+      text: "Greater"
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "View reports"
+}) }}
+
+</form>
