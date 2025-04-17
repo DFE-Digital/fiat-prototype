@@ -1,0 +1,17 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% block content %}
+{# Report title #}
+<h1></h1>
+
+{# Report data #}
+{% include "/reporting/mvp/tables/region/table-trust-contacts.njk" %}
+
+{# Download data #}
+<button href="#" class="govuk-button" data-module="govuk-button">
+  Download fields, CSV 60.51 MB
+</button>
+
+{# Copy link #}
+<a href="#" class="govuk-link">Copy share link</a>
+{% endblock %}
+

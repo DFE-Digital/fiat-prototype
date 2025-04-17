@@ -10,13 +10,15 @@
     {# Choose a region #}
     {% include "/reporting/mvp/parts/region/select.njk" %}
 
-    {# <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> #}
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     {% if (data['region'] == "westyorkshire") %}
+        <h2>Reports for West Yorkshire</h2>
+
         {# Reporting subnav #}
         {% include "/reporting/mvp/parts/reporting-sub_nav.njk" %}
 
-        {# Region, LA level reports #}
+        {# Region, Trust level reports #}
         {% include "/reporting/mvp/parts/region/reports-la-level.njk" %}
     {% endif %}
 
