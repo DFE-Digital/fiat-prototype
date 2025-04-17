@@ -12,6 +12,10 @@
     max-width: none;
 }
 
+.report-container {
+    max-width: 95%;
+}
+
 // Light blue header
 .fiat-top {
     background-color: tint($color_dfe-secondary-blue, 90%);

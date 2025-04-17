@@ -1,17 +1,26 @@
-{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+{% set containerClasses = "report-container" %}
 {% block content %}
-{# Report title #}
-<h1></h1>
 
-{# Report data #}
-{% include "/reporting/mvp/tables/region/table-trust-contacts.njk" %}
 
-{# Download data #}
-<button href="#" class="govuk-button" data-module="govuk-button">
-  Download fields, CSV 60.51 MB
-</button>
+  {# Back link if users don't want reports to open in a new tab #}
+  {{ govukBackLink({
+    text: "Back",
+    href: "#",
+    classes: "govuk-!-margin-top-0 govuk-!-margin-bottom-5"
+  }) }}
 
-{# Copy link #}
-<a href="#" class="govuk-link">Copy share link</a>
+  {# Report data #}
+  {% include "/reporting/mvp/tables/region/table-trust-contacts.njk" %}
+
+  <div class="govuk-button-group govuk-!-margin-top-7">
+    {# Download data #}
+    <button href="#" class="govuk-button" data-module="govuk-button">
+      Download fields, CSV 60.51 MB
+    </button>
+
+    {# Copy link #}
+    <a href="#" class="govuk-link">Copy share link</a>
+  </div>
+
 {% endblock %}
-
