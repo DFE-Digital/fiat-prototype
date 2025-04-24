@@ -12,6 +12,10 @@
     max-width: none;
 }
 
+.report-container {
+    max-width: 95%;
+}
+
 // Light blue header
 .fiat-top {
     background-color: tint($color_dfe-secondary-blue, 90%);
@@ -20,6 +24,10 @@
 .fiat-top--ala {
     background-color: tint(govuk-colour("purple"), 90%);
     // background-color: govuk-colour("purple");
+}
+
+.fiat-top--reporting {
+    background-color: tint(govuk-colour("yellow"), 70%);
 }
 
 // Container for Trust heading and caption
@@ -137,4 +145,26 @@
     .govuk-warning-text__text {
         color: govuk-colour("white");
     }
+}
+
+// reporting
+.single-report {
+    margin: 1.5em 0;
+    padding-left: 1em; 
+    padding-top: .5em; 
+    padding-bottom: 1em;
+    border-left: solid 3px tint(govuk-colour("yellow"), 50%); 
+}
+
+.report-table {
+    border: 1px solid #b1b4b6;
+
+    .govuk-table__header, .govuk-table__cell {
+        padding: 10px 20px 10px 10px;
+    }
+}
+
+.report-table-th {
+    background-color: govuk-colour("light-grey");
+    // min-width: 150px;
 }

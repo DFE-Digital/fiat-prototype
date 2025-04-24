@@ -1,0 +1,506 @@
+{%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+{{ govukTable({
+  attributes: {
+    "data-module": "moj-sortable-table"
+  },
+  classes: "report-table",
+  caption: "Table",
+  captionClasses: "govuk-visually-hidden",
+  head: 
+    [
+    {
+      text: "Trust name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Academy name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "URN",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Type",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Region",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Local authority",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Academy address",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "TRM name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "TRM email address",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "SFSO lead name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "SFSO lead email address",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Head teacher name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Head teacher email address",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Biscuit trust",
+        attributes: {
+          "data-sort-value": "Biscuit trust"
+        }
+      },
+      {
+        text: "Hobnob academy",
+        attributes: {
+          "data-sort-value": "Hobnob academy"
+        }
+      },
+      {
+        text: "23542",
+        attributes: {
+          "data-sort-value": "23542"
+        }
+      },
+      {
+        text: "Academy converter",
+        attributes: {
+          "data-sort-value": "Academy converter"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "123 Street name, Leeds, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Leeds, LS324JDF"
+        }
+      },
+      {
+        text: "Hugo Gloe",
+        attributes: {
+          "data-sort-value": "Hugo Gloe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>hugo.gloe@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "hugo.gloe@education.gov.uk"
+        }
+      },
+      {
+        text: "Mandy Martini",
+        attributes: {
+          "data-sort-value": "Mandy Martini"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>mandy.martini@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "mandy.martini@education.gov.uk"
+        }
+      },
+      {
+        text: "Billy Brocoli",
+        attributes: {
+          "data-sort-value": "Billy Brocoli"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>billy.brocoli@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "billy.brocoli@education.gov.uk"
+        }
+      }
+    ],
+    [
+      {
+        text: "Chocolate trust",
+        attributes: {
+          "data-sort-value": "Chocolate trust"
+        }
+      },
+      {
+        text: "Galaxy school",
+        attributes: {
+          "data-sort-value": "Galaxy school"
+        }
+      },
+      {
+        text: "32542",
+        attributes: {
+          "data-sort-value": "32542"
+        }
+      },
+      {
+        text: "Academy sponsor led",
+        attributes: {
+          "data-sort-value": "Academy sponsor led"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Bradford Council",
+        attributes: {
+          "data-sort-value": "Bradford Council"
+        }
+      },
+      {
+        text: "123 Street name, Bradford, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Bradford, LS324JDF"
+        }
+      },
+      {
+        text: "Jane Doe",
+        attributes: {
+          "data-sort-value": "Jane Doe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>jane.doe@education.gov.uk<a/>",
+        attributes: {
+          "data-sort-value": "jane.doe@education.gov.uk"
+        }
+      },
+      {
+        text: "Marly Mojito",
+        attributes: {
+          "data-sort-value": "Marly Mojito"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>marly.mojito@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "marly.mojito@education.gov.uk"
+        }
+      },
+      {
+        text: "Caroline Carrot",
+        attributes: {
+          "data-sort-value": "Caroline Carrot"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>caroline.carrot@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "caroline.carrot@education.gov.uk"
+        }
+      }
+    ],
+    [
+      {
+        text: "Fruity trust",
+        attributes: {
+          "data-sort-value": "Fruity trust"
+        }
+      },
+      {
+        text: "Apple voluntary school",
+        attributes: {
+          "data-sort-value": "Apple voluntary school"
+        }
+      },
+      {
+        text: "34526",
+        attributes: {
+          "data-sort-value": "34526"
+        }
+      },
+      {
+        text: "Academy convertor",
+        attributes: {
+          "data-sort-value": "Academy convertor"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "123 Street name, Leeds, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Leeds, LS324JDF"
+        }
+      },
+      {
+        text: "John Poe",
+        attributes: {
+          "data-sort-value": "John Poe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>john.poe@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "john.poe@education.gov.uk"
+        }
+      },
+      {
+        text: "Sam Daiquiri",
+        attributes: {
+          "data-sort-value": "Sam Daiquiri"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>sam.daiquiri@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "sam.daiquiri@education.gov.uk"
+        }
+      },
+      {
+        text: "Peter Parsnip",
+        attributes: {
+          "data-sort-value": "Peter Parsnip"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>peter.parsnip@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "peter.parsnip@education.gov.uk"
+        }
+      }
+    ],
+    [
+      {
+        text: "Savory trust",
+        attributes: {
+          "data-sort-value": "Savory trust"
+        }
+      },
+      {
+        text: "Toastie academy",
+        attributes: {
+          "data-sort-value": "Toastie academy"
+        }
+      },
+      {
+        text: "25624",
+        attributes: {
+          "data-sort-value": "25624"
+        }
+      },
+      {
+        text: "Academy sponsor led",
+        attributes: {
+          "data-sort-value": "Academy sponsor led"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "123 Street name, Leeds, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Leeds, LS324JDF"
+        }
+      },
+      {
+        text: "Mandy Moe",
+        attributes: {
+          "data-sort-value": "Mandy Moe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>mandy.moe@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "mandy.moe@education.gov.uk"
+        }
+      },
+      {
+        text: "Stella Artois",
+        attributes: {
+          "data-sort-value": "Stella Artois"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>stella.artois@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "stella.artois@education.gov.uk"
+        }
+      },
+      {
+        text: "Sally Swede",
+        attributes: {
+          "data-sort-value": "Sally Swede"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>sally.swede@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "sally.swede@education.gov.uk"
+        }
+      }
+    ],
+    [
+      {
+        text: "Crispy trust",
+        attributes: {
+          "data-sort-value": "Crispy trust"
+        }
+      },
+      {
+        text: "Cheese and onion school",
+        attributes: {
+          "data-sort-value": "Cheese and onion school"
+        }
+      },
+      {
+        text: "26363",
+        attributes: {
+          "data-sort-value": "26363"
+        }
+      },
+      {
+        text: "Academy converter",
+        attributes: {
+          "data-sort-value": "Academy converter"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Calderdale Council",
+        attributes: {
+          "data-sort-value": "Calderdale Council"
+        }
+      },
+      {
+        text: "123 Street name, Calderdale, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Calderdale, LS324JDF"
+        }
+      },
+      {
+        text: "Sally Sloe",
+        attributes: {
+          "data-sort-value": "Sally Sloe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>sally.sloe@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "sally.sloe@education.gov.uk"
+        }
+      },
+      {
+        text: "Carly Caffeine",
+        attributes: {
+          "data-sort-value": "Carly Caffeine"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>carly.caffeine@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "carly.caffeine@education.gov.uk"
+        }
+      },
+      {
+        text: "Carl Cabbage",
+        attributes: {
+          "data-sort-value": "Carl Cabbage"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>carl.cabbage@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "carl.cabbage@education.gov.uk"
+        }
+      }
+    ]
+  ]
+}) }}
