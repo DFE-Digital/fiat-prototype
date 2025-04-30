@@ -1,0 +1,659 @@
+{%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+{{ govukTable({
+  attributes: {
+    "data-module": "moj-sortable-table"
+  },
+  classes: "report-table",
+  caption: "Table",
+  captionClasses: "govuk-visually-hidden",
+  head: 
+    [
+    {
+      text: "Trust name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Academy name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "URN",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Type",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Phase",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Age range",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Region",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Local authority",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Academy address",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Rural/Urban",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Has nursery classes",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Pupil numbers",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Pupil capacity",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "% Full",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "SEN Resourced provision number on roll",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "SEN Resourced provision capacity",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Special Educational Needs (SEN) unit number on roll",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Special Educational Needs (SEN) unit capacity",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Type of resourced provision (SEN)",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Type of SEN provision",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Biscuit trust",
+        attributes: {
+          "data-sort-value": "Biscuit trust"
+        }
+      },
+      {
+        text: "Hobnob academy",
+        attributes: {
+          "data-sort-value": "Hobnob academy"
+        }
+      },
+      {
+        text: "23542",
+        attributes: {
+          "data-sort-value": "23542"
+        }
+      },
+      {
+        text: "Academy converter",
+        attributes: {
+          "data-sort-value": "Academy converter"
+        }
+      },
+      {
+        text: "Primary",
+        attributes: {
+          "data-sort-value": "Primary"
+        }
+      },
+      {
+        text: "2-11",
+        attributes: {
+          "data-sort-value": "2-11"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "123 Street name, Leeds, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Leeds, LS324JDF"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "Urban city and town"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        text: "1083",
+        attributes: {
+          "data-sort-value": "1083"
+        }
+      },
+      {
+        text: "1083",
+        attributes: {
+          "data-sort-value": "1083"
+        }
+      },
+      {
+        text: "100%",
+        attributes: {
+          "data-sort-value": "100%"
+        }
+      },
+      {
+        text: "57",
+        attributes: {
+          "data-sort-value": "57"
+        }
+      },
+      {
+        text: "63",
+        attributes: {
+          "data-sort-value": "63"
+        }
+      },
+      {
+        text: "23",
+        attributes: {
+          "data-sort-value": "23"
+        }
+      },
+      {
+        text: "25",
+        attributes: {
+          "data-sort-value": "25"
+        }
+      },
+      {
+        text: "Resourced provision and SEN unit",
+        attributes: {
+          "data-sort-value": "Resourced provision and SEN unit"
+        }
+      },
+      {
+        text: "SpLD - Specific Learning Difficulty
+              VI - Vis Impairment
+              OTH - Other Difficulty/Disability
+              HI - Hearing Impairment
+              SLCN - Speech, language and Communication
+              ASD - Autistic Spectrum Disorder",
+        attributes: {
+          "data-sort-value": "SpLD - Specific Learning Difficulty
+              VI - Vis Impairment
+              OTH - Other Difficulty/Disability
+              HI - Hearing Impairment
+              SLCN - Speech, language and Communication
+              ASD - Autistic Spectrum Disorder"
+        }
+      }
+    ],
+    [
+      {
+        text: "Chocolate trust",
+        attributes: {
+          "data-sort-value": "Chocolate trust"
+        }
+      },
+      {
+        text: "Galaxy school",
+        attributes: {
+          "data-sort-value": "Galaxy school"
+        }
+      },
+      {
+        text: "32542",
+        attributes: {
+          "data-sort-value": "32542"
+        }
+      },
+      {
+        text: "Academy sponsor led",
+        attributes: {
+          "data-sort-value": "Academy sponsor led"
+        }
+      },
+      {
+        text: "Primary",
+        attributes: {
+          "data-sort-value": "Primary"
+        }
+      },
+      {
+        text: "2-11",
+        attributes: {
+          "data-sort-value": "2-11"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Bradford Council",
+        attributes: {
+          "data-sort-value": "Bradford Council"
+        }
+      },
+      {
+        text: "123 Street name, Bradford, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Bradford, LS324JDF"
+        }
+      },
+      {
+        text: "Urban city and town",
+        attributes: {
+          "data-sort-value": "Urban city and town"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        text: "3526",
+        attributes: {
+          "data-sort-value": "3526"
+        }
+      },
+      {
+        text: "3523",
+        attributes: {
+          "data-sort-value": "3523"
+        }
+      },
+      {
+        text: "89%",
+        attributes: {
+          "data-sort-value": "89%"
+        }
+      },
+      {
+        text: "62",
+        attributes: {
+          "data-sort-value": "62"
+        }
+      },
+      {
+        text: "65",
+        attributes: {
+          "data-sort-value": "65"
+        }
+      },
+      {
+        text: "20",
+        attributes: {
+          "data-sort-value": "20"
+        }
+      },
+      {
+        text: "25",
+        attributes: {
+          "data-sort-value": "25"
+        }
+      },
+      {
+        text: "Resourced provision and SEN unit",
+        attributes: {
+          "data-sort-value": "Resourced provision and SEN unit"
+        }
+      },
+      {
+        text: "SpLD - Specific Learning Difficulty
+              VI - Visual Impairment
+              OTH - Other Difficulty/Disability
+              HI - Hearing Impairment
+              SLCN - Speech, language and Communication
+              ASD - Autistic Spectrum Disorder",
+        attributes: {
+          "data-sort-value": "SpLD - Specific Learning Difficulty
+              VI - Visual Impairment
+              OTH - Other Difficulty/Disability
+              HI - Hearing Impairment
+              SLCN - Speech, language and Communication
+              ASD - Autistic Spectrum Disorder"
+        }
+      }
+    ],
+    [
+      {
+        text: "Fruity trust",
+        attributes: {
+          "data-sort-value": "Fruity trust"
+        }
+      },
+      {
+        text: "Apple voluntary school",
+        attributes: {
+          "data-sort-value": "Apple voluntary school"
+        }
+      },
+      {
+        text: "34526",
+        attributes: {
+          "data-sort-value": "34526"
+        }
+      },
+      {
+        text: "Academy convertor",
+        attributes: {
+          "data-sort-value": "Academy convertor"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "123 Street name, Leeds, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Leeds, LS324JDF"
+        }
+      },
+      {
+        text: "John Poe",
+        attributes: {
+          "data-sort-value": "John Poe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>john.poe@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "john.poe@education.gov.uk"
+        }
+      },
+      {
+        text: "Sam Daiquiri",
+        attributes: {
+          "data-sort-value": "Sam Daiquiri"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>sam.daiquiri@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "sam.daiquiri@education.gov.uk"
+        }
+      },
+      {
+        text: "Peter Parsnip",
+        attributes: {
+          "data-sort-value": "Peter Parsnip"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>peter.parsnip@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "peter.parsnip@education.gov.uk"
+        }
+      }
+    ],
+    [
+      {
+        text: "Savory trust",
+        attributes: {
+          "data-sort-value": "Savory trust"
+        }
+      },
+      {
+        text: "Toastie academy",
+        attributes: {
+          "data-sort-value": "Toastie academy"
+        }
+      },
+      {
+        text: "25624",
+        attributes: {
+          "data-sort-value": "25624"
+        }
+      },
+      {
+        text: "Academy sponsor led",
+        attributes: {
+          "data-sort-value": "Academy sponsor led"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "123 Street name, Leeds, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Leeds, LS324JDF"
+        }
+      },
+      {
+        text: "Mandy Moe",
+        attributes: {
+          "data-sort-value": "Mandy Moe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>mandy.moe@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "mandy.moe@education.gov.uk"
+        }
+      },
+      {
+        text: "Stella Artois",
+        attributes: {
+          "data-sort-value": "Stella Artois"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>stella.artois@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "stella.artois@education.gov.uk"
+        }
+      },
+      {
+        text: "Sally Swede",
+        attributes: {
+          "data-sort-value": "Sally Swede"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>sally.swede@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "sally.swede@education.gov.uk"
+        }
+      }
+    ],
+    [
+      {
+        text: "Crispy trust",
+        attributes: {
+          "data-sort-value": "Crispy trust"
+        }
+      },
+      {
+        text: "Cheese and onion school",
+        attributes: {
+          "data-sort-value": "Cheese and onion school"
+        }
+      },
+      {
+        text: "26363",
+        attributes: {
+          "data-sort-value": "26363"
+        }
+      },
+      {
+        text: "Academy converter",
+        attributes: {
+          "data-sort-value": "Academy converter"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Calderdale Council",
+        attributes: {
+          "data-sort-value": "Calderdale Council"
+        }
+      },
+      {
+        text: "123 Street name, Calderdale, LS324JDF",
+        attributes: {
+          "data-sort-value": "123 Street name, Calderdale, LS324JDF"
+        }
+      },
+      {
+        text: "Sally Sloe",
+        attributes: {
+          "data-sort-value": "Sally Sloe"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>sally.sloe@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "sally.sloe@education.gov.uk"
+        }
+      },
+      {
+        text: "Carly Caffeine",
+        attributes: {
+          "data-sort-value": "Carly Caffeine"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>carly.caffeine@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "carly.caffeine@education.gov.uk"
+        }
+      },
+      {
+        text: "Carl Cabbage",
+        attributes: {
+          "data-sort-value": "Carl Cabbage"
+        }
+      },
+      {
+        html: "<a href='#' class='govuk-link'>carl.cabbage@education.gov.uk</a>",
+        attributes: {
+          "data-sort-value": "carl.cabbage@education.gov.uk"
+        }
+      }
+    ]
+  ]
+}) }}
