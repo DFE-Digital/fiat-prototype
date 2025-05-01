@@ -1,0 +1,271 @@
+{%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+{{ govukTable({
+  attributes: {
+    "data-module": "moj-sortable-table"
+  },
+  classes: "report-table",
+  caption: "Table",
+  captionClasses: "govuk-visually-hidden",
+  head: 
+    [
+    {
+      text: "Trust name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "URN",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Region",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Local authority",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Name",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "ascending"
+      }
+    },
+    {
+      text: "Role",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "From",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "To",
+      classes: "report-table-th",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Biscuit trust",
+        attributes: {
+          "data-sort-value": "Biscuit trust"
+        }
+      },
+      {
+        text: "23542",
+        attributes: {
+          "data-sort-value": "23542"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "Hugo Gloe",
+        attributes: {
+          "data-sort-value": "Hugo Gloe"
+        }
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "22 Nov 2022",
+        attributes: {
+          "data-sort-value": "22 Nov 2022"
+        }
+      },
+      {
+        text: "21 Nov 2026",
+        attributes: {
+          "data-sort-value": "21 Nov 2026"
+        }
+      }
+    ],
+    [
+      {
+        text: "Chocolate trust",
+        attributes: {
+          "data-sort-value": "Chocolate trust"
+        }
+      },
+      {
+        text: "24526",
+        attributes: {
+          "data-sort-value": "24526"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Bradford Council",
+        attributes: {
+          "data-sort-value": "Bradford Council"
+        }
+      },
+      {
+        text: "Jane Doe",
+        attributes: {
+          "data-sort-value": "Jane Doe"
+        }
+      },
+      {
+        text: "Chair of local governing body",
+        attributes: {
+          "data-sort-value": "Chair of local governing body"
+        }
+      },
+      {
+        text: "19 Dec 2022",
+        attributes: {
+          "data-sort-value": "19 Dec 2022"
+        }
+      },
+      {
+        text: "21 Dec 2026",
+        attributes: {
+          "data-sort-value": "21 Dec 2026"
+        }
+      }
+    ],
+    [
+      {
+        text: "Crispy trust",
+        attributes: {
+          "data-sort-value": "Crispy trust"
+        }
+      },
+      {
+        text: "35262",
+        attributes: {
+          "data-sort-value": "35262"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Calderdale Council",
+        attributes: {
+          "data-sort-value": "Calderdale Council"
+        }
+      },
+      {
+        text: "John Poe",
+        attributes: {
+          "data-sort-value": "John Poe"
+        }
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "4 Feb 2022",
+        attributes: {
+          "data-sort-value": "4 Feb 2022"
+        }
+      },
+      {
+        text: "3 Feb 2026",
+        attributes: {
+          "data-sort-value": "3 Feb 2026"
+        }
+      }
+    ],
+    [
+      {
+        text: "Fruity trust",
+        attributes: {
+          "data-sort-value": "Fruity trust"
+        }
+      },
+      {
+        text: "26376",
+        attributes: {
+          "data-sort-value": "26376"
+        }
+      },
+      {
+        text: "West Yorkshire",
+        attributes: {
+          "data-sort-value": "West Yorkshire"
+        }
+      },
+      {
+        text: "Leeds City Council",
+        attributes: {
+          "data-sort-value": "Leeds City Council"
+        }
+      },
+      {
+        text: "Mandy Moe",
+        attributes: {
+          "data-sort-value": "Mandy Moe"
+        }
+      },
+      {
+        text: "Governor",
+        attributes: {
+          "data-sort-value": "Governor"
+        }
+      },
+      {
+        text: "13 Nov 2022",
+        attributes: {
+          "data-sort-value": "13 Nov 2022"
+        }
+      },
+      {
+        text: "16 Nov 2026",
+        attributes: {
+          "data-sort-value": "16 Nov 2026"
+        }
+      }
+    ]
+  ]
+}) }}
