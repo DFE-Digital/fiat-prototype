@@ -2,8 +2,8 @@
 {% macro singleReport(title="'title'", description="'description'", linktext="'linktext'", link="'#'") %} 
 
 <div class="single-report">
-    <h3 class="govuk-heading-s">{{title}}</h3>
-    <p>{{description}}</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-3">{{title}}</h3>
+    <p class="govuk-hint">{{description}}</p>
     {{ govukButton({
         text: linktext,
         href: link,
@@ -13,8 +13,8 @@
 
 {% endmacro %}
 
-<h2 class="govuk-heading-m">Trust level information</h2>
+<h2 class="govuk-heading-m">Trust information</h2>
 
-{{singleReport(title="Trust overview", description="Description about what is in this report (and maybe what isn't).", link="#", linktext="View trust overview report")}}
-{{singleReport(title="Contacts", description="Description about what is in this report (and maybe what isn't).", link="#", linktext="View contacts report")}}
-{{singleReport(title="Governance", description="Description about what is in this report (and maybe what isn't).", link="../reports/region/report-region-trust-governance", linktext="View governance report")}}
+{{singleReport(title="Trust overview", description="Basic information about trusts in the region.", link="#", linktext="View trust overview report")}}
+{{singleReport(title="Contacts", description="Trust and DfE contacts within the region.", link="#", linktext="View contacts report")}}
+{{singleReport(title="Governance", description="Trust leaders, members and trustees in the region.", link="../reports/region/report-region-trust-governance", linktext="View governance report")}}
