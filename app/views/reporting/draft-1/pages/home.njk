@@ -1,0 +1,15 @@
+{% extends "/reporting/mvp/layouts/home-page_layout.njk" %}
+
+{% set pageTitle = "Find information about academies and trusts" %}
+{% set pageHeading = pageTitle %}
+
+{# Custom block for the main content area of a trust page #}
+{% block homeContent %}
+
+<div class="govuk-width-container">
+
+    {# Signposts #}
+    {% include "/reporting/mvp/parts/home/signposts.njk" %}
+
+</div>
+{% endblock %}

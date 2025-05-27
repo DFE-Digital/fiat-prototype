@@ -1,0 +1,15 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'Trust information',
+    href: 'reporting-region--trust-level',
+    active: true if subNavActive == "trust-level"
+  },
+  {
+    text: 'School and academy information',
+    href: 'reporting-region--school-academy-level',
+    active: true if subNavActive == "school-academy-level"
+  }
+  ]
+}) }}

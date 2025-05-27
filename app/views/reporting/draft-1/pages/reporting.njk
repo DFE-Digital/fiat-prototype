@@ -1,0 +1,11 @@
+{% set pageTitle = "Reporting" %}
+{% set pageHeading = pageTitle %}
+
+{% extends "/reporting/mvp/layouts/reporting_layout.njk" %}
+
+{% block reportingContent %}
+
+    {# Cards to next page #}
+    {% include "/reporting/mvp/parts/signposts-reporting.njk" %}
+
+{% endblock %}

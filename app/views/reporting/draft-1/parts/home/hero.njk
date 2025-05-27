@@ -1,0 +1,88 @@
+{% set establishmentGuidance %}
+    <ul class="govuk-list govuk-list--bullet">
+        <li>academies</li>
+        <li>free schools</li>
+        <li>local authority maintained schools</li>
+        <li>special schools</li>
+        <li>trust</li>
+    </ul>
+{% endset %}
+
+{% set homeSearch %}
+    <div class="dfe-header__search" style="text-align: left; margin-left:0;">
+        <button class="dfe-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+            <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+            </svg>
+            <span class="govuk-visually-hidden">For example, st mary's primary school</span>
+        </button>
+        <div class="dfe-header__search-wrap" id="wrap-search">
+            <form class="dfe-header__search-form" id="search" action="/search/" method="get" role="search">
+                <label class="govuk-label govuk-label--m" for="search-field" style="
+                display: block;
+                ">
+                Search for a trust or school
+                </label>
+                <div class="govuk-hint">
+                    Enter a URN (unique reference number), TRN (trust reference number), or name. Include any punctuation in names.
+                </div>
+                <div class="search-area" style="display: flex;">
+                    <input class="dfe-search__input" id="search-field" name="q" type="search" placeholder="e.g. st mary's primary school" autocomplete="off" spellcheck="false" data-ms-editor="true" style="border: 2px solid #0b0c0c; width: 30em; height: 3em;">
+                    <button class="dfe-search__submit" type="submit" style="background-color: #1d70b8; height: auto; width: 3em;">
+                        <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27" style="fill: #ffffff;">
+                            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+                        </svg>
+                        <span class="govuk-visually-hidden">Search</span>
+                    </button>
+                    <button class="dfe-search__close" id="close-search">
+                        <svg class="dfe-icon dfe-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27">
+                            <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+                        </svg>
+                        <span class="govuk-visually-hidden">Close search</span>
+                    </button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endset %}
+
+<div class="fiat-top-content">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl fiat-trust-heading govuk-!-margin-bottom-3" style="text-transform: none;">
+                Find information about academies and trusts
+            </h1>
+
+            <p class="govuk-body">
+                Use this tool to find information on trusts and schools, including academies.
+            </p>
+
+            {# Dropdown guidance #}
+            {{ govukDetails({
+            summaryText: "Establishments you can search",
+            html: establishmentGuidance
+            }) }}
+
+            {# Search for a trust or school #}
+            <hr class="govuk-section-break govuk-section-break--s">
+            {{ homeSearch | safe }}
+
+            {# Find a report CTA #}
+            <div class="govuk-!-margin-top-6">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Find information as a report</h2>
+                <p class="govuk-hint">
+                    See school and trust information by region or local authority.
+                </p>
+                {{ govukButton({
+                    classes: "govuk-!-margin-bottom-6",
+                    text: "Find a report",
+                    href: "reporting"
+                }) }}
+            </div>
+
+        </div>
+    </div>
+</div>
