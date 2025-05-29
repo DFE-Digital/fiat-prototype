@@ -18,7 +18,7 @@
 
     {% set localAuthorities = data['local-authorities'] %}    
     {% if localAuthorities | length  %}
-        <p class="govuk-caption">Including the following selected local authorities:</p>
+        <p class="govuk-caption">Including data from the following selected local authorities:</p>
         {# Get local authority picks #}
         <ul class="govuk-list govuk-list--bullet">
             {% for localAuthority in localAuthorities %}
