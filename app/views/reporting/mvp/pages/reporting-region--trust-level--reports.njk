@@ -1,4 +1,4 @@
-{% set pageTitle = "Reporting by region" %}
+{% set pageTitle = "Reporting by region and local authority" %}
 {% set pageHeading = pageTitle %}
 {# Set an active state on the appropraite secondary nav item #}
 {% set subNavActive = "trust-level" %}
@@ -7,22 +7,28 @@
 
 {% block reportingContent %}
 
-{# Nicer title for if only two regions are selected #}
-{% set regions = data['regions'] %}
-{% set regionsArray = [] %}
-{% set reportTitle = "" %}
-    
-{% for region in regions %}
-    {% set regionsArray = (regionsArray.push(region), regionsArray) %}
-    {% set reportTitle = regionsArray | formatList %}
-{% endfor %}
+    {# Nicer title for if only two regions are selected #}
+    {% set regions = data['regions'] %}
+    {% set reportTitle = "" %}
+    {% for region in regions %}
+        {% set reportTitle = regions | formatList %}
+    {% endfor %}
 
-<h2 class="govuk-heading-m">Reports for {{ reportTitle }}</h2>
+    <h2 class="govuk-heading-m">Reports for {{ reportTitle }}</h2>
+
+    <p class="govuk-caption">Including the following selected local authorities:</p>
+    {# Also get local authority picks #}
+    {% set localAuthorities = data['local-authorities'] %}
+    <ul class="govuk-list govuk-list--bullet">
+        {% for localAuthority in localAuthorities %}
+            <li>{{ localAuthority }}</li>
+        {% endfor %}
+    </ul>
 
     {# Reporting subnav #}
     {% include "/reporting/mvp/parts/reporting-sub_nav.njk" %}
 
     {# Region, Trust level reports #}
-    {% include "/reporting/mvp/parts/region/reports-region-trust-level.njk" %}
+    {% include "/reporting/mvp/parts/region-la/reports-region-trust-level.njk" %}
 
 {% endblock %}

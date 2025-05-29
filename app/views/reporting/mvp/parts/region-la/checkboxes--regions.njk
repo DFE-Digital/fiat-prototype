@@ -1,0 +1,58 @@
+<form class="form" action="../pages/reporting-region-la--las" method="post">
+    {{ govukCheckboxes({
+    name: "regions",
+    fieldset: {
+        legend: {
+        text: "Choose regions",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+        }
+    },
+    hint: {
+        text: "Select all that apply"
+    },
+    items: [
+        {
+        value: "East Midlands",
+        text: "East Midlands"
+        },
+        {
+        value: "East of England",
+        text: "East of England"
+        },
+        {
+        value: "London",
+        text: "London"
+        },
+        {
+        value: "North East",
+        text: "North East"
+        },
+        {
+        value: "North West",
+        text: "North West"
+        },
+        {
+        value: "South East",
+        text: "South East"
+        },
+        {
+        value: "South West",
+        text: "South West"
+        },
+        {
+        value: "West Midlands",
+        text: "West Midlands"
+        },
+        {
+        value: "Yorkshire & The Humber",
+        text: "Yorkshire & The Humber"
+        }
+    ]
+    }) }}
+
+    {{ govukButton({
+        text: "View local authorities",
+        classes: "govuk-!-margin-bottom-3"
+    }) }}
+</form>

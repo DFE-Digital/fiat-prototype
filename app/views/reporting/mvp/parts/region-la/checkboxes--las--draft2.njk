@@ -1,0 +1,279 @@
+{# Nicer title for if only two regions are selected #}
+{% set regions = data['regions'] %}
+{% set regionsArray = [] %}
+{% set reportTitle = "" %}
+
+{# {% set laHint %}
+<p class="govuk-hint">You previously chose the following regions:</p>
+<ul>
+    {% for region in regions %}
+        <li>{{ region }}</li>
+    {% endfor %}
+</ul>
+{% endset %} #}
+
+<form class="form" action="../pages/reporting-region--trust-level--reports" method="post">
+    {# North East #}
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset govuk-fieldset__legend--m" aria-describedby="north-east">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Local authorities in the North East
+            </legend>
+            <div id="north-east" class="govuk-hint">
+            Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="County Durham" name="north-east-las" type="checkbox" value="County Durham">
+                <label class="govuk-label govuk-checkboxes__label" for="County Durham">
+                County Durham
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Darlington" name="north-east-las" type="checkbox" value="Darlington">
+                <label class="govuk-label govuk-checkboxes__label" for="Darlington">
+                Darlington
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Gateshead" name="north-east-las" type="checkbox" value="Gateshead">
+                <label class="govuk-label govuk-checkboxes__label" for="Gateshead">
+                Gateshead
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Hartlepool" name="north-east-las" type="checkbox" value="Hartlepool">
+                <label class="govuk-label govuk-checkboxes__label" for="Hartlepool">
+                Hartlepool
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Middlesbrough" name="north-east-las" type="checkbox" value="Middlesbrough">
+                <label class="govuk-label govuk-checkboxes__label" for="Middlesbrough">
+                Middlesbrough
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Newcastle upon Tyne" name="north-east-las" type="checkbox" value="Newcastle upon Tyne">
+                <label class="govuk-label govuk-checkboxes__label" for="Newcastle upon Tyne">
+                Newcastle upon Tyne
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="North Tyneside" name="north-east-las" type="checkbox" value="North Tyneside">
+                <label class="govuk-label govuk-checkboxes__label" for="North Tyneside">
+                North Tyneside
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Northumberland" name="north-east-las" type="checkbox" value="Northumberland">
+                <label class="govuk-label govuk-checkboxes__label" for="Northumberland">
+                Northumberland
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Redcar and Cleveland" name="north-east-las" type="checkbox" value="Redcar and Cleveland">
+                <label class="govuk-label govuk-checkboxes__label" for="Redcar and Cleveland">
+                Redcar and Cleveland
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="South Tyneside" name="north-east-las" type="checkbox" value="South Tyneside">
+                <label class="govuk-label govuk-checkboxes__label" for="South Tyneside">
+                South Tyneside
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Stockton-on-Tees" name="north-east-las" type="checkbox" value="Stockton-on-Tees">
+                <label class="govuk-label govuk-checkboxes__label" for="Stockton-on-Tees">
+                Stockton-on-Tees
+                </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Sunderland" name="north-east-las" type="checkbox" value="Sunderland">
+                <label class="govuk-label govuk-checkboxes__label" for="Sunderland">
+                Sunderland
+                </label>
+            </div>
+            <div class="govuk-checkboxes__divider">or</div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="north-east-las-none" name="north-east-las" type="checkbox" value="none" data-behaviour="exclusive">
+                <label class="govuk-label govuk-checkboxes__label" for="north-east-las-none">
+                I do not want to include data from any of these local authorities
+                </label>
+            </div>
+            </div>
+        </fieldset>
+    </div>
+    
+    {# North West #}
+    <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset govuk-fieldset__legend--m" aria-describedby="north-west">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        Local authorities in the North West
+        </legend>
+        <div id="north-west" class="govuk-hint">
+        Select all that apply
+        </div>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Blackburn with Darwen" name="north-west-las" type="checkbox" value="Blackburn with Darwen">
+            <label class="govuk-label govuk-checkboxes__label" for="Blackburn with Darwen">
+            Blackburn with Darwen
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Blackpool" name="north-west-las" type="checkbox" value="Blackpool">
+            <label class="govuk-label govuk-checkboxes__label" for="Blackpool">
+            Blackpool
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Bolton" name="north-west-las" type="checkbox" value="Bolton">
+            <label class="govuk-label govuk-checkboxes__label" for="Bolton">
+            Bolton
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Bury" name="north-west-las" type="checkbox" value="Bury">
+            <label class="govuk-label govuk-checkboxes__label" for="Bury">
+            Bury
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Cheshire East" name="north-west-las" type="checkbox" value="Cheshire East">
+            <label class="govuk-label govuk-checkboxes__label" for="Cheshire East">
+            Cheshire East
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Cheshire West and Chester" name="north-west-las" type="checkbox" value="Cheshire West and Chester">
+            <label class="govuk-label govuk-checkboxes__label" for="Cheshire West and Chester">
+            Cheshire West and Chester
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Cumberland" name="north-west-las" type="checkbox" value="Cumberland">
+            <label class="govuk-label govuk-checkboxes__label" for="Cumberland">
+            Cumberland
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Halton" name="north-west-las" type="checkbox" value="Halton">
+            <label class="govuk-label govuk-checkboxes__label" for="Halton">
+            Halton
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Knowsley" name="north-west-las" type="checkbox" value="Knowsley">
+            <label class="govuk-label govuk-checkboxes__label" for="Knowsley">
+            Knowsley
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Lancashire" name="north-west-las" type="checkbox" value="Lancashire">
+            <label class="govuk-label govuk-checkboxes__label" for="Lancashire">
+            Lancashire
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Liverpool" name="north-west-las" type="checkbox" value="Liverpool">
+            <label class="govuk-label govuk-checkboxes__label" for="Liverpool">
+            Liverpool
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Manchester" name="north-west-las" type="checkbox" value="Manchester">
+            <label class="govuk-label govuk-checkboxes__label" for="Manchester">
+            Manchester
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Oldham" name="north-west-las" type="checkbox" value="Oldham">
+            <label class="govuk-label govuk-checkboxes__label" for="Oldham">
+            Oldham
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Rochdale" name="north-west-las" type="checkbox" value="Rochdale">
+            <label class="govuk-label govuk-checkboxes__label" for="Rochdale">
+            Rochdale
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Salford" name="north-west-las" type="checkbox" value="Salford">
+            <label class="govuk-label govuk-checkboxes__label" for="Salford">
+            Salford
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Sefton" name="north-west-las" type="checkbox" value="Sefton">
+            <label class="govuk-label govuk-checkboxes__label" for="Sefton">
+            Sefton
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="St. Helens" name="north-west-las" type="checkbox" value="St. Helens">
+            <label class="govuk-label govuk-checkboxes__label" for="St. Helens">
+            St. Helens
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Stockport" name="north-west-las" type="checkbox" value="Stockport">
+            <label class="govuk-label govuk-checkboxes__label" for="Stockport">
+            Stockport
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Tameside" name="north-west-las" type="checkbox" value="Tameside">
+            <label class="govuk-label govuk-checkboxes__label" for="Tameside">
+            Tameside
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Trafford" name="north-west-las" type="checkbox" value="Trafford">
+            <label class="govuk-label govuk-checkboxes__label" for="Trafford">
+            Trafford
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Warrington" name="north-west-las" type="checkbox" value="Warrington">
+            <label class="govuk-label govuk-checkboxes__label" for="Warrington">
+            Warrington
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Westmorland and Furness" name="north-west-las" type="checkbox" value="Westmorland and Furness">
+            <label class="govuk-label govuk-checkboxes__label" for="Westmorland and Furness">
+            Westmorland and Furness
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Wigan" name="north-west-las" type="checkbox" value="Wigan">
+            <label class="govuk-label govuk-checkboxes__label" for="Wigan">
+            Wigan
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="Wirral" name="north-west-las" type="checkbox" value="Wirral">
+            <label class="govuk-label govuk-checkboxes__label" for="Wirral">
+            Wirral
+            </label>
+        </div>
+        <div class="govuk-checkboxes__divider">or</div>
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="north-east-las-none" name="north-east-las" type="checkbox" value="none" data-behaviour="exclusive">
+            <label class="govuk-label govuk-checkboxes__label" for="north-east-las-none">
+            I do not want to include data from any of these local authorities
+            </label>
+        </div>
+        </div>
+    </fieldset>
+    </div>
+
+    {{ govukButton({
+        text: "View reports",
+        classes: "govuk-!-margin-bottom-3"
+    }) }}
+</form>
+

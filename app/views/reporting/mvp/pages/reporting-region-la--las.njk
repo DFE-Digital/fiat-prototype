@@ -1,4 +1,4 @@
-{% set pageTitle = "Reporting by region" %}
+{% set pageTitle = "Reporting by region and local authority" %}
 {% set pageHeading = pageTitle %}
 {# Set an active state on the appropraite secondary nav item #}
 {% set subNavActive = "trust-level" %}
@@ -8,6 +8,6 @@
 {% block reportingContent %}
 
     {# Choose a region #}
-    {% include "/reporting/mvp/parts/region/checkboxes.njk" %}
+    {% include "/reporting/mvp/parts/region-la/checkboxes--las.njk" %}
 
 {% endblock %}
