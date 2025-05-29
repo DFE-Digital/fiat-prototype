@@ -1,3 +1,10 @@
+{% set reportingByVar = "" %}
+{% if currentURL == '/reporting/mvp/pages/reporting-la' %}
+    {% set reportingByVar = "Local authority" %}
+{% elseif currentURL == '/reporting/mvp/pages/reporting-region' %}
+    {% set reportingByVar = "Region" %}
+{% endif %}
+
 {{ govukBreadcrumbs({
     classes: "breadcrumbs-171804 govuk-!-margin-0",
     items: [
@@ -10,7 +17,7 @@
         href: "reporting"
     },
     {
-        text: "By region"
+        html: reportingByVar
     }
     ]
 }) }}

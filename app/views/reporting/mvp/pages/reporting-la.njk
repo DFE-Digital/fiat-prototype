@@ -1,13 +1,13 @@
-{% set pageTitle = "Reporting by region" %}
+{% set pageTitle = "Reporting by local authority" %}
 {% set pageHeading = pageTitle %}
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "school-academy-level" %}
+{% set subNavActive = "trust-level" %}
 
 {% extends "/reporting/mvp/layouts/reporting_layout.njk" %}
 
 {% block reportingContent %}
 
-    {# Choose a region #}
-    {% include "/reporting/mvp/parts/region/checkboxes.njk" %}
+    {# Choose some local authorities #}
+    {% include "/reporting/mvp/parts/la/checkboxes.njk" %}
 
 {% endblock %}
