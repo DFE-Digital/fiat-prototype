@@ -16,14 +16,16 @@
 
     <h2 class="govuk-heading-m">Reports for {{ reportTitle }}</h2>
 
-    <p class="govuk-caption">Including the following selected local authorities:</p>
-    {# Also get local authority picks #}
-    {% set localAuthorities = data['local-authorities'] %}
-    <ul class="govuk-list govuk-list--bullet">
-        {% for localAuthority in localAuthorities %}
-            <li>{{ localAuthority }}</li>
-        {% endfor %}
-    </ul>
+    {% set localAuthorities = data['local-authorities'] %}    
+    {% if localAuthorities | length  %}
+        <p class="govuk-caption">Including the following selected local authorities:</p>
+        {# Get local authority picks #}
+        <ul class="govuk-list govuk-list--bullet">
+            {% for localAuthority in localAuthorities %}
+                <li>{{ localAuthority }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
     {# Reporting subnav #}
     {% include "/reporting/mvp/parts/reporting-sub_nav.njk" %}
