@@ -1,0 +1,20 @@
+{# Set up the macro by including the recurring bits for each item #}
+{% macro singleReport(title="'title'", description="'description'", linktext="'linktext'", link="'#'") %} 
+
+<div class="single-report">
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-3">{{title}}</h3>
+    <p class="govuk-hint">{{description}}</p>
+    {{ govukButton({
+        text: linktext,
+        href: link,
+        classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+    }) }}
+</div>
+
+{% endmacro %}
+
+<h2 class="govuk-heading-m">Trust information</h2>
+
+{{singleReport(title="Trust overview", description="Basic information about trusts.", link="#", linktext="View trust overview report")}}
+{{singleReport(title="Contacts", description="Trust and DfE contacts.", link="#", linktext="View contacts report")}}
+{{singleReport(title="Governance", description="Trust leaders, members and trustees.", link="../reports/region/report-region-trust-governance", linktext="View governance report")}}

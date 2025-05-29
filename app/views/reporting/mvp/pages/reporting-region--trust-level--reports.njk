@@ -1,0 +1,36 @@
+{% set pageTitle = "Reporting by region and local authority" %}
+{% set pageHeading = pageTitle %}
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "trust-level" %}
+
+{% extends "/reporting/mvp/layouts/reporting_layout.njk" %}
+
+{% block reportingContent %}
+
+    {# Nicer title for if only two regions are selected #}
+    {% set regions = data['regions'] %}
+    {% set reportTitle = "" %}
+    {% for region in regions %}
+        {% set reportTitle = regions | formatList %}
+    {% endfor %}
+
+    <h2 class="govuk-heading-m">Reports for {{ reportTitle }}</h2>
+
+    {% set localAuthorities = data['local-authorities'] %}    
+    {% if localAuthorities | length  %}
+        <p class="govuk-caption">Including data from the following selected local authorities:</p>
+        {# Get local authority picks #}
+        <ul class="govuk-list govuk-list--bullet">
+            {% for localAuthority in localAuthorities %}
+                <li>{{ localAuthority }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {# Reporting subnav #}
+    {% include "/reporting/mvp/parts/reporting-sub_nav.njk" %}
+
+    {# Region, Trust level reports #}
+    {% include "/reporting/mvp/parts/region-la/reports-region-trust-level.njk" %}
+
+{% endblock %}

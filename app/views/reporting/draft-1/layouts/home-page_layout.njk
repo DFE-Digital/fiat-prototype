@@ -1,0 +1,78 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% set serviceName = "Find information about academies and trusts" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+
+{################################# Page title #################################}
+{% block pageTitle %}
+    {% if subPage %}
+      {{subPage}} - {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% else %}
+      {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% endif %}
+{% endblock %} 
+
+{################################# Header #################################}
+{% block header %}
+  {{ header({
+      "showNav": "false",
+      "showSearch": "false",
+      "showHeaderActionLinks": "true",
+      "logoPath": "public/images",
+      "searchAction": "/search/",
+      "searchInputName": "keywords",
+      "logoAltText": "Department for Education",
+      "homeHref": "https://gov.uk",
+      "selectedNav": view,
+      "headerActionLinks": [
+        {
+          "url"  : "reporting",
+          "label" : "Reporting"
+        }
+      ],
+      "service": {
+        "name": serviceName,
+        "serviceUrl": "/"
+      }
+    })
+  }}
+{% endblock %}
+
+{################################# FIAT top #################################}
+{% set containerClasses = "fiat-max-width-0 govuk-!-margin-0" %}
+{% set mainClasses = "govuk-width-container" %}
+
+{% block beforeContent %}
+  
+  {# Blue bit #}
+  <div class="fiat-top govuk-!-padding-top-3">
+    <div class="govuk-width-container">
+
+      {# Content #}
+      {% include "/reporting/mvp/parts/home/hero.njk" %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+  {% block homeContent %} Space for signposts - custom block {% endblock %}
+{% endblock %}
+
+{# RSD Footer #}
+{% block footer %}
+  {% include "/reporting/mvp/parts/rsd-footer.njk" %}
+{% endblock %}
+
+{################################# Bottom of file #################################}
+{% block scripts %}
+  {{ super() }}
+  {# <script src="/assets/javascripts/dfefrontend.min.js"></script> #}
+{% endblock %}

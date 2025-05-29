@@ -1,0 +1,191 @@
+{# Nicer title for if only two regions are selected #}
+{% set regions = data['regions'] %}
+{% set regionsArray = [] %}
+{% set reportTitle = "" %}
+
+{# {% set laHint %}
+<p class="govuk-hint">You previously chose the following regions:</p>
+<ul>
+    {% for region in regions %}
+        <li>{{ region }}</li>
+    {% endfor %}
+</ul>
+{% endset %} #}
+
+<form class="form" action="../pages/reporting-region--trust-level--reports" method="post">
+   {{ govukCheckboxes({
+    name: "regions",
+    fieldset: {
+        legend: {
+        text: "Choose local authorities",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+        }
+    },
+    hint: {
+        html: laHint
+    },
+    items: [
+        {
+        value: "County Durham",
+        text: "County Durham"
+        },
+        {
+        value: "Darlington",
+        text: "Darlington"
+        },
+        {
+        value: "Gateshead",
+        text: "Gateshead"
+        },
+        {
+        value: "Hartlepool",
+        text: "Hartlepool"
+        },
+        {
+        value: "Middlesbrough",
+        text: "Middlesbrough"
+        },
+        {
+        value: "Newcastle upon Tyne",
+        text: "Newcastle upon Tyne"
+        },
+        {
+        value: "North Tyneside",
+        text: "North Tyneside"
+        },
+        {
+        value: "Northumberland",
+        text: "Northumberland"
+        },
+        {
+        value: "Redcar and Cleveland",
+        text: "Redcar and Cleveland"
+        },
+        {
+        value: "South Tyneside",
+        text: "South Tyneside"
+        },
+        {
+        value: "Stockton-on-Tees",
+        text: "Stockton-on-Tees"
+        },
+        {
+        value: "Sunderland",
+        text: "Sunderland"
+        },
+        {
+        value: "Blackburn with Darwen",
+        text: "Blackburn with Darwen"
+        },
+        {
+        value: "Blackpool",
+        text: "Blackpool"
+        },
+        {
+        value: "Bolton",
+        text: "Bolton"
+        },
+        {
+        value: "Bury",
+        text: "Bury"
+        },
+        {
+        value: "Cheshire East",
+        text: "Cheshire East"
+        },
+        {
+        value: "Cheshire West and Chester",
+        text: "Cheshire West and Chester"
+        },
+        {
+        value: "Cumberland",
+        text: "Cumberland"
+        },
+        {
+        value: "Halton",
+        text: "Halton"
+        },
+        {
+        value: "Knowsley",
+        text: "Knowsley"
+        },
+        {
+        value: "Lancashire",
+        text: "Lancashire"
+        },
+        {
+        value: "Liverpool",
+        text: "Liverpool"
+        },
+        {
+        value: "Manchester",
+        text: "Manchester"
+        },
+        {
+        value: "Oldham",
+        text: "Oldham"
+        },
+        {
+        value: "Pre-LGR 2023 Cumbria",
+        text: "Pre-LGR 2023 Cumbria"
+        },
+        {
+        value: "Rochdale",
+        text: "Rochdale"
+        },
+        {
+        value: "Salford",
+        text: "Salford"
+        },
+        {
+        value: "Sefton",
+        text: "Sefton"
+        },
+        {
+        value: "St. Helens",
+        text: "St. Helens"
+        },
+        {
+        value: "Stockport",
+        text: "Stockport"
+        },
+        {
+        value: "Tameside",
+        text: "Tameside"
+        },
+        {
+        value: "Trafford",
+        text: "Trafford"
+        },
+        {
+        value: "Warrington",
+        text: "Warrington"
+        },
+        {
+        value: "Westmorland and Furness",
+        text: "Westmorland and Furness"
+        },
+        {
+        value: "Wigan",
+        text: "Wigan"
+        },
+        {
+        value: "Wirral",
+        text: "Wirral"
+        },
+        {
+        divider: "or"
+        },
+        {
+        value: "none",
+        text: "I don't need local authority reports"
+        }
+    ]
+    }) }}
+
+    {{ govukButton({
+        text: "View reports",
+        classes: "govuk-!-margin-bottom-3"
+    }) }}
+</form>

@@ -1,0 +1,43 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+{% set containerClasses = "report-container" %}
+{% block content %}
+  {# Back link if users don't want reports to open in a new tab #}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back();",
+    classes: "govuk-!-margin-top-0 govuk-!-margin-bottom-5"
+  }) }}
+
+  {# Banner if "Copy share link" is clicked #}
+  <div id="js-copy-link-banner" class="govuk-notification-banner govuk-notification-banner--success govuk-!-display-none" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        Link copied
+      </h3>
+      <p class="govuk-body">
+        You can share this with your colleagues.
+      </p>
+    </div>
+  </div>
+
+  <h1 class="govuk-heading-l">School and academy overview within the West Yorkshire region</h1>
+
+  <div class="govuk-button-group govuk-!-margin-top-3">
+    {# Copy link #}
+    <span id="js-copy-link-btn" class="govuk-button ">Copy link to this page</span>
+    
+    {# Download data #}
+    <a href="/public/downloads/Proto-Region-SA-Overview-2025-04-30.csv" class="govuk-button govuk-button--secondary">
+      Download as a CSV (15.51 MB)
+    </a>
+  </div>
+
+  {# Report data #}
+  {% include "/reporting/mvp/tables/region/table-region-ala-overview.njk" %}
+
+{% endblock %}
