@@ -14,10 +14,7 @@
     
 {% for region in regions %}
     {% set regionsArray = (regionsArray.push(region), regionsArray) %}
-
-            {% set reportTitle = regionsArray | formatList %}
-
-
+    {% set reportTitle = regionsArray | formatList %}
 {% endfor %}
 
 <h2 class="govuk-heading-m">Reports for {{ reportTitle }}</h2>
@@ -29,5 +26,3 @@
     {% include "/reporting/mvp/parts/region/reports-region-trust-level.njk" %}
 
 {% endblock %}
-
-{# {{ regions | last | replace(", ", "and", 1) }} #}
