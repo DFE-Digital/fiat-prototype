@@ -1,0 +1,692 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before",
+    classes: "govuk-tag--grey"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After"
+  }) }}
+{% endset %}
+
+{{ govukTable({
+  caption: "Current ratings",
+  captionClasses: "govuk-table__caption--m",
+  classes: "ofsted-currentRating-table",
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Quality of education",
+      classes: "table-col--10",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Behaviour and attitudes",
+      classes: "table-col--10",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Personal development",
+      classes: "table-col--10",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Leadership and management",
+      classes: "table-col--10",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Early years provision",
+      classes: "table-col--10",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Sixth form provision",
+      classes: "table-col--10",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Before or after joining",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "A long name voluntary academy"
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "A longer name academy"
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Another academy with the longest name to test"
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Another longer named academy"
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Inadequate",
+        attributes: {
+          "data-sort-value": "inadequate"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Baking academy"
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Biscuit academy"
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Inadequate",
+        attributes: {
+          "data-sort-value": "inadequate"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Chocolate academy"
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Inadequate",
+        attributes: {
+          "data-sort-value": "inadequate"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Coffee academy"
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Inadequate",
+        attributes: {
+          "data-sort-value": "inadequate"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+     {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Fruity academy"
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "requires improvement"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Grunge academy"
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "Orange voluntary academy"
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ],
+    [
+      {
+        html: "School or academy name here"
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        html: afterJoiningTag,
+        attributes: {
+          "data-sort-value": "after"
+        }
+      }
+    ],
+    [
+      {
+        html: "Strawberry academy"
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "good"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "outstanding"
+        }
+      },
+      {
+        html: beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "before"
+        }
+      }
+    ]
+  ]
+}) }}

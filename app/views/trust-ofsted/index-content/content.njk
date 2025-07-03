@@ -1,0 +1,27 @@
+{# trust-ofsted #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Ofsted information at a trust level
+</h2>
+
+<p class="govuk-caption-m">
+    Sub-pages and tables included in the level 1 page "Ofsted" at a trust level.
+</p>
+
+{% set 197709shortInspections %}
+    {# 197709-short-inspections #}
+    {% include "/trust-ofsted/index-content/197709-short-inspections.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-trust-ofsted-index",
+    items: [
+    {
+        heading: {
+        text: "Addition of short inspection flag"
+        },
+        content: {
+        html: 197709shortInspections
+        }
+    }
+    ]
+}) }}

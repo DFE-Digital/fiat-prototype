@@ -1,0 +1,16 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set shortInspectionGuidance %}
+    <p class="govuk-body">If a school has had a more recent short inspection carried out, you can find the result on the school record.</p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'Where to find short inspection data',
+  html: shortInspectionGuidance
+}) }}
+
+
+
+
