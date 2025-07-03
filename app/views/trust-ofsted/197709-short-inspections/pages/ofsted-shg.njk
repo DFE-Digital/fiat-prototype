@@ -1,4 +1,4 @@
-{% extends "/193768-ofsted-shg/mvp/layouts/trust_layout.njk" %}
+{% extends "trust-ofsted/197709-short-inspections/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -20,7 +20,10 @@
 {% include "../parts/ofsted-sub_nav.njk" %}
 
 {# No SHG guidance #}
-{% include "/193768-ofsted-shg/mvp/parts/explainer-SHGnotAvailable.njk" %}
+{% include "trust-ofsted/197709-short-inspections/parts/explainer-SHGnotAvailable.njk" %}
+
+{# Has short inspection guidance #}
+{% include "trust-ofsted/197709-short-inspections/parts/explainer-shortInspectionGuidance.njk" %}
 
 <hr class="govuk-section-break govuk-section-break--m">
 
@@ -36,6 +39,6 @@
   }) }}
 
 {# Sources and updates #}
-{% include "/193768-ofsted-shg/mvp/parts/sources-updates.njk" %}
+{% include "trust-ofsted/197709-short-inspections/parts/sources-updates.njk" %}
 
 {% endblock %}
