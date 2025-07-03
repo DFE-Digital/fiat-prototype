@@ -1,0 +1,17 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set shortInspNotAvailable %}
+      <p class="govuk-body">A grade and date of a short inspection may not be available, when a full inspection has followed it.</p>
+      <p class="govuk-body">The data can be found in the school's Ofsted inspection reports.</p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'Why short inspection data might not be available',
+  html: shortInspNotAvailable
+}) }}
+
+
+
+
