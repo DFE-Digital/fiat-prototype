@@ -12,6 +12,11 @@
     {% include "/trust-academies/index-content/205668-date-joined.njk" %}
 {% endset %}
 
+{% set 224274removeGIAS %}
+    {# 224274-remove-gias-link #}
+    {% include "/trust-academies/index-content/224274-remove-gias-link.njk" %}
+{% endset %}
+
 {{ govukAccordion({
     id: "accordion-trust-academies-index",
     items: [
@@ -21,6 +26,14 @@
         },
         content: {
         html: 205668dateJoined
+        }
+    },
+    {
+        heading: {
+        text: "Remove GIAS link"
+        },
+        content: {
+        html: 224274removeGIAS
         }
     }
     ]
