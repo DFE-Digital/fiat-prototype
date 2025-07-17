@@ -1,0 +1,20 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [{
+    text: 'School details',
+    href: 'ala-school-details',
+    active: true if subNavActive == "details"
+  },{
+    text: 'Federation details',
+    href: 'ala-school-federation-details',
+    active: true if subNavActive == "federation"
+  },{
+    text: 'Reference numbers',
+    href: 'ala-school-reference-numbers',
+    active: true if subNavActive == "reference-numbers"
+  }, {
+    text: 'SEN (special educational needs)',
+    href: 'ala-school-sen',
+    active: true if subNavActive == "sen"
+  }]
+}) }}

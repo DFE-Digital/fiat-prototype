@@ -1,0 +1,95 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% set serviceName = "Find information about academies and trusts" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+
+{################################# Page title #################################}
+{% block pageTitle %}
+    {% if subPage %}
+      {{subPage}} - {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% else %}
+      {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% endif %}
+{% endblock %} 
+
+{################################# Header #################################}
+{% block header %}
+  {{ header({
+      "showNav": "false",
+      "showSearch": "true",
+      "showHeaderActionLinks": "false",
+      "logoPath": "public/images",
+      "searchAction": "/search/",
+      "searchInputName": "keywords",
+      "logoAltText": "Department for Education",
+      "homeHref": "https://gov.uk",
+      "selectedNav": view,
+      "service": {
+        "name": serviceName,
+        "serviceUrl": "/"
+      }
+    })
+  }}
+{% endblock %}
+
+{################################# FIAT top #################################}
+{% set containerClasses = "fiat-max-width-0 govuk-!-margin-0" %}
+{% set mainClasses = "govuk-width-container" %}
+
+{# Trust link #}
+{% set trustLink %}
+    <a href="#" class="govuk-link">ABBEY ACADEMIES TRUST</a>
+{% endset %}
+
+{# The Phase banner must be within a beforeContent block to butt up next to the DfE Header appropriately #}
+{% block beforeContent %}
+  <div class="fiat-top--ala govuk-!-padding-top-3">
+    <div class="govuk-width-container ">
+
+      {% include "../parts/breadcrumbs.njk" %}
+
+      {# A check to see if any page outside of Index is being used. If true, show the Heading and Caption #}
+      {% if currentURL !== '/' %}
+        <div class="fiat-top-content">
+
+          <h1 class="govuk-heading-l fiat-trust-heading govuk-!-display-inline-block govuk-!-margin-bottom-3" style="text-transform: none;">
+            {{ pageHeading | default("Abbey academies trust") }}
+          </h1>
+
+          <span class="govuk-caption-m">
+            {{ pageCaption | default("Multi-academy trust") }}
+          </span>
+
+          {% if pageTitle == "Grunge and dance voluntary academy" %}
+            <span class="govuk-caption-m govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+              Trust: {{ trustLink | safe }}
+            </span>
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {# Primary navigation #}
+  {% include "/221337-religious-characteristics/mvp/parts/primary_nav.njk" %}
+
+{% endblock %}
+
+{# RSD Footer #}
+{% block footer %}
+  {% include "/221337-religious-characteristics/mvp/parts/rsd-footer.njk" %}
+{% endblock %}
+
+{################################# Bottom of file #################################}
+{% block scripts %}
+  {{ super() }}
+  {# <script src="/assets/javascripts/dfefrontend.min.js"></script> #}
+{% endblock %}

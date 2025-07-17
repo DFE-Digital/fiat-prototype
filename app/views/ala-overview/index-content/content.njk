@@ -1,0 +1,27 @@
+{# 221337-religious-characteristics #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Governance in academies and schools
+</h2>
+
+<p class="govuk-caption-m">
+    Ways of showing current and historic governors in an academy and school.
+</p>
+
+{% set 197684governance %}
+    {# 221337-religious-characteristics #}
+    {% include "/ala-governance/index-content/221337-religious-characteristics.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-academies-schools-governance-index",
+    items: [
+    {
+        heading: {
+        text: "Basic tables"
+        },
+        content: {
+        html: 197684governance
+        }
+    }
+    ]
+}) }}
