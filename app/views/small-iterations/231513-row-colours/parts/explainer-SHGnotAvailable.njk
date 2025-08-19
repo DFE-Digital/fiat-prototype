@@ -1,0 +1,18 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set SHGnotAvailable %}
+    <p class="govuk-body">Single headline grades stopped being awarded by Ofsted on <strong>2 September 2024</strong>.</p>
+    <p class="govuk-body">Inspections completed after this date are broken down by category.</p>
+    <p class="govuk-body">You can see these on the ‘Current ratings’ and ‘Previous ratings’ pages.</p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'Why a single headline grade might not be available',
+  html: SHGnotAvailable
+}) }}
+
+
+
+

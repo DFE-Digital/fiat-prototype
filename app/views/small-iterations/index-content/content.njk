@@ -1,0 +1,27 @@
+{# 231513-row-colours #}
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Small iterations
+</h2>
+
+<p class="govuk-caption-m">
+    Minor experiments and changes to help increase consistency and add polish to the product.
+</p>
+
+{% set 231513rowColours %}
+    {# 231513-row-colours #}
+    {% include "/small-iterations/index-content/231513-row-colours.njk" %}
+{% endset %}
+
+{{ govukAccordion({
+    id: "accordion-small-iteration-index",
+    items: [
+    {
+        heading: {
+        text: "Row colours"
+        },
+        content: {
+        html: 231513rowColours
+        }
+    }
+    ]
+}) }}
