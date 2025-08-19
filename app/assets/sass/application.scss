@@ -87,6 +87,10 @@
     width: 15%;
 }
 
+.table-col--13 {
+    width: 13%;
+}
+
 .table-col--10 {
     width: 10%;
 }
@@ -174,4 +178,22 @@
 
 .report-table-th--long {
     min-width: 350px;
+}
+
+// small iterations
+.si-row-colours-table {
+    .govuk-table__head {
+        background: #ebf2f6;
+    }
+
+    .govuk-table__header, .govuk-table__cell {
+        padding-top: govuk-spacing(3);
+        padding-right: govuk-spacing(3);
+        padding-bottom: govuk-spacing(3);
+        padding-left: govuk-spacing(3);
+    }
+
+    tr.govuk-table__row:nth-child(even) {
+        background: #f6f6f6;
+    }
 }
