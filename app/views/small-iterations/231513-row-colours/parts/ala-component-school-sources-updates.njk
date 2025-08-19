@@ -1,0 +1,61 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Academy details:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 17 February 2025.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Reference numbers:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 17 February 2025.
+        </li>
+    </ul>
+
+     <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Federation details:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 17 February 2025.
+        </li>
+    </ul>
+
+     <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>SEN (special educational needs):</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 17 February 2025.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Religious characteristics:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 17 February 2025.
+        </li>
+    </ul>
+
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "Where this information came from",
+  html: sourceUpdatesContent
+}) }}
