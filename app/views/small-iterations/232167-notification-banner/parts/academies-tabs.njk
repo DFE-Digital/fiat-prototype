@@ -1,0 +1,29 @@
+{% set detailsTable %}
+    {% include "../tables/details-table.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Details",
+      id: "details",
+      panel: {
+        html: detailsTable
+      }
+    },
+    {
+      label: "Pupil numbers",
+      id: "pupil-numbers",
+      panel: {
+        text: "X"
+      }
+    },
+    {
+      label: "Free school meals",
+      id: "free-schools",
+      panel: {
+        text: "X"
+      }
+    }
+  ]
+}) }}

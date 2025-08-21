@@ -1,0 +1,24 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# If a name or email address has been set outside of the default Joe Bloggs, then set a 
+currentData variable of today #}
+{% if (data['trmName']) or (data['trmEmail']) %}
+    {% set currentDate = "today" | govukDate %}
+{% else %}
+    {% set currentDate = "28 July 2024" %}
+{% endif %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+    <p class='govuk-body'>
+        <span class='govuk-!-font-weight-bold'>Ofsted</span><br>
+        Last updated: {{ currentDate }}<br>
+        Information from: Place...
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "Sources and updates",
+  html: sourceUpdatesContent
+}) }}
