@@ -197,3 +197,9 @@
         background: #f6f6f6;
     }
 }
+
+.si-row-colours-table--school {
+    .govuk-table__head {
+        background-color: tint(govuk-colour("purple"), 90%);
+    }
+}
