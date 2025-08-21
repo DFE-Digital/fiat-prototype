@@ -12,6 +12,11 @@
     {% include "/small-iterations/index-content/231513-row-colours.njk" %}
 {% endset %}
 
+{% set 232167notificationBanner %}
+    {# 232167-notification-banner #}
+    {% include "/small-iterations/index-content/232167-notification-banner.njk" %}
+{% endset %} 
+
 {{ govukAccordion({
     id: "accordion-small-iteration-index",
     items: [
@@ -21,6 +26,14 @@
         },
         content: {
         html: 231513rowColours
+        }
+    },
+    {
+        heading: {
+        text: "Notification banner"
+        },
+        content: {
+        html: 232167notificationBanner
         }
     }
     ]

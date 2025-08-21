@@ -1,0 +1,566 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--orange govuk-!-margin-top-1"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining",
+    classes: "govuk-!-margin-top-1"
+  }) }}
+{% endset %}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Single headline grades",
+  captionClasses: "govuk-table__caption--m",
+  classes: "si-row-colours-table",
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date joined",
+      classes: "table-col--13",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Has recent short inspection",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Current single headline grade",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date of current inspection",
+      classes: "table-col--13",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Previous single headline grade",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date of previous inspection",
+      classes: "table-col--13",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Bourne Abbey Church of England Primary Academy</a>"
+      },
+      {
+        text: "1 Aug 2021",
+        attributes: {
+          "data-sort-value": "210801"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        html: 'Not available' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Not available"
+        }
+      },
+      {
+        html: '1 Jan 2025',
+        attributes: {
+          "data-sort-value": "1 Jan 2025"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      },
+      {
+        html: '15 Jan 2022',
+         attributes: {
+          "data-sort-value": "220115" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Bourne Elsea Park Church of England Primary Academy</a>"
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        html: 'Not available' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Not available"
+        }
+      },
+      {
+        html: '15 Jan 2029',
+        attributes: {
+          "data-sort-value": "290115"
+        }
+      },
+      {
+        html: 'Not available' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Not available"
+        }
+      },
+      {
+        html: '15 Jan 2025',
+        attributes: {
+          "data-sort-value": "250115"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Colsterworth Church of England Primary School</a>"
+      },
+      {
+        text: "21 Oct 2023",
+        attributes: {
+          "data-sort-value": "231021"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      },
+      {
+        html: '3 Oct 2023',
+        attributes: {
+          "data-sort-value": "231003"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: '15 Jan 2022',
+        attributes: {
+          "data-sort-value": "231021"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Grunge academy</a>"
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: 'Not available' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Not available"
+        }
+      },
+      {
+        html: '15 Jan 2025',
+        attributes: {
+          "data-sort-value": "250115"
+        }
+      },
+      {
+        html: '<strong>' + 'Inadequate' + '</strong>' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      },
+      {
+        html: '15 Jan 2022',
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Biscuit academy</a>"
+      },
+      {
+        text: "21 Oct 2023",
+        attributes: {
+          "data-sort-value": "231021"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding" 
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Strawberry academy</a>"
+      },
+      {
+        text: "21 Oct 2023",
+        attributes: {
+          "data-sort-value": "231021"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: '<strong>' + 'Inadequate' + '</strong>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Inadequate"
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Coffee academy</a>"
+      },
+      {
+        text: "1 Aug 2011",
+        attributes: {
+          "data-sort-value": "110801"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: '<strong>' + 'Requires improvement' + '</strong>' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>A longer name academy</a>"
+      },
+      {
+        text: "18 Mar 2023",
+        attributes: {
+          "data-sort-value": "230319"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: 'Not available' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Not available"
+        }
+      },
+      {
+        text: "15 Jan 2025",
+        attributes: {
+          "data-sort-value": "250115"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected" 
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Another longer named academy</a>"
+      },
+      {
+        text: "11 Jan 2023",
+        attributes: {
+          "data-sort-value": "230111"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        text: "15 Jan 2023",
+        attributes: {
+          "data-sort-value": "230115"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>A long name voluntary academy</a>"
+      },
+      {
+        text: "1 Aug 2011",
+        attributes: {
+          "data-sort-value": "110801"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not yet inspected',
+        attributes: {
+          "data-sort-value": "Not yet inspected"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      },
+      {
+        html: 'Not inspected',
+        attributes: {
+          "data-sort-value": "Not inspected"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Orange voluntary academy</a>"
+      },
+      {
+        text: "14 Feb 2022",
+        attributes: {
+          "data-sort-value": "220214"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#'' class='govuk-link'>Another academy with the longest name to test</a>"
+      },
+      {
+        text: "14 Feb 2022",
+        attributes: {
+          "data-sort-value": "220214"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: '<strong>' + 'Outstanding' + '</strong>' + '<br>' + afterJoiningTag,
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      },
+      {
+        html: '<strong>' + 'Good' + '</strong>' + '<br>' + beforeJoiningTag,
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        text: "15 Jan 2022",
+        attributes: {
+          "data-sort-value": "220115"
+        }
+      }
+    ]
+    
+  ]
+}) }}
