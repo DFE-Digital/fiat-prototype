@@ -8,6 +8,8 @@
 // Changes the container width from 960px to 1200px
 .govuk-width-container { @include govuk-width-container; }
 
+.govuk-template { background: white; }
+
 .fiat-max-width-0 {
     max-width: none;
 }
@@ -201,5 +203,40 @@
 .si-row-colours-table--school {
     .govuk-table__head {
         background-color: tint(govuk-colour("purple"), 90%);
+    }
+}
+
+.fast-notification {
+    display: flex;
+    justify-content: space-between;
+    padding: govuk-spacing(3);
+    border: 4px solid govuk-colour("yellow");
+    background-color: tint(govuk-colour("yellow"), 75%);
+    margin: govuk-spacing(2) 0;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    #fast-notification_close-button {
+        color: $govuk-link-colour;
+        // font-weight: bold;
+        cursor: pointer;
+    }
+
+    .moj-badge {
+        background: white;
+    }
+}
+
+.fast-notification_content {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0;
+        display: inline-block;
+        margin-left: govuk-spacing(2);
+        max-width: none;
     }
 }

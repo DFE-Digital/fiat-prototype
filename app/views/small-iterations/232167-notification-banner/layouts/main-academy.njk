@@ -20,6 +20,30 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {################################# Header #################################}
 {% block header %}
+
+  <div class="govuk-width-container" id="fast-notification_container">
+    <div class="fast-notification">
+      <div class="fast-notification_content">
+
+        {# new badge  #}
+        {{ mojBadge({
+          text: "NEW",
+          classes: "moj-badge moj-badge--pink moj-badge--large"
+        }) }}
+
+        {# content #}
+        <p class="govuk-body">20/08/2025: "Religious characteristics" can now be found within school records, within the "Overview" page</p>
+
+      </div>
+      
+      {# close link #}
+      <p class="govuk-body">
+        <a class="govuk-link" id="fast-notification_close-button">Close</a>
+      </p>
+
+    </div>
+  </div>
+
   {{ header({
       "showNav": "false",
       "showSearch": "true",

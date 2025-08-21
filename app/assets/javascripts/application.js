@@ -22,5 +22,16 @@ window.GOVUKPrototypeKit.documentReady(() => {
       });
     });
   }
+
+    const closeButton = document.getElementById("fast-notification_close-button");
+    const container = document.getElementById("fast-notification_container");
   
+    if (closeButton && container) {
+      closeButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        container.classList.add("govuk-!-display-none");
+        console.log('it works!');
+      });
+    }
 });
+
