@@ -1,0 +1,126 @@
+{%- from "govuk/components/table/macro.njk" import govukTable -%}
+
+{{ govukTable({
+  head: [
+    {
+      text: ""
+    },
+    {
+      text: "2025",
+      attributes: {
+        "aria-sort": "none"
+      },
+      format: "numeric"
+    },
+    {
+      text: "2024",
+      attributes: {
+        "aria-sort": "none"
+      },
+      format: "numeric"
+    },
+    {
+      text: "2023",
+      attributes: {
+        "aria-sort": "none"
+      },
+      format: "numeric"
+    },
+    {
+      text: "2022",
+      attributes: {
+        "aria-sort": "none"
+      },
+      format: "numeric"
+    },
+    {
+      text: "2021",
+      attributes: {
+        "aria-sort": "none"
+      },
+      format: "numeric"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Percentage of overall absence"
+      },
+      {
+        text: "Not yet submitted",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "not-yet-submitted"
+        }
+      },
+      {
+        text: "0",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "0"
+        }
+      },
+      {
+        text: "1%",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "1"
+        }
+      },
+      {
+        text: "3%",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "3"
+        }
+      },
+      {
+        text: "4",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "4%"
+        }
+      }
+    ],
+    [
+      {
+        text: "Percentage of enrolments who are persistent absentees"
+      },
+      {
+        text: "Not yet submitted",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "not-yet-submitted"
+        }
+      },
+      {
+        text: "7%",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "7%"
+        }
+      },
+      {
+        text: "5%",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "5"
+        }
+      },
+      {
+        text: "6%",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "6"
+        }
+      },
+      {
+        text: "3",
+        format: "numeric",
+        attributes: {
+          "data-sort-value": "3%"
+        }
+      }
+    ]
+  ]
+}) }}
