@@ -19,13 +19,13 @@
 {{ mojSubNavigation({
   label: 'Sub navigation',
   items: [{
-    text: 'Attendance',
-    href: 'pupils-attendance',
-    active: true if subNavActive == "attendance"
-  }, {
     text: 'Population',
     href: 'pupils-population',
     active: true if subNavActive == "population"
-  }
-  ]
+  },
+  {
+    text: 'Attendance',
+    href: 'pupils-attendance',
+    active: true if subNavActive == "attendance"
+  }]
 }) }}
