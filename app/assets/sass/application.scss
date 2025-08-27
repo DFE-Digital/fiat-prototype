@@ -210,8 +210,6 @@
     display: flex;
     justify-content: space-between;
     padding: govuk-spacing(3);
-    border: 4px solid govuk-colour("light-pink");
-    background-color: tint(govuk-colour("light-pink"), 80%);
     margin: govuk-spacing(2) 0;
 
     p {
@@ -239,4 +237,29 @@
         margin-left: govuk-spacing(2);
         max-width: none;
     }
+}
+
+.fast-notification--yellow {
+    border: 2px solid govuk-colour("yellow");
+    background-color: tint(govuk-colour("yellow"), 80%);
+}
+
+.fast-notification--green {
+    border: 2px solid govuk-colour("light-green");
+    background-color: tint(govuk-colour("light-green"), 80%);
+}
+
+.fast-notification--blue {
+    border: 2px solid govuk-colour("blue");
+    background-color: tint(govuk-colour("blue"), 80%);
+}
+
+.fast-notification--turquoise {
+    border: 2px solid govuk-colour("turquoise");
+    background-color: tint(govuk-colour("turquoise"), 80%);
+}
+
+.fast-notification--light-purple {
+    border: 2px solid govuk-colour("light-purple");
+    background-color: tint(govuk-colour("light-purple"), 80%);
 }
