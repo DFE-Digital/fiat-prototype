@@ -1,0 +1,20 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'Overview',
+    href: 'ofsted-overview',
+    active: true if subNavActive == "overview"
+  },
+  {
+    text: 'Report cards',
+    href: 'ofsted-reportCards',
+    active: true if subNavActive == "report_cards"
+  },
+  {
+    text: 'Older inspections (before November 2025)',
+    href: 'ofsted-olderInspections',
+    active: true if subNavActive == "older_inspections"
+  }
+  ]
+}) }}
