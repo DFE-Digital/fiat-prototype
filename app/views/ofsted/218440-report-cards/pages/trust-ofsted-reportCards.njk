@@ -7,7 +7,7 @@
 {% set navActive = "ofsted" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "overview" %}
+{% set subNavActive = "report_cards" %}
 
 {# Custom block for the main content area of a trust page #}
 {% block trustContent %}
@@ -19,16 +19,16 @@
   {# Sub-nav to flick through data sets #}
   {% include "ofsted/218440-report-cards/parts/trust-ofsted-sub_nav.njk" %}
 
-  {# No SHG guidance #}
-  {# {% include "ofsted/218440-report-cards/parts/explainer-SHGnotAvailable.njk" %} #}
+  {# Subtitle #}
+  <h3 class="govuk-heading-m">Report cards</h3>
 
-  {# Has short inspection guidance #}
-  {% include "ofsted/218440-report-cards/parts/explainer-shortInspectionGuidance.njk" %}
+  {# Missing report card guidance #}
+  {% include "ofsted/218440-report-cards/parts/explainer-reportCardnotAvailable.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--m">
 
-  {# Tables #}
-  {% include "ofsted/218440-report-cards/tables/trust-ofsted-overview_table.njk" %}
+  {# Tabs #}
+  {% include "ofsted/218440-report-cards/parts/trust-ofsted-reportCards_tabs.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--s">
 
