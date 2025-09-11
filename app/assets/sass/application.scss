@@ -263,3 +263,20 @@
     border: 2px solid govuk-colour("light-purple");
     background-color: tint(govuk-colour("light-purple"), 80%);
 }
+
+// report cards
+
+.report-card__accordion {
+    .govuk-accordion__controls {
+        display: none;
+    }
+}
+
+.report-card_accordion--safeguarding {
+    border: 2px solid govuk-colour("green") !important;
+    padding: govuk-spacing(3);
+    
+    .govuk-accordion__section-button {
+        border-top: none !important;
+    }
+}
