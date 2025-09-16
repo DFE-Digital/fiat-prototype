@@ -2,7 +2,7 @@
 {% set beforeJoiningTag %}
   {{ govukTag({
     text: "Before joining",
-    classes: "govuk-tag--orange govuk-!-margin-top-1"
+    classes: "govuk-tag--orange govuk-!-margin-top-2 govuk-!-margin-bottom-2"
   }) }}
 {% endset %}
 
@@ -10,7 +10,7 @@
 {% set afterJoiningTag %}
   {{ govukTag({
     text: "After joining",
-    classes: "govuk-!-margin-top-1"
+    classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-2"
   }) }}
 {% endset %}
 
@@ -35,7 +35,7 @@
   rows: [
     [
       {
-        text: "Current inspection"
+        html: "<strong>Current inspection</strong>"
       },
       {
         text: "Report card"
@@ -46,10 +46,10 @@
     ],
     [
       {
-        text: "Short inspection"
+        html: "<strong>Short inspection</strong>"
       },
       {
-        text: "Short inspection" 
+        text: "Yes" 
       },
       {
         html: "31 January 2024" + "<br>" + afterJoiningTag
@@ -57,13 +57,13 @@
     ],
     [
       {
-        text: "Previous inspection"
+        html: "<strong>Previous inspection</strong>"
       },
       {
-        text: "Single headline grade"
+        text: "Report card"
       },
       {
-        html: "6 March 2024" + "<br>" + beforeJoiningTag
+        html: "6 March 2024" + "<br>" + afterJoiningTag
       }
     ]
   ]
