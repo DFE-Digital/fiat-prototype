@@ -270,13 +270,25 @@
     .govuk-accordion__controls {
         display: none;
     }
+    .govuk-accordion__section {
+        background-color: white;
+    }
+    .govuk-accordion__section-button {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 .report-card_accordion--safeguarding {
     border: 2px solid govuk-colour("green") !important;
-    padding: govuk-spacing(3);
+    padding: govuk-spacing(3); 
     
     .govuk-accordion__section-button {
         border-top: none !important;
     }
+}
+
+.govuk-accordion__section {
+    background-color: tint(govuk-colour("light-grey"), 50%);
+    // padding: govuk-spacing(3); this looks weird since the 'border' (shadow) is attributed to a different element, so it doesn't stretch with the padding
 }
