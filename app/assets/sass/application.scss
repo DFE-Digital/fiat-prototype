@@ -291,4 +291,8 @@
 .govuk-accordion__section {
     background-color: tint(govuk-colour("light-grey"), 50%);
     // padding: govuk-spacing(3); this looks weird since the 'border' (shadow) is attributed to a different element, so it doesn't stretch with the padding
+
+    .govuk-accordion__section-content {
+        padding-bottom: govuk-spacing(5);
+    }
 }
