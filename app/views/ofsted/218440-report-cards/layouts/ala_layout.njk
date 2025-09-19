@@ -1,0 +1,23 @@
+{% extends "/ofsted/218440-report-cards/layouts/ala_main.njk" %}
+
+{# {% set pageTitle = "Grunge and dance voluntary academy" %} #}
+{% set pageHeading = pageTitle %}
+{% set pageCaption = "Academy sponsor led" %}
+
+{% block content %} 
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {# Start of school content block #}
+
+      {% block schoolContent %}
+        Text goes here, override this by overriding the block
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}
+

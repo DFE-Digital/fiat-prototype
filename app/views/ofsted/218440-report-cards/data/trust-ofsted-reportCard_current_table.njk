@@ -1,0 +1,235 @@
+{# Set before joining tag #}
+{# {% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--orange govuk-!-margin-top-1"
+  }) }}
+{% endset %} #}
+
+{# Set After joining tag #}
+{# {% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining",
+    classes: "govuk-!-margin-top-1"
+  }) }}
+{% endset %} #}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Current report cards",
+  captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-5",
+  classes: "si-row-colours-table",
+  head: [
+    {
+      text: "School name",
+      classes: "table-col--20",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Leadership and Governance",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Personal development and Wellbeing",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Curriculum and Teaching",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Inclusion",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Achievement",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Attendance and Behaviour",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='abbey-catholic/ala-ofsted-reportCards' class='govuk-link'>Abbey Catholic Primary School</a>"
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='bourne-abbey/ala-ofsted-reportCards' class='govuk-link'>Bourne Abbey Church of England Primary Academy</a>"
+      },
+      {
+        text: "Urgent Improvement",
+        attributes: {
+          "data-sort-value": "Urgent Improvement"
+        }
+      },
+      {
+        text: "Needs attention",
+        attributes: {
+          "data-sort-value": "Needs attention"
+        }
+      },
+      {
+        html: 'Urgent Improvement',
+        attributes: {
+          "data-sort-value": 'Urgent Improvement'
+        }
+      },
+      {
+        html: 'Needs attention',
+        attributes: {
+          "data-sort-value": "Needs attention"
+        }
+      },
+      {
+        html: 'Expected standard',
+        attributes: {
+          "data-sort-value": 'Expected standard'
+        }
+      },
+      {
+        html: 'Expected standard',
+        attributes: {
+          "data-sort-value": "Expected standard"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='colsterworth-church/ala-ofsted-reportCards' class='govuk-link'>Colsterworth Church of England Primary School</a>"
+      },
+      {
+        text: "Exceptional",
+        attributes: {
+          "data-sort-value": "Exceptional"
+        }
+      },
+      {
+        text: "Strong standard",
+        attributes: {
+          "data-sort-value": "Strong standard"
+        }
+      },
+      {
+        text: "Expected standard",
+        attributes: {
+          "data-sort-value": "Expected standard"
+        }
+      },
+      {
+        text: "Strong standard",
+        attributes: {
+          "data-sort-value": "Strong standard"
+        }
+      },
+      {
+        html: 'Strong standard',
+        attributes: {
+          "data-sort-value": 'Strong standard'
+        }
+      },
+      {
+        html: 'Exceptional',
+        attributes: {
+          "data-sort-value": "Exceptional"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='brabins-endowed/ala-ofsted-reportCards' class='govuk-link'>Brabins Endowed School</a>"
+      },
+      {
+        text: "Strong standard",
+        attributes: {
+          "data-sort-value": "Strong standard"
+        }
+      },
+      {
+        text: "Expected standard",
+        attributes: {
+          "data-sort-value": "Expected standard"
+        }
+      },
+      {
+        text: "Expected standard",
+        attributes: {
+          "data-sort-value": "Expected standard"
+        }
+      },
+      {
+        text: "Exceptional",
+        attributes: {
+          "data-sort-value": "Exceptional"
+        }
+      },
+      {
+        html: 'Strong standard',
+        attributes: {
+          "data-sort-value": 'Strong standard'
+        }
+      },
+      {
+        html: 'Strong standard',
+        attributes: {
+          "data-sort-value": "Strong standard"
+        }
+      }
+    ]
+  ]
+}) }}
