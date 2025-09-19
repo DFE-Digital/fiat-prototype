@@ -7,20 +7,31 @@
     Re-draft of the Ofsted section for both Trust and School records to accommodate November 2025 introduction of "Report cards".
 </p>
 
-{% set 218440reportCards %}
-    {# 218440-report-cards #}
-    {% include "/ofsted/index-content/218440-report-cards.njk" %}
+{% set draft1 %}
+    {% include "/ofsted/index-content/218440-report-cards--draft1.njk" %}
+{% endset %}
+
+{% set draft2 %}
+    {% include "/ofsted/index-content/218440-report-cards--draft2.njk" %}
 {% endset %}
 
 {{ govukAccordion({
-    id: "accordion-ofsted-draft-1",
+    id: "accordion-ofsted",
     items: [
+    {
+        heading: {
+        text: "Draft 2"
+        },
+        content: {
+        html: draft2
+        }
+    },
     {
         heading: {
         text: "Draft 1"
         },
         content: {
-        html: 218440reportCards
+        html: draft1
         }
     }
     ]
