@@ -8,12 +8,41 @@
     <p class='govuk-heading-s'>Overview</p>
     <ul class="govuk-list govuk-list--bullet">
         <li>
-            Single headline grades were taken from State-funded school inspections and outcomes: management information on {{ currentDate }} and Further education and skills inspections and outcomes: management information on {{ currentDate }}
+            Date joined trust taken from Get information about schools on {{ currentDate }}
         </li>
         <li>
-            All inspection dates were taken from State-funded school inspections and outcomes: management information on {{ currentDate }} and Further education and skills inspections and outcomes: management information on {{ currentDate }}
+            All inspection types taken from State-funded school inspections and outcomes: management information on {{ currentDate }}
+        </li>
+        <li>
+            All inspection dates taken from State-funded school inspections and outcomes: management information on {{ currentDate }}
         </li>
     </ul>
+
+    <p class='govuk-heading-s'>Report cards</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>
+            Current report card ratings taken from State-funded school inspections and outcomes: management information on {{ currentDate }}
+        </li>
+        <li>
+            Previous report card ratings taken from State-funded school inspections and outcomes: management information on {{ currentDate }}
+        </li>
+    </ul>
+
+    <p class='govuk-heading-s'>Older inspections (before November 2025)</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>
+            Inspection ratings after September 24 taken from State-funded school inspections and outcomes: management information on {{ currentDate }}
+        </li>
+        <li>
+            Inspection ratings before September 24 taken from State-funded school inspections and outcomes: management information on {{ currentDate }}
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <a href="#" target="_blank">
+            More about the data we use (opens in a new tab)
+        </a>
+    </p>
 {% endset %}
 
 {# Display it all in a details component #}
