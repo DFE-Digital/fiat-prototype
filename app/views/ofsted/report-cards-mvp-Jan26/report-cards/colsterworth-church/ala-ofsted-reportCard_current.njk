@@ -1,5 +1,5 @@
 {# Title #}
-<h1 class="govuk-heading-l">
+<h1 class="govuk-heading-m">
     Current report card
 </h1>
 
@@ -7,95 +7,61 @@
 <p class="govuk-body">This inspection took place <strong>21 July 2026</strong>.</p>
 <p class="govuk-body">This was <strong>after</strong> joining the trust.</p>
 
-{# Safeguarding met #}
-<div class="report-card__accordion">
-    {{ govukAccordion({
-    id: "accordion-default",
-    classes: "report-card_accordion--safeguarding govuk-!-margin-top-3",
-    items: [
-        {
-        heading: {
-            text: "Safeguarding standards met"
-        },
-        content: {
-            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-        }
-        }
-    ]
-    }) }}
-</div>
-
-{# Exceptional #}
-<h2 class="govuk-heading-l">
-    Exceptional
-</h2>
-{{ govukAccordion({
-    id: "accordion-reportCard-current-strong-standard",
-    items: [
-        {
-        heading: {
-            text: "Leadership and governance"
-        },
-        content: {
-            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-        }
-        }, {
-        heading: {
-            text: "Attendance and behaviour"
-        },
-        content: {
-            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-        }
-        }
-    ]
-}) }}
-
-{# Strong standard #}
-<h2 class="govuk-heading-l">
-    Strong standard
-</h2>
-{{ govukAccordion({
-    id: "accordion-reportCard-current-expected-standard",
-    items: [
-        {
-        heading: {
-            text: "Personal development and wellbeing"
-        },
-        content: {
-            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-        }
-        }, {
-        heading: {
-            text: "Inclusion"
-        },
-        content: {
-            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-        }
-        }, {
-        heading: {
-            text: "Achievement"
-        },
-        content: {
-            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-        }
-        }
-    ]
-}) }}
-
-{# Expected standard #}
-<h2 class="govuk-heading-l">
-    Expected standard
-</h2>
-{{ govukAccordion({
-    id: "accordion-reportCard-current-needs-attention",
-    items: [
-        {
-        heading: {
-            text: "Curriculum and teaching"
-        },
-        content: {
-            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-        }
-        }
-    ]
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Leadership and Governance",
+        classes: "govuk-!-width-one-half"
+      },
+      value: {
+        text: "Exceptional"
+      }
+    },
+    {
+      key: {
+        text: "Personal development and Wellbeing",
+        classes: "govuk-!-width-one-half"
+      },
+      value: {
+        text: "Strong standard"
+      }
+    },
+    {
+      key: {
+        text: "Curriculum and Teaching",
+        classes: "govuk-!-width-one-half"
+      },
+      value: {
+        text: "Expected standard"
+      }
+    },
+    {
+      key: {
+        text: "Inclusion",
+        classes: "govuk-!-width-one-half"
+      },
+      value: {
+        text: "Strong standard"
+      }
+    },
+    {
+      key: {
+        text: "Achievement",
+        classes: "govuk-!-width-one-half"
+      },
+      value: {
+        text: "Strong standard"
+      }
+    },
+    {
+      key: {
+        text: "Attendance and Behaviour",
+        classes: "govuk-!-width-one-half"
+      },
+      value: {
+        text: "Exceptional"
+      }
+    }
+  ]
 }) }}
