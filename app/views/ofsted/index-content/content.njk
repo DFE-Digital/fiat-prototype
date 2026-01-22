@@ -15,9 +15,21 @@
     {% include "/ofsted/index-content/218440-report-cards--draft2.njk" %}
 {% endset %}
 
+{% set mvpJan26 %}
+    {% include "/ofsted/index-content/report-cards-mvp-Jan26.njk" %}
+{% endset %}
+
 {{ govukAccordion({
     id: "accordion-ofsted",
     items: [
+    {
+        heading: {
+        text: "MvP Jan 26"
+        },
+        content: {
+            html: mvpJan26
+        }
+    },
     {
         heading: {
         text: "Draft 2"

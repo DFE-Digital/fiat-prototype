@@ -1,0 +1,101 @@
+{# Title #}
+<h1 class="govuk-heading-l">
+    Current report card
+</h1>
+
+{# Meta info #}
+<p class="govuk-body">This inspection took place <strong>12 November 2025</strong>.</p>
+<p class="govuk-body">This was <strong>after</strong> joining the trust.</p>
+
+{# Safeguarding met #}
+<div class="report-card__accordion">
+    {{ govukAccordion({
+    id: "accordion-default",
+    classes: "report-card_accordion--safeguarding govuk-!-margin-top-3",
+    items: [
+        {
+        heading: {
+            text: "Safeguarding standards met"
+        },
+        content: {
+            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        }
+        }
+    ]
+    }) }}
+</div>
+
+{# Expected standard #}
+<h2 class="govuk-heading-l">
+    Expected standard
+</h2>
+{{ govukAccordion({
+    id: "accordion-reportCard-current-strong-standard",
+    items: [
+        {
+        heading: {
+            text: "Achievement"
+        },
+        content: {
+            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        }
+        }, {
+        heading: {
+            text: "Attendance and behaviour"
+        },
+        content: {
+            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        }
+        }
+    ]
+}) }}
+
+{# Needs attention #}
+<h2 class="govuk-heading-l">
+    Needs attention
+</h2>
+{{ govukAccordion({
+    id: "accordion-reportCard-current-expected-standard",
+    items: [
+        {
+        heading: {
+            text: "Personal development and wellbeing"
+        },
+        content: {
+            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        }
+        }, {
+        heading: {
+            text: "Inclusion"
+        },
+        content: {
+            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        }
+        }
+    ]
+}) }}
+
+{# Urgent improvement #}
+<h2 class="govuk-heading-l">
+    Urgent improvement
+</h2>
+{{ govukAccordion({
+    id: "accordion-reportCard-current-needs-attention",
+    items: [
+        {
+        heading: {
+            text: "Leadership and governance"
+        },
+        content: {
+            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        }
+        }, {
+        heading: {
+            text: "Curriculum and teaching"
+        },
+        content: {
+            html: '<p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+        }
+        }
+    ]
+}) }}

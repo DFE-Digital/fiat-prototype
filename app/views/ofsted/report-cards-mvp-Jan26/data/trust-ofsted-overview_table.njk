@@ -1,0 +1,237 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--orange govuk-!-margin-top-1"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining",
+    classes: "govuk-!-margin-top-1"
+  }) }}
+{% endset %}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Overview",
+  captionClasses: "govuk-table__caption--m",
+  classes: "si-row-colours-table",
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date joined",
+      classes: "table-col--13",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Has recent short inspection",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Current inspection type",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date of current inspection",
+      classes: "table-col--13",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Previous inspection type",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date of previous inspection",
+      classes: "table-col--13",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='abbey-catholic/ala-ofsted-overview' class='govuk-link'>Abbey Catholic Primary School</a>"
+      },
+      {
+        text: "18 July 2019",
+        attributes: {
+          "data-sort-value": "190718"
+        }
+      },
+      {
+        text: "Yes",
+        attributes: {
+          "data-sort-value": "Yes"
+        }
+      },
+      {
+        html: 'Older inspection',
+        attributes: {
+          "data-sort-value": "Older inspection"
+        }
+      },
+      {
+        html: '12 Dec 2025',
+        attributes: {
+          "data-sort-value": "251212"
+        }
+      },
+      {
+        html: 'Older inspection',
+        attributes: {
+          "data-sort-value": "Older inspection" 
+        }
+      },
+      {
+        html: '15 Nov 2020',
+         attributes: {
+          "data-sort-value": "201115" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='bourne-abbey/ala-ofsted-overview' class='govuk-link'>Bourne Abbey Church of England Primary Academy</a>"
+      },
+      {
+        text: "18 Jul 2024",
+        attributes: {
+          "data-sort-value": "240718"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: 'Report card',
+        attributes: {
+          "data-sort-value": 'Report card'
+        }
+      },
+      {
+        html: '12 Nov 2025',
+        attributes: {
+          "data-sort-value": "251112"
+        }
+      },
+      {
+        html: 'Older inspection',
+        attributes: {
+          "data-sort-value": 'Older inspection'
+        }
+      },
+      {
+        html: '15 Nov 2024',
+        attributes: {
+          "data-sort-value": "241115"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='colsterworth-church/ala-ofsted-overview' class='govuk-link'>Colsterworth Church of England Primary School</a>"
+      },
+      {
+        text: "12 Jun 2020",
+        attributes: {
+          "data-sort-value": "200612"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: 'Report card',
+        attributes: {
+          "data-sort-value": 'Report card'
+        }
+      },
+      {
+        html: '21 Jul 2026',
+        attributes: {
+          "data-sort-value": "260621"
+        }
+      },
+      {
+        html: 'Older inspection',
+        attributes: {
+          "data-sort-value": 'Older inspection'
+        }
+      },
+      {
+        html: '18 Jul 2021',
+        attributes: {
+          "data-sort-value": "210718"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='brabins-endowed/ala-ofsted-overview' class='govuk-link'>Brabins Endowed School</a>"
+      },
+      {
+        text: "12 Jun 2020",
+        attributes: {
+          "data-sort-value": "200612"
+        }
+      },
+      {
+        text: "No",
+        attributes: {
+          "data-sort-value": "No"
+        }
+      },
+      {
+        html: 'Report card',
+        attributes: {
+          "data-sort-value": "Report card"
+        }
+      },
+      {
+        html: '21 Aug 2030',
+        attributes: {
+          "data-sort-value": "300821"
+        }
+      },
+      {
+        html: 'Report card',
+        attributes: {
+          "data-sort-value": "Report card"
+        }
+      },
+      {
+        html: '18 Aug 2026',
+        attributes: {
+          "data-sort-value": "260818"
+        }
+      }
+    ]
+  ]
+}) }}
