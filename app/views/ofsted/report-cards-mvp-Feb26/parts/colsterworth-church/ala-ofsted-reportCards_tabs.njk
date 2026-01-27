@@ -1,0 +1,26 @@
+{% set current %}
+    {% include "../../report-cards/colsterworth-church/ala-ofsted-reportCard_current.njk" %}
+{% endset -%}
+
+{% set previous %}
+    {% include "../../report-cards/colsterworth-church/ala-ofsted-reportCard_previous.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Current report card",
+      id: "ala-ofsted-reportCard_current",
+      panel: {
+        html: current
+      }
+    },
+    {
+      label: "Previous report card",
+      id: "ala-ofsted-reportCard_previous",
+      panel: {
+        html: previous
+      }
+    }
+  ]
+}) }}

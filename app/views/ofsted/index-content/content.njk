@@ -19,9 +19,21 @@
     {% include "/ofsted/index-content/report-cards-mvp-Jan26.njk" %}
 {% endset %}
 
+{% set mvpFeb26 %}
+    {% include "/ofsted/index-content/report-cards-mvp-Feb26.njk" %}
+{% endset %}
+
 {{ govukAccordion({
     id: "accordion-ofsted",
     items: [
+    {
+        heading: {
+        text: "MvP Feb 26"
+        },
+        content: {
+            html: mvpFeb26
+        }
+    },
     {
         heading: {
         text: "MvP Jan 26"
