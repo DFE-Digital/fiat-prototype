@@ -4,15 +4,15 @@
 {# {% set subPage = "Academies details" %} #}
 
 {# Set name of school #}
-{% set pageTitle = "Brabins Endowed School" %}
+{% set pageTitle = "Walton High" %}
 
 {# Set an active state on the appropraite primary nav item #}
 {% set navActive = "ofsted" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "report_cards" %}
+{% set subNavActive = "overview" %}
 
-{# Custom block for the main content area of a school page #}
+{# Custom block for the main content area of a trust page #}
 {% block schoolContent %}
 
   <h2 class="govuk-heading-l">
@@ -22,16 +22,18 @@
   {# Sub-nav to flick through data sets #}
   {% include "ofsted/report-cards-mvp-Feb26/parts/ala-ofsted-sub_nav.njk" %}
 
-  {# Subtitle #}
-  <h3 class="govuk-heading-m">Report cards</h3>
+  <p class="govuk-body">This school joined the trust on <strong>01 December 2024</strong>.
 
-  {# Missing report card guidance #}
-  {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-ala-reportCardnotAvailable.njk" %}
+  {# Has short inspection guidance #}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-ala-shortInspectionGuidance.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--m">
 
-  {# Tabs #}
-  {% include "ofsted/report-cards-mvp-Feb26/parts/brabins-endowed/ala-ofsted-reportCards_tabs.njk" %}
+  {# Subtitle #}
+  <h3 class="govuk-heading-m">Overview</h3>
+
+  {# Tables #}
+  {% include "ofsted/report-cards-mvp-Feb26/data/walton-high/ala-ofsted-overview_table.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--s">
 

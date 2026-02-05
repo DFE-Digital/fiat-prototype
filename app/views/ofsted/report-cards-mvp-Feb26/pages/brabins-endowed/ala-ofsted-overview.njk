@@ -1,4 +1,4 @@
-{% extends "ofsted/report-cards-mvp-Jan26/layouts/ala_layout.njk" %}
+{% extends "ofsted/report-cards-mvp-Feb26/layouts/ala_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -20,12 +20,12 @@
   </h2>
 
   {# Sub-nav to flick through data sets #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/ala-ofsted-sub_nav.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/ala-ofsted-sub_nav.njk" %}
 
   <p class="govuk-body">This school joined the trust on <strong>12 June 2020</strong>.
 
   {# Has short inspection guidance #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/explainer-ala-shortInspectionGuidance.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-ala-shortInspectionGuidance.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--m">
 
@@ -33,7 +33,7 @@
   <h3 class="govuk-heading-m">Overview</h3>
 
   {# Tables #}
-  {% include "ofsted/report-cards-mvp-Jan26/data/brabins-endowed/ala-ofsted-overview_table.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/data/brabins-endowed/ala-ofsted-overview_table.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--s">
 
@@ -48,6 +48,6 @@
     }) }}
 
   {# Sources and updates #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/ala-ofsted-sourcesUpdates.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/ala-ofsted-sourcesUpdates.njk" %}
 
 {% endblock %}

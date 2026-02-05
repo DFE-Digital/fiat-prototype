@@ -1,4 +1,4 @@
-{% extends "ofsted/report-cards-mvp-Jan26/layouts/trust_layout.njk" %}
+{% extends "ofsted/report-cards-mvp-Feb26/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -17,18 +17,127 @@
   </h2>
 
   {# Sub-nav to flick through data sets #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-sub_nav.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/trust-ofsted-sub_nav.njk" %}
 
   {# Subtitle #}
   <h3 class="govuk-heading-m">Older inspections (before November 2025)</h3>
 
+
   {# SHG not available #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/explainer-SHGnotAvailable.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-SHGnotAvailable.njk" %}
 
-  <hr class="govuk-section-break govuk-section-break--m">
-
-  {# Tabs #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-olderInspections_tabs.njk" %}
+  <table class="govuk-table si-row-colours-table si-row-colours-table--no-background" data-module="moj-sortable-table">
+    <caption class="govuk-table__caption govuk-table__caption--s govuk-!-margin-bottom-5"></caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header table-col--20" aria-sort="none">School name</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Date of inspection</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Quality of education</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Behaviour and attitudes</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Personal development</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Leadership and management</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Effective safeguarding</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Category of concern</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" rowspan="2"><a href="abbey-catholic/ala-ofsted-olderInspections" class="govuk-link">Abbey Catholic Primary School</a></td>
+        <td class="govuk-table__cell" data-sort-value="2025-10-12"><span class="govuk-visually-hidden">for Abbey Catholic Primary School </span>12 Dec 2025</td>
+        <td class="govuk-table__cell" data-sort-value="Good">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Good">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Good">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Requires improvement</td>
+        <td class="govuk-table__cell" data-sort-value="Good">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Good">Good</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="2020-11-15"><span class="govuk-visually-hidden">for Abbey Catholic Primary School </span>15 Nov 2020</td>
+        <td class="govuk-table__cell" data-sort-value="Outstanding">Outstanding</td>
+        <td class="govuk-table__cell" data-sort-value="Outstanding">Outstanding</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Requires improvement</td>
+        <td class="govuk-table__cell" data-sort-value="Good">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Good">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Requires improvement</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" rowspan="2"><a href="bourne-abbey/ala-ofsted-olderInspections" class="govuk-link">Bourne Abbey Church of England Primary Academy</a></td>
+        <td class="govuk-table__cell" data-sort-value="2025-12-12"><span class="govuk-visually-hidden">for Bourne Abbey Church of England Primary Academy </span>15 Nov 2024</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Inadequate</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Requires improvement</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Inadequate</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Requires improvement</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Requires improvement</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Requires improvement</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="2020-11-15"><span class="govuk-visually-hidden">for Bourne Abbey Church of England Primary Academy </span>Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" rowspan="2"><a href="colsterworth-church/ala-ofsted-olderInspections" class="govuk-link">Colsterworth Church of England Primary School</a></td>
+        <td class="govuk-table__cell" data-sort-value=""><span class="govuk-visually-hidden">for Colsterworth Church of England Primary School </span>18 Jul 2021</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Outstanding</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Outstanding</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="2020-11-15"><span class="govuk-visually-hidden">for Colsterworth Church of England Primary School </span>Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" rowspan="2"><a href="brabins-endowed/ala-ofsted-olderInspections" class="govuk-link">Brabins Endowed School</a></td>
+        <td class="govuk-table__cell" data-sort-value=""><span class="govuk-visually-hidden">for Brabins Endowed School </span>Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Not applicable</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="2020-11-15"><span class="govuk-visually-hidden">for Brabins Endowed School </span>Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" rowspan="2"><a href="walton-high/ala-ofsted-olderInspections" class="govuk-link">Walton High</a></td>
+        <td class="govuk-table__cell" data-sort-value=""><span class="govuk-visually-hidden">for Walton High </span>16 May 2023</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">Yes</td>
+        <td class="govuk-table__cell" data-sort-value="Not applicable">None</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="2020-11-15"><span class="govuk-visually-hidden">for Walton High </span>25 September 2013</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Inadequate">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Good</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not applicable</td>
+        <td class="govuk-table__cell" data-sort-value="Requires improvement">Not yet inspected</td>
+      </tr>
+    </tbody>
+  </table>
 
   <hr class="govuk-section-break govuk-section-break--s">
 
@@ -39,6 +148,6 @@
     }) }}
 
   {# Sources and updates #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-sourcesUpdates.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/trust-ofsted-sourcesUpdates.njk" %}
 
 {% endblock %}
