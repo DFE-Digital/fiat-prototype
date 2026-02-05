@@ -1,4 +1,4 @@
-{% extends "ofsted/report-cards-mvp-Jan26/layouts/trust_layout.njk" %}
+{% extends "ofsted/report-cards-mvp-Feb26/layouts/trust_layout.njk" %}
 
 {# Set sub page word to use in pageTitle (e.g. tab title) #}
 {# {% set subPage = "Academies details" %} #}
@@ -17,18 +17,18 @@
   </h2>
 
   {# Sub-nav to flick through data sets #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-sub_nav.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/trust-ofsted-sub_nav.njk" %}
 
   {# No SHG guidance #}
-  {# {% include "ofsted/report-cards-mvp-Jan26/parts/explainer-SHGnotAvailable.njk" %} #}
+  {# {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-SHGnotAvailable.njk" %} #}
 
   {# Has short inspection guidance #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/explainer-shortInspectionGuidance.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-shortInspectionGuidance.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--m">
 
   {# Tables #}
-  {% include "ofsted/report-cards-mvp-Jan26/data/trust-ofsted-overview_table.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/data/trust-ofsted-overview_table.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--s">
 
@@ -39,6 +39,6 @@
     }) }}
 
   {# Sources and updates #}
-  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-sourcesUpdates.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/trust-ofsted-sourcesUpdates.njk" %}
 
 {% endblock %}

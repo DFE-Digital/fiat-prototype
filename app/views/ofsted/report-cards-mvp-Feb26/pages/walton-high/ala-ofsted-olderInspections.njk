@@ -4,13 +4,13 @@
 {# {% set subPage = "Academies details" %} #}
 
 {# Set name of school #}
-{% set pageTitle = "Brabins Endowed School" %}
+{% set pageTitle = "Walton High" %}
 
 {# Set an active state on the appropraite primary nav item #}
 {% set navActive = "ofsted" %}
 
 {# Set an active state on the appropraite secondary nav item #}
-{% set subNavActive = "report_cards" %}
+{% set subNavActive = "older_inspections" %}
 
 {# Custom block for the main content area of a school page #}
 {% block schoolContent %}
@@ -23,15 +23,15 @@
   {% include "ofsted/report-cards-mvp-Feb26/parts/ala-ofsted-sub_nav.njk" %}
 
   {# Subtitle #}
-  <h3 class="govuk-heading-m">Report cards</h3>
+  <h3 class="govuk-heading-m">Older inspections (before November 2025)</h3>
 
   {# Missing report card guidance #}
-  {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-ala-reportCardnotAvailable.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/explainer-SHGnotAvailable.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--m">
 
   {# Tabs #}
-  {% include "ofsted/report-cards-mvp-Feb26/parts/brabins-endowed/ala-ofsted-reportCards_tabs.njk" %}
+  {% include "ofsted/report-cards-mvp-Feb26/parts/walton-high/ala-ofsted-olderInspections_tabs.njk" %}
 
   <hr class="govuk-section-break govuk-section-break--s">
 

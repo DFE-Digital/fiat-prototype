@@ -198,6 +198,12 @@
     tr.govuk-table__row:nth-child(even) {
         background: #f6f6f6;
     }
+
+}
+.si-row-colours-table--no-background {
+    tr.govuk-table__row:nth-child(even) {
+        background: inherit;
+    }
 }
 
 .si-row-colours-table--school {
