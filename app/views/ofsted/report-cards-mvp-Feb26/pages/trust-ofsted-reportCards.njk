@@ -1,0 +1,44 @@
+{% extends "ofsted/report-cards-mvp-Jan26/layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set navActive = "ofsted" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "report_cards" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      Ofsted
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-sub_nav.njk" %}
+
+  {# Subtitle #}
+  <h3 class="govuk-heading-m">Report cards</h3>
+
+  {# Missing report card guidance #}
+  {% include "ofsted/report-cards-mvp-Jan26/parts/explainer-reportCardnotAvailable.njk" %}
+
+  <hr class="govuk-section-break govuk-section-break--m">
+
+  {# Tabs #}
+  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-reportCards_tabs.njk" %}
+
+  <hr class="govuk-section-break govuk-section-break--s">
+
+  {{ govukButton({
+      text: "Download all Ofsted data",
+      classes: "govuk-button--secondary",
+      href: "#"
+    }) }}
+
+  {# Sources and updates #}
+  {% include "ofsted/report-cards-mvp-Jan26/parts/trust-ofsted-sourcesUpdates.njk" %}
+
+{% endblock %}
