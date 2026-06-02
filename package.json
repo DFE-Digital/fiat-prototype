@@ -6,11 +6,10 @@
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "2.0.1",
-    "@ministryofjustice/frontend": "5.1.2",
-    "@x-govuk/govuk-prototype-components": "3.0.9",
+    "@ministryofjustice/frontend": "9.0.0",
     "@x-govuk/govuk-prototype-filters": "1.5.0",
     "dfe-frontend": "^2.0.1",
-    "govuk-frontend": "5.9.0",
+    "govuk-frontend": "6.0.0",
     "govuk-prototype-kit": "13.20.1",
     "radio-button-redirect": "^1.2.0"
   }
