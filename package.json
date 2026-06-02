@@ -9,7 +9,7 @@
     "@ministryofjustice/frontend": "9.0.0",
     "@x-govuk/govuk-prototype-filters": "1.5.0",
     "dfe-frontend": "^2.0.1",
-    "govuk-frontend": "6.0.0",
+    "govuk-frontend": "6.1.0",
     "govuk-prototype-kit": "13.20.1",
     "radio-button-redirect": "^1.2.0"
   }
