@@ -12,6 +12,7 @@
     "dfe-frontend": "^2.0.1",
     "govuk-frontend": "6.1.0",
     "govuk-prototype-kit": "13.20.1",
+    "marked": "^4.3.0",
     "radio-button-redirect": "^1.2.0"
   }
 }
