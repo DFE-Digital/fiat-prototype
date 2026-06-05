@@ -1,6 +1,6 @@
-# Readme for the FIAT Prototype
-FIAT (Find Information about Academies and Trusts)
-Design prototypes for iterations and additions to the FIAT product, from Beta phase onwards.
+# Readme for the FAST Prototype
+FAST (Find Information about Schools and Trusts)
+Prototypes for iterations and additions to the FAST product, from Beta phase onwards.
 
 The previous iteration of this prototype was TRAMS (repository here https://github.com/DFE-Digital/TRAMS-alpha)
 
@@ -12,10 +12,6 @@ This prototype is based on the:
 
 And on occasion, others (e.g MoJ Design system)
 
-## Requirements
-
-- Node.js - version 20.x.x
-
 ## Installation
 
 - Clone this repository to a folder on your computer
@@ -24,4 +20,4 @@ And on occasion, others (e.g MoJ Design system)
 - Type `npm install` to install the dependencies
 
 ## View online
-- [View the prototype online](https://fiat-prototype-d2ea58cab555.herokuapp.com/)
+- [View the prototype online](https://fiat-prototype.rsd.education.gov.uk/)
