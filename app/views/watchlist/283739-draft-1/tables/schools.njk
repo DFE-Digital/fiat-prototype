@@ -1,0 +1,61 @@
+<table class="govuk-table si-row-colours-table si-row-colours-table--school" data-module="moj-sortable-table">
+  <caption class="govuk-table__caption govuk-!-margin-bottom-4">Schools</caption>
+  
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" aria-sort="none">School name</th>
+      <th scope="col" class="govuk-table__header" aria-sort="none">URN</th>
+      <th scope="col" class="govuk-table__header" aria-sort="none">Trust</th>
+      <th scope="col" class="govuk-table__header" aria-sort="none">Local authority</th>
+      <th scope="col" class="govuk-table__header govuk-visually-hidden govuk-link--no-visited-state" aria-sort="none">Action</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="task-list" class="govuk-link govuk-link--no-visited-state">Academy@worden</a></td>
+      <td class="govuk-table__cell">12345</td>
+      <td class="govuk-table__cell">ACADEMY@WORDEN</td>
+      <td class="govuk-table__cell">Lancashire</td>
+      <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="task-list" class="govuk-link govuk-link--no-visited-state">Burwell Village College</a></td>
+      <td class="govuk-table__cell">110758</td>
+      <td class="govuk-table__cell">Not applicable</td>
+      <td class="govuk-table__cell">Cambridgeshire</td>
+      <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="task-list" class="govuk-link govuk-link--no-visited-state">Oasis Academy Immingham</a></td>
+      <td class="govuk-table__cell">135176</td>
+      <td class="govuk-table__cell">OASIS COMMUNITY LEARNING</td>
+      <td class="govuk-table__cell">North East Lincolnshire</td>
+      <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+    </tr>
+
+    {% if (uriLastPart !== "watchlist-remove-school") %}
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="task-list" class="govuk-link govuk-link--no-visited-state">Oasis Academy Mayfield</a></td>
+        <td class="govuk-table__cell">135629</td>
+        <td class="govuk-table__cell">OASIS COMMUNITY LEARNING</td>
+        <td class="govuk-table__cell">Southampton</td>
+        <td class="govuk-table__cell"><a href="watchlist-remove-school" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+      </tr>
+    {% endif %}
+
+    {% if (uriLastPart === "watchlist-confirm-school") %}
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="task-list" class="govuk-link govuk-link--no-visited-state">Earl Soham Community Primary School</a></td>
+        <td class="govuk-table__cell">124578</td>
+        <td class="govuk-table__cell">Not applicable</td>
+        <td class="govuk-table__cell">Suffolk</td>
+        <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Remove</a></td>
+      </tr>
+    {% endif %}
+    
+  </tbody>
+</table>

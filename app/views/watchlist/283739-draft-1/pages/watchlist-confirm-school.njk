@@ -1,0 +1,71 @@
+{% extends "/watchlist/283739-draft-1/layouts/question_layout.njk" %}
+
+{% set pageTitle = "Add to watchlist" %}
+{% set pageHeading = pageTitle %}
+
+{% block questionContent %}
+
+  <span class="govuk-caption-l">Add to watchlist</span>
+
+  <form action="" method="post" novalidate>
+      
+    <h1 class="govuk-heading-l">Confirm school details</h1>
+
+    <dl class="govuk-summary-list">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Earl Soham Community Primary School
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          URN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          124578
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Trust
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not applicable
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Local authority
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Suffolk
+        </dd>
+      </div>
+
+    </dl>
+    
+    <div class="govuk-button-group govuk-!-margin-top-5">
+      {{ govukButton({ 
+        text: "Save and complete",
+        href: "watchlist-schools" }) 
+      }}
+
+      {{ govukButton({ 
+        text: "Save and add another", 
+        classes: "govuk-button--secondary", 
+        href: "#" }) 
+      }}
+
+      <a href="#" class="govuk-link">Cancel and go back to watchlist</a>
+    </div>
+
+  </form>
+
+{% endblock %}

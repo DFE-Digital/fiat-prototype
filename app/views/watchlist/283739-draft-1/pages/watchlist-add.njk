@@ -1,0 +1,39 @@
+{% extends "/watchlist/283739-draft-1/layouts/question_layout.njk" %}
+
+{% set pageTitle = "Add to watchlist" %}
+{% set pageHeading = pageTitle %}
+
+{% block questionContent %}
+
+  <span class="govuk-caption-l">Add to watchlist</span>
+
+  <form action="watchlist-search-school" method="post" novalidate>
+
+    {{ govukRadios({
+      name: "watchlist-add",
+      fieldset: {
+        legend: {
+          text: "Select the type of establishment to add",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l govuk-heading-l"
+        }
+      },
+      items: [
+        {
+          value: "school",
+          text: "School"
+        },
+        {
+          value: "trust",
+          text: "Trust"
+        }
+      ]
+    }) }}
+        
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+  </form>
+
+{% endblock %}

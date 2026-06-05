@@ -1,0 +1,70 @@
+{% extends "/watchlist/283739-draft-1/layouts/question_layout.njk" %}
+
+{% set pageTitle = "Remove from watchlist" %}
+{% set pageHeading = pageTitle %}
+
+{% block questionContent %}
+
+  <span class="govuk-caption-l">Add to watchlist</span>
+
+  <form action="" method="post" novalidate>
+      
+    <h1 class="govuk-heading-l">Remove school from watchlist</h1>
+
+    <p class="govuk-caption-m">Confirm the details below to remove the school from your watchlist.<br>The school can still be found within FAST.</p>
+
+    <dl class="govuk-summary-list">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Oasis Academy Mayfield
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          URN
+        </dt>
+        <dd class="govuk-summary-list__value">
+          135629
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Trust
+        </dt>
+        <dd class="govuk-summary-list__value">
+          OASIS COMMUNITY LEARNING
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Local authority
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Southampton
+        </dd>
+      </div>
+
+    </dl>
+
+    <div class="govuk-button-group">
+
+      {{ govukButton({ 
+        text: "Remove from watchlist",
+        classes: "govuk-button--warning", 
+        href: "watchlist-schools" }) 
+      }}
+
+      <a href="#" class="govuk-link">Cancel and go back to watchlist</a>
+
+    </div>
+
+  </form>
+
+{% endblock %}
