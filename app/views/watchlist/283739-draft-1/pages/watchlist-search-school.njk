@@ -1,0 +1,35 @@
+{% extends "/watchlist/283739-draft-1/layouts/question_layout.njk" %}
+
+{% block questionContent %}
+
+  <span class="govuk-caption-l">Add to watchlist</span>
+
+  <form action="watchlist-confirm-school" method="post" novalidate>
+      
+    {{ xGovukAutocomplete({
+      id: "school",
+      name: "school",
+      allowEmpty: false,
+      label: {
+        classes: "govuk-label--l",
+        isPageHeading: true,
+        text: "Search for a school"
+      },
+      hint: {
+        text: "Search by URN (unique reference number) or name. Include any punctuation in names."
+      },
+      items: [
+        { text: "Earl Soham Community Primary School (124578)" },
+        { text: "Eagle Academy (102746)" },
+        { text: "Endearing Spa Primary School (100006)" },
+        { text: "Enigmatic Spa Secondary School (103871)" }
+      ]
+      }) }}
+        
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+  </form>
+
+{% endblock %}

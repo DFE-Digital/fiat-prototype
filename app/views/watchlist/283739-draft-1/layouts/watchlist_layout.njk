@@ -1,6 +1,32 @@
-{% extends "/watchlist/283739-draft-1/layouts/main-watchlist.njk" %}
+{% extends "/watchlist/283739-draft-1/layouts/main.njk" %}
 
 {% block content %} 
+
+  {% set addWatchlistItem %}
+    <h1 class="govuk-notification-banner__heading">
+      School added to watchlist
+    </h1>
+  {% endset %}
+
+  {% set removeWatchlistItem %}
+    <h1 class="govuk-notification-banner__heading">
+      School removed from watchlist
+    </h1>
+  {% endset %}
+
+  {% if (uriLastPart === "watchlist-confirm-school") %}
+    {{ govukNotificationBanner({
+      html: addWatchlistItem,
+      type: "success"
+    }) }}
+  {% endif %}
+
+    {% if (uriLastPart === "watchlist-remove-school") %}
+    {{ govukNotificationBanner({
+      html: removeWatchlistItem,
+      type: "success"
+    }) }}
+  {% endif %}
 
   <div class="govuk-grid-row">
 
