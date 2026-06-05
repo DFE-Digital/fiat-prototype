@@ -1,0 +1,24 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'Single headline grades',
+    href: 'ofsted-shg',
+    active: true if subNavActive == "shg"
+  },
+  {
+    text: 'Current ratings',
+    href: 'ofsted-subjudgements',
+    active: true if subNavActive == "subjudgements"
+  },
+  {
+    text: 'Previous ratings',
+    href: '#'
+  },
+  {
+    text: 'Safeguarding and concerns',
+    href: 'ofsted-safeguarding-concerns',
+    active: true if subNavActive == "safeguarding and concerns"
+  }
+  ]
+}) }}

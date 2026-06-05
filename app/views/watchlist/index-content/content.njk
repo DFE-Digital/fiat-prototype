@@ -1,0 +1,26 @@
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Watchlist
+</h2>
+
+<p class="govuk-caption-m">
+    A watchlist concept originating from the MSI product to allow users to easily navigate to their favoured establishment page within FAST.
+</p>
+
+{% set 283739draft1 %}
+    {# 283739draft1 #}
+    {% include "/watchlist/index-content/283739-draft-1.njk" %}
+{% endset %} 
+
+{{ govukAccordion({
+    id: "accordion-watchlist-index",
+    items: [
+    {
+        heading: {
+        text: "Draft 1"
+        },
+        content: {
+        html: 283739draft1
+        }
+    }
+    ]
+}) }}
