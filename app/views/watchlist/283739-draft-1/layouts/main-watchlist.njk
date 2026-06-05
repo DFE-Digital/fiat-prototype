@@ -1,0 +1,78 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% set serviceName = "Find information about academies and trusts" %}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+
+{################################# Page title #################################}
+{% block pageTitle %}
+    {% if subPage %}
+      {{subPage}} - {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% else %}
+      {{pageTitle}} - {{serviceName}} - GOV.UK
+    {% endif %}
+{% endblock %} 
+
+{################################# Header #################################}
+{% block header %}
+
+  <header class="govuk-header" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+        <div class="govuk-header__logo">
+          <a href="#" class="govuk-header__link govuk-header__link--homepage">
+              <img src="/public/images/department-for-education_white.png" alt="Department for Education" class="govuk-header__logotype">
+          </a>
+        </div>
+    </div>
+  </header>
+
+  {{ govukServiceNavigation({
+    serviceName: "Find information about schools and trusts",
+    serviceUrl: "#",
+    navigation: [
+      {
+        href: "/watchlist/283739-draft-1/pages/watchlist-schools",
+        text: "Watchlist",
+        active: true
+      },
+      {
+        href: "#",
+        text: "Trusts and schools"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{################################# FIAT top #################################}
+{% set containerClasses = "fiat-max-width-0 govuk-!-margin-0" %}
+{% set mainClasses = "govuk-width-container" %}
+
+{# The Phase banner must be within a beforeContent block to butt up next to the DfE Header appropriately #}
+{# {% block beforeContent %}
+
+  <div class="fiat-top govuk-!-padding-top-3">
+    <div class="govuk-width-container ">
+
+     Phase banner
+
+    </div>
+  </div>
+  
+{% endblock %} #}
+
+{# RSD Footer #}
+{% block footer %}
+  {% include "/watchlist/283739-draft-1/parts/rsd-footer.njk" %}
+{% endblock %}
+
+{################################# Bottom of file #################################}
+{% block scripts %}
+  {{ super() }}
+  {# <script src="/assets/javascripts/dfefrontend.min.js"></script> #}
+{% endblock %}

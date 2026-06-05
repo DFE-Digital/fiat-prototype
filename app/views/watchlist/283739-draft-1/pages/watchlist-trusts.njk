@@ -1,0 +1,30 @@
+{% extends "watchlist/283739-draft-1/layouts/watchlist_layout.njk" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "watchlist-trusts" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block watchlistContent %}
+
+  <h1 class="govuk-heading-l">
+    My watchlist
+  </h1>
+
+  <p class="govuk-body">
+    You can use your watchlist to quickly navigate to your favoured establishment page.
+  </p>
+
+  {{ govukButton({
+    text: "Add to watchlist",
+    href: "/watchlist/283739-draft-1/pages/watchlist-add"
+  }) }}
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/watchlist-sub_nav.njk" %}
+
+  {# Tables #}
+  {% include "../tables/trusts.njk" %}
+
+  <hr class="govuk-section-break govuk-section-break--s">
+
+{% endblock %}
