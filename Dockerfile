@@ -8,6 +8,8 @@ COPY . .
 
 RUN npm install
 
+COPY overrides/govuk-prototype-kit-plugins-routes.js /app/node_modules/govuk-prototype-kit/lib/plugins/plugins-routes.js
+
 EXPOSE 3000
 
 ENTRYPOINT ["npm", "run"]
