@@ -1,3 +1,8 @@
 {
-  "serviceName": "Find information about schools and trusts"
+  "serviceName": "Find information about schools and trusts",
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
 }
