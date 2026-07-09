@@ -1,0 +1,26 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Todays date in a variable #}
+{% set currentDate = "today" | govukDate %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+    <p class='govuk-heading-s'>Actuals</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>
+            All information taken from [somewhere] on {{ currentDate }}
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <a href="#" target="_blank">
+            More about the data we use (opens in a new tab)
+        </a>
+    </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "Where this information came from",
+  html: sourceUpdatesContent
+}) }}
