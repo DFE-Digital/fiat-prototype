@@ -1,0 +1,44 @@
+{% extends "finance-2026/289906-draft-1/layouts/trust_layout.njk" %}
+
+{% set pageTitle = "Abbey Academies Trust" %}
+{% set pageHeading = pageTitle %}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set navActive = "finances" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subPageHeading = "Resources" %}
+{% set subNavActive = "resources" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      Finances
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/sub_nav.njk" %}
+
+  <h2 class="govuk-heading-m">
+      Other useful resources
+  </h2>
+
+  <p class="govuk-body">
+    Links open in a new tab.
+  </p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <a href="#" target="_blank">Financial Benchmarking Tool</a>
+    </li>
+    <li>
+      <a href="#" target="_blank">Other useful tool here</a>
+    </li>
+    <li>
+      <a href="#" target="_blank">Maybe a third here</a>
+    </li>
+  </ul>
+
+{% endblock %}
+
