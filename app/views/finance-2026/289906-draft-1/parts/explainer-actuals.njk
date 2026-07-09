@@ -1,0 +1,40 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set actuals %}
+  <h4 class="govuk-heading-s">Revenue reserve (including % of total income)</h4>
+  <p class="govuk-body">Accumulated unspent funds built up from previous years that can be used for running costs such as staffing, educational resources, utilities and other operating expenses.</p>
+
+  <h4 class="govuk-heading-s">Staff costs (including % of total income)</h4>
+  <p class="govuk-body">
+    Total amount the trust spends on employing people. 
+    <br>% of income (E.g. 80% = £80 spent on staff for every £100 of total income)
+  </p>
+
+  <h4 class="govuk-heading-s">In-year balance</h4>
+  <p class="govuk-body">Total income received during the year minus total expenditure spent during the year.</p>
+  <p class="govuk-body">
+    If income is greater than expenditure, the trust has a positive balance.
+    <br>If expenditure is greater than income, the trust has a negative balance.
+  </p>
+
+  <h4 class="govuk-heading-s">Total income – for % calculation </h4>
+  <p class="govuk-body">
+    The total amount the trust receives from all sources, to fund the day-to-day running of schools and services within the financial year. 
+    It is used for operational spending like staffing, teaching, utilities and learning resources.
+  </p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'What these figures mean',
+  html: actuals
+}) }}
+
+
+
+
+
+ 
+
+ 
