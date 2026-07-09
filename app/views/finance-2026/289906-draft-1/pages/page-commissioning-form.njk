@@ -1,0 +1,24 @@
+{% extends "finance-2026/289906-draft-1/layouts/trust_layout.njk" %}
+
+{% set pageTitle = "Abbey Academies Trust" %}
+{% set pageHeading = pageTitle %}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set navActive = "finances" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subPageHeading = "SFSO Commissioning Form" %}
+{% set subNavActive = "commissioning-form" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/sub_nav.njk" %}
+
+  {# Tables #}
+  {# {% include "../tables/schools.njk" %} #}
+
+  <hr class="govuk-section-break govuk-section-break--s">
+
+{% endblock %}

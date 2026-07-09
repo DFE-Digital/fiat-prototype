@@ -1,0 +1,26 @@
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Finance 2026
+</h2>
+
+<p class="govuk-caption-m">
+    Prototypes covering the "Finance" section introduced in 2026.
+</p>
+
+{% set 289906draft1 %}
+    {# 289906draft1 #}
+    {% include "/finance-2026/index-content/289906-draft-1.njk" %}
+{% endset %} 
+
+{{ govukAccordion({
+    id: "accordion-finance-2026-index",
+    items: [
+    {
+        heading: {
+        text: "Draft 1"
+        },
+        content: {
+        html: 289906draft1
+        }
+    }
+    ]
+}) }}

@@ -1,0 +1,20 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'SFSO Commissioning Form',
+    href: 'page-commissioning-form',
+    active: true if subNavActive == "commissioning-form"
+  },
+  {
+    text: 'Actuals',
+    href: 'page-actuals',
+    active: true if subNavActive == "actuals"
+  },
+  {
+    text: 'Resources',
+    href: 'page-resources',
+    active: true if subNavActive == "resources"
+  }
+  ]
+}) }}
