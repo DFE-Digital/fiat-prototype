@@ -21,12 +21,21 @@
   {% include "../parts/sub_nav.njk" %}
 
   <h2 class="govuk-heading-m">
-      Actuals for the year 2024/2025
+      Actuals for the academic year 2024/25
   </h2>
 
   <p class="govuk-body">
-    These figures can also be found in the <a href="#" target="_blank">Financial Benchmarking Tool</a> (opens in a new tab).
+    These figures can also be found in the <a href="https://financial-benchmarking-and-insights-tool.education.gov.uk/ " target="_blank">Financial Benchmarking Tool</a> (opens in a new tab). They represent the trust's headline position at <span class="govuk-!-font-weight-bold">31 August 2025</span>.
   </p>
+
+  <p class="govuk-body">
+    Detailed financial advice should be commissioned through the SFSO Commissiong form. Draft data for the 2025/26 academic year may be available from September 2026.
+  </p>
+
+  {# <hr class="govuk-section-break govuk-section-break--m"> #}
+
+  {# Has actuals explanation #}
+  {% include "../parts/explainer-actuals.njk" %}
 
   {{ govukWarningText({
     html: "The figures below are not for official use." + '<br>' + "For more detailed information, complete the SFSO Commissioning form.",
@@ -35,9 +44,6 @@
 
   {# Has actuals table #}
   {% include "../tables/table-actuals.njk" %}
-
-  {# Has actuals explanation #}
-  {% include "../parts/explainer-actuals.njk" %}
 
   {# Has sources and updates #}
   {% include "../parts/sourcesUpdates-actuals.njk" %}
