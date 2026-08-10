@@ -1,0 +1,25 @@
+{% extends "/la-2026/needs-a-ticket/layouts/main.njk" %}
+
+{% set pageTitle = "Abbey Academies Trust" %}
+{% set pageHeading = pageTitle %}
+
+{% block content %} 
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {# Start of school content block #}
+
+      {% block trustContent %}
+        Text goes here, override this by overriding the block
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+  {% include "../parts/rsd-footer.njk" %}
+{% endblock %}
