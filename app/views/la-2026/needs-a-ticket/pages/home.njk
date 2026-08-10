@@ -1,0 +1,18 @@
+{% extends "/la-2026/needs-a-ticket/layouts/home-page_layout.njk" %}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set primNavActive = "home" %}
+
+{% set pageTitle = "Find information about schools and trusts" %}
+{% set pageHeading = pageTitle %}
+
+{# Custom block for the main content area of a trust page #}
+{% block homeContent %}
+
+<div class="govuk-width-container">
+
+    {# Signposts #}
+    {% include "/la-2026/needs-a-ticket/parts/home/signposts-la.njk" %}
+
+</div>
+{% endblock %}
