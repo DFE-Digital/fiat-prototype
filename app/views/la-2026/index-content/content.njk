@@ -1,0 +1,26 @@
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Local Authorities 2026
+</h2>
+
+<p class="govuk-caption-m">
+    Prototypes covering the work relating to the introduction of Local Authorities.
+</p>
+
+{% set needsaticket %}
+    {# needsaticket #}
+    {% include "/la-2026/index-content/needs-a-ticket.njk" %}
+{% endset %} 
+
+{{ govukAccordion({
+    id: "la-2026-index",
+    items: [
+    {
+        heading: {
+        text: "LA Homepage"
+        },
+        content: {
+        html: needsaticket
+        }
+    }
+    ]
+}) }}
