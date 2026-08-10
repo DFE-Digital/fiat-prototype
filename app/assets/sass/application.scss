@@ -28,8 +28,12 @@
     // background-color: govuk-colour("purple");
 }
 
-.fiat-top--reporting {
-    background-color: tint(govuk-colour("yellow"), 70%);
+.fiat-top--reporting, .fiat-top--yellow {
+    background-color: tint(govuk-colour("yellow"), 75%);
+}
+
+.fiat-top--la {
+    background-color: govuk-colour("yellow", $variant: "tint-80");
 }
 
 // Container for Trust heading and caption
