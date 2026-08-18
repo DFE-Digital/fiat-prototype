@@ -1,0 +1,38 @@
+{% set detailsTable %}
+    {% include "../tables/details-table.njk" %}
+{% endset -%}
+
+{% set pupilNumbersTable %}
+    {% include "../charts/pupil-numbers-chart.njk" %}
+    {% include "../tables/pupil-numbers-table.njk" %}
+{% endset -%}
+
+{% set fsmTable %}
+    {% include "../tables/fsm-table.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Details",
+      id: "details",
+      panel: {
+        html: detailsTable
+      }
+    },
+    {
+      label: "Pupil numbers",
+      id: "pupil-numbers",
+      panel: {
+        html: pupilNumbersTable
+      }
+    },
+    {
+      label: "Free school meals",
+      id: "free-schools",
+      panel: {
+        html: fsmTable
+      }
+    }
+  ]
+}) }}

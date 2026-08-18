@@ -36,7 +36,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     serviceUrl: "/",
     navigation: [
       {
-        href: "/graphs/highcharts/pages/watchlist-schools",
+        href: "/graphs/highcharts-p1/pages/watchlist-schools",
         text: "Watchlist"
       },
       {
@@ -58,7 +58,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
   <div class="fiat-top govuk-!-padding-top-3">
     <div class="govuk-width-container ">
 
-      {% include "/graphs/highcharts/parts/breadcrumbs.njk" %}
+      {% include "/graphs/highcharts-p1/parts/breadcrumbs.njk" %}
 
       {# A check to see if any page outside of Index is being used. If true, show the Heading and Caption #}
       {% if currentURL !== '/' %}
@@ -76,7 +76,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
   </div>
 
   {# Primary navigation #}
-  {% include "/graphs/highcharts/parts/trust_primary_nav.njk" %}
+  {% include "/graphs/highcharts-p1/parts/trust_primary_nav.njk" %}
 
 {% endblock %}
 

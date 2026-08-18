@@ -6,9 +6,14 @@
     Prototypes exploring the use of graphs and charts as alterantive views of date.
 </p>
 
-{% set graphsHighcharts %}
+{% set highchartsP1 %}
     {# graphs-highcharts #}
-    {% include "/graphs/index-content/highcharts.njk" %}
+    {% include "/graphs/index-content/highcharts-p1.njk" %}
+{% endset %} 
+
+{% set highchartsP2 %}
+    {# graphs-highcharts #}
+    {% include "/graphs/index-content/highcharts-p2.njk" %}
 {% endset %} 
 
 {{ govukAccordion({
@@ -16,10 +21,18 @@
     items: [
     {
         heading: {
-        text: "Highcharts"
+        text: "Highcharts P1 - Pupil numbers - Bar chart"
         },
         content: {
-        html: graphsHighcharts
+        html: highchartsP1
+        }
+    },
+    {
+        heading: {
+        text: "Highcharts P2 - Pupil numbers - Stacked comparison bar chart"
+        },
+        content: {
+        html: highchartsP2
         }
     }
     ]
