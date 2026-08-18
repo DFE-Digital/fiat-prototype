@@ -3,6 +3,7 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 // 
 
+@import url("https://code.highcharts.com/css/highcharts.css");
 @import 'node_modules/dfe-frontend/packages/dfefrontend';
 
 // Changes the container width from 960px to 1200px
@@ -316,4 +317,40 @@
 .govuk-header__link:focus .govuk-header__logotype {
     content: url("/public/images/department-for-education_black.png");
     height: 30px;
+}
+
+// Highcharts exploration (styled mode — colours and type via CSS)
+#pupil-numbers-chart {
+  --highcharts-color-1: #0F385C; // GOV.UK blue — pupil capacity
+  --highcharts-color-0: #5694CA; // lighter blue — pupil numbers
+
+  // 24 — govuk-heading-m / govuk-body-l
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  // 19 — govuk-heading-s / govuk-body
+  .highcharts-subtitle,
+  .highcharts-axis-title,
+  .highcharts-legend-item {
+    @include govuk-font-size($size: 19);
+  }
+
+  // 16 — govuk-body-s
+  .highcharts-axis-labels,
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+// Export menu is rendered outside the chart container
+.highcharts-menu-item {
+  @include govuk-font-size($size: 16);
+}
+
+.highcharts-focus-border {
+  stroke: #0b0c0c;
+  stroke-width: 3px;
+// @include govuk-focused-text;
 }
