@@ -344,6 +344,29 @@
   }
 }
 
+#pupil-numbers-stacked-chart {
+  --highcharts-color-0: #0F385C; // pupil numbers (darker) — first in stack
+  --highcharts-color-1: #5694CA; // capacity (light blue)
+  --highcharts-color-2: #d4351c; // over capacity — GOV.UK red
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-subtitle,
+  .highcharts-axis-title,
+  .highcharts-legend-item,
+  .highcharts-stack-label {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-axis-labels,
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
 // Export menu is rendered outside the chart container
 .highcharts-menu-item {
   @include govuk-font-size($size: 16);
