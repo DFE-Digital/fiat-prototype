@@ -1,5 +1,5 @@
-// Pupil numbers chart for the Graphs / Highcharts prototype.
-// Called from graphs/highcharts/layouts/main.njk after Highcharts has loaded.
+// Pupil numbers chart for the Graphs / Highcharts prototypes (P1 bar, P2 stacked).
+// Called from highcharts-p1 / highcharts-p2 layouts after Highcharts has loaded.
 
 window.FIAT = window.FIAT || {}
 
@@ -11,7 +11,12 @@ window.FIAT.initPupilNumbersChart = function () {
   const container = document.getElementById('pupil-numbers-chart')
   const stackedContainer = document.getElementById('pupil-numbers-stacked-chart')
 
-  if (!tableView || !chartView || !showChartButton || !showTableButton || !container || !stackedContainer) {
+  // Toggle needs the shared chrome; each prototype only has one chart type
+  if (!tableView || !chartView || !showChartButton || !showTableButton) {
+    return
+  }
+
+  if (!container && !stackedContainer) {
     return
   }
 
@@ -66,7 +71,7 @@ window.FIAT.initPupilNumbersChart = function () {
   let stackedChart
 
   function createCharts () {
-    if (!chart && container.getAttribute('data-chart-ready') !== 'true') {
+    if (container && !chart && container.getAttribute('data-chart-ready') !== 'true') {
       container.setAttribute('data-chart-ready', 'true')
 
       chart = Highcharts.chart('pupil-numbers-chart', {
@@ -130,7 +135,7 @@ window.FIAT.initPupilNumbersChart = function () {
       })
     }
 
-    if (!stackedChart && stackedContainer.getAttribute('data-chart-ready') !== 'true') {
+    if (stackedContainer && !stackedChart && stackedContainer.getAttribute('data-chart-ready') !== 'true') {
       stackedContainer.setAttribute('data-chart-ready', 'true')
 
       stackedChart = Highcharts.chart('pupil-numbers-stacked-chart', {
