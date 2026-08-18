@@ -147,10 +147,6 @@ window.FIAT.initPupilNumbersChart = function () {
           text: 'How full is each academy?',
           align: 'left'
         },
-        subtitle: {
-          text: 'Stacked view of pupil numbers against capacity',
-          align: 'left'
-        },
         xAxis: {
           categories: categories,
           title: {
