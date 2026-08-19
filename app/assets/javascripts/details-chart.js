@@ -1,4 +1,4 @@
-// Details pie charts — by type and by local authority (Highcharts P1 / P2)
+// Details pie charts — by type and by local authority (Highcharts P2)
 
 window.FIAT = window.FIAT || {}
 
@@ -53,7 +53,12 @@ window.FIAT.initDetailsChart = function () {
             { name: 'Free schools', y: 1 },
             { name: 'Academy converter', y: 1 }
           ]
-        }]
+        }],
+        accessibility: {
+          description:
+            'Pie chart of academies by type. Two are academy sponsor led, one is a free school, and one is an academy converter.',
+          linkedDescription: '#details-type-description'
+        }
       })
     }
 
@@ -70,11 +75,16 @@ window.FIAT.initDetailsChart = function () {
           name: 'Academies',
           colorByPoint: true,
           data: [
+            { name: 'Darlington', y: 2 },
             { name: 'Sheffield', y: 1 },
-            { name: 'London', y: 1 },
-            { name: 'Darlington', y: 2 }
+            { name: 'London', y: 1 }
           ]
-        }]
+        }],
+        accessibility: {
+          description:
+            'Pie chart of academies by local authority. Two are in Darlington, one is in Sheffield, and one is in London.',
+          linkedDescription: '#details-la-description'
+        }
       })
     }
   }

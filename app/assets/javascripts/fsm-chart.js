@@ -28,14 +28,20 @@ window.FIAT.initFsmChart = function () {
           'Double chocolate bourbon academy',
           'Scottish shortbread school'
         ],
-        title: { text: 'Academy', margin: 40 }
+        title: { text: 'Academy', margin: 40 },
+        accessibility: {
+          description: 'Academies in the trust'
+        }
       },
       yAxis: {
         min: 0,
         max: 100,
         tickInterval: 20,
         title: { text: 'Percentage of pupils', margin: 30 },
-        labels: { format: '{value}%' }
+        labels: { format: '{value}%' },
+        accessibility: {
+          description: 'Percentage of pupils eligible for free school meals'
+        }
       },
       legend: { align: 'left', verticalAlign: 'top', symbolHeight: 14, symbolWidth: 14 },
       tooltip: { shared: true, valueSuffix: '%' },
@@ -59,7 +65,12 @@ window.FIAT.initFsmChart = function () {
         { name: 'Pupils eligible for free school meals', data: [61.3, 42.0, 27.8, 24.3] },
         { name: 'Local authority average 2023/24', data: [43.7, 24.2, 19.6, 19.6] },
         { name: 'National average 2023/24', data: [24.9, 25.6, 25.6, 25.6] }
-      ]
+      ],
+      accessibility: {
+        description:
+          'Horizontal bar chart comparing free school meal eligibility with local authority and national averages for each academy. Super sweet biscuit academy is well above both averages; Scottish shortbread school is closest to the national average.',
+        linkedDescription: '#fsm-description'
+      }
     })
   }
 

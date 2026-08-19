@@ -151,7 +151,8 @@ window.FIAT.initPupilNumbersChart = function () {
         },
         accessibility: {
           description:
-            'Horizontal bar chart comparing pupil numbers and pupil capacity for four academies in the trust.'
+            'Horizontal bar chart comparing pupil numbers and pupil capacity for four academies in the trust. Super sweet biscuit academy is over capacity; Scottish shortbread school has the most spare places.',
+          linkedDescription: '#pupil-numbers-description'
         }
       })
     }
@@ -228,7 +229,8 @@ window.FIAT.initPupilNumbersChart = function () {
         },
         accessibility: {
           description:
-            'Stacked horizontal bar chart showing pupil numbers, capacity and over capacity for each academy.'
+            'Stacked horizontal bar chart showing pupil numbers, capacity and over capacity for each academy. Super sweet biscuit academy is over capacity; Scottish shortbread school has the most remaining capacity.',
+          linkedDescription: '#pupil-numbers-stacked-description'
         }
       })
     }
