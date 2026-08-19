@@ -367,6 +367,46 @@
   }
 }
 
+#details-chart {
+  --highcharts-color-0: #0F385C; // academy sponsor led
+  --highcharts-color-1: #5694CA; // free schools
+  --highcharts-color-2: #003078; // academy converter
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-legend-item,
+  .highcharts-data-label {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+#details-la-chart {
+  --highcharts-color-0: #0F385C; // Sheffield
+  --highcharts-color-1: #5694CA; // London
+  --highcharts-color-2: #003078; // Darlington
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-legend-item,
+  .highcharts-data-label {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
 // Export menu is rendered outside the chart container
 .highcharts-menu-item {
   @include govuk-font-size($size: 16);

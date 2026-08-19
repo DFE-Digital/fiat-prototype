@@ -1,3 +1,13 @@
+<div id="details-table-view">
+  {{ govukButton({
+    text: "View data as a chart",
+    classes: "govuk-button--secondary",
+    attributes: {
+      id: "details-show-chart",
+      type: "button"
+    }
+  }) }}
+
 {{ govukTable({
   attributes: {
     'data-module': 'moj-sortable-table'
@@ -96,15 +106,15 @@
         }
       },
       {
-        text: "Sheffield",
+        text: "London",
         attributes: {
-          "data-sort-value": "Sheffield"
+          "data-sort-value": "London"
         }
       },
       {
-        text: "Academy sponser led",
+        text: "Free schools",
         attributes: {
-          "data-sort-value": "Academy sponser led"
+          "data-sort-value": "Free schools"
         }
       },
       {
@@ -131,9 +141,9 @@
         }
       },
       {
-        text: "Sheffield",
+        text: "Darlington",
         attributes: {
-          "data-sort-value": "Sheffield"
+          "data-sort-value": "Darlington"
         }
       },
       {
@@ -187,3 +197,4 @@
     
   ]
 }) }}
+</div>

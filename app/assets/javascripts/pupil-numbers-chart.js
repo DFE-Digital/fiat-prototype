@@ -51,6 +51,27 @@ window.FIAT.initPupilNumbersChart = function () {
     return Math.max(0, pupils - pupilCapacity[i])
   })
 
+  const originalExporting = {
+    buttons: {
+      contextButton: {
+        // Default menu
+        menuItems: [
+          'viewFullscreen',
+          'printChart',
+          'separator',
+          'downloadPNG',
+          'downloadJPEG',
+          'downloadPDF',
+          'downloadSVG',
+          'separator',
+          'downloadCSV',
+          'downloadXLS',
+          'viewData'
+        ]
+      }
+    }
+  }
+
   const sharedExporting = {
     buttons: {
       contextButton: {
@@ -114,7 +135,7 @@ window.FIAT.initPupilNumbersChart = function () {
           shared: true,
           valueSuffix: ' pupils'
         },
-        exporting: sharedExporting,
+        exporting: originalExporting,
         series: [
           {
             name: 'Pupil numbers',
