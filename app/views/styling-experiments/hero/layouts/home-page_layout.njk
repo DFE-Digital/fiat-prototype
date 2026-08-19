@@ -5,6 +5,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% set serviceName = "Find information about schools and trusts" %}
 
+{% set htmlClasses = "govuk-template--rebranded" %}
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
 {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
@@ -33,6 +34,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
   {{ govukServiceNavigation({
     serviceName: "Find information about schools and trusts",
+    classes: "govuk-service-navigation govuk-service-navigation--inverse",
     serviceUrl: "/",
     navigation: [
       {

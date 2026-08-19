@@ -37,6 +37,23 @@
     background-color: govuk-colour("yellow", $variant: "tint-80");
 }
 
+.fiat-top--blue {
+    background-color: govuk-colour("blue");
+
+    .fiat-top-content p, 
+    .fiat-trust-heading,
+    .govuk-details__summary,
+    .govuk-list,
+    .govuk-label,
+    .govuk-hint {
+        color: govuk-colour("white");
+    }
+
+    .govuk-details__text {
+        border-left-color: govuk-colour("white");
+    }
+}
+
 // Container for Trust heading and caption
 .fiat-top-content {
     padding: 1rem 0 1rem 0;
@@ -60,9 +77,10 @@
 }
 
 // 171804 Primary navigation
-.govuk-service-navigation__list {
-    font-weight: 600;
-}
+// Commented out 19/08/2026 - not sure if we need this anymore
+// .govuk-service-navigation__list {
+//     font-weight: 600;
+// }
 
 // 171804 RSD Footer
 .rsd-footer-phase {
