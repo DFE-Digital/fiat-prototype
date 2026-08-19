@@ -89,12 +89,16 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   <script src="/public/javascripts/pupil-numbers-chart.js"></script>
   <script src="/public/javascripts/details-chart.js"></script>
+  <script src="/public/javascripts/fsm-chart.js"></script>
   <script>
     if (window.FIAT && typeof window.FIAT.initPupilNumbersChart === 'function') {
       window.FIAT.initPupilNumbersChart()
     }
     if (window.FIAT && typeof window.FIAT.initDetailsChart === 'function') {
       window.FIAT.initDetailsChart()
+    }
+    if (window.FIAT && typeof window.FIAT.initFsmChart === 'function') {
+      window.FIAT.initFsmChart()
     }
   </script>
   {# <script src="/assets/javascripts/dfefrontend.min.js"></script> #}

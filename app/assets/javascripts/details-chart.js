@@ -70,9 +70,9 @@ window.FIAT.initDetailsChart = function () {
           name: 'Academies',
           colorByPoint: true,
           data: [
-            { name: 'Sheffield', y: 2 },
+            { name: 'Sheffield', y: 1 },
             { name: 'London', y: 1 },
-            { name: 'Darlington', y: 1 }
+            { name: 'Darlington', y: 2 }
           ]
         }]
       })

@@ -368,9 +368,9 @@
 }
 
 #details-chart {
-  --highcharts-color-0: #0F385C; // academy sponsor led
-  --highcharts-color-1: #5694CA; // free schools
-  --highcharts-color-2: #003078; // academy converter
+  --highcharts-color-0: #1D70B8; // academy sponsor led
+  --highcharts-color-1: #CA357C; // free schools
+  --highcharts-color-2: #F7996A; // academy converter
 
   .highcharts-title {
     @include govuk-font-size($size: 24);
@@ -388,9 +388,9 @@
 }
 
 #details-la-chart {
-  --highcharts-color-0: #0F385C; // Sheffield
-  --highcharts-color-1: #5694CA; // London
-  --highcharts-color-2: #003078; // Darlington
+  --highcharts-color-0: #1D70B8; // North East
+  --highcharts-color-1: #CA357C; // London
+  --highcharts-color-2: #F7996A; // Darlington
 
   .highcharts-title {
     @include govuk-font-size($size: 24);
@@ -401,6 +401,28 @@
     @include govuk-font-size($size: 19);
   }
 
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+#fsm-chart {
+  --highcharts-color-0: #1D70B8; // FSM eligibility
+  --highcharts-color-1: #CA357C; // LA average
+  --highcharts-color-2: #F7996A; // national average
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-subtitle,
+  .highcharts-axis-title,
+  .highcharts-legend-item {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-axis-labels,
   .highcharts-tooltip,
   .highcharts-credits {
     @include govuk-font-size($size: 16);
@@ -410,17 +432,20 @@
 // Export menu is rendered as a dropdown; chart containers clip it by default
 #pupil-numbers-chart-view,
 #details-chart-view,
+#fsm-chart-view,
 #pupil-numbers-chart,
 #pupil-numbers-stacked-chart,
 #details-chart,
-#details-la-chart {
+#details-la-chart,
+#fsm-chart {
   overflow: visible;
 }
 
 #pupil-numbers-chart,
 #pupil-numbers-stacked-chart,
 #details-chart,
-#details-la-chart {
+#details-la-chart,
+#fsm-chart {
   .highcharts-container {
     overflow: visible !important;
   }
@@ -428,7 +453,8 @@
 
 // Tab panels also clip absolutely positioned export menus
 .govuk-tabs__panel:has(#pupil-numbers-chart-view),
-.govuk-tabs__panel:has(#details-chart-view) {
+.govuk-tabs__panel:has(#details-chart-view),
+.govuk-tabs__panel:has(#fsm-chart-view) {
   overflow: visible;
 }
 

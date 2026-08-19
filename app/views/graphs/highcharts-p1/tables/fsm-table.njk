@@ -1,9 +1,19 @@
+<div id="fsm-table-view">
+  {{ govukButton({
+    text: "View data as a chart",
+    classes: "govuk-button--secondary",
+    attributes: {
+      id: "fsm-show-chart",
+      type: "button"
+    }
+  }) }}
+
 {{ govukTable({
   attributes: {
     'data-module': 'moj-sortable-table'
   },
   classes: "si-row-colours-table",
-  caption: "Details",
+  caption: "Free school meals",
   captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-2",
   head: [
     {
@@ -55,7 +65,7 @@
         }
       },
       {
-        text: "	43.7%",
+        text: "43.7%",
         attributes: {
           "data-sort-value": "43.7"
         }
@@ -154,6 +164,6 @@
         }
       }
     ]
-    
   ]
 }) }}
+</div>
