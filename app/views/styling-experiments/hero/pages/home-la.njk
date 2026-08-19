@@ -1,0 +1,32 @@
+{% extends "/styling-experiments/hero/layouts/home-page_layout.njk" %}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set primNavActive = "home-la" %}
+
+{% set pageTitle = "Find information about local authorities" %}
+{% set pageHeading = pageTitle %}
+
+{% block beforeContent %}
+  
+  {# Yellow bit #}
+  <div class="fiat-top fiat-top--la govuk-!-padding-top-3 govuk-!-padding-bottom-5">
+    <div class="govuk-width-container">
+
+      {# Content #}
+      {% include "/styling-experiments/hero/parts/home/hero-la.njk" %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{# Custom block for the main content area of a home page #}
+{% block homeContent %}
+
+<div class="govuk-width-container">
+
+    {# Signposts #}
+    {% include "/styling-experiments/hero/parts/home/signposts-la.njk" %}
+
+</div>
+{% endblock %}
