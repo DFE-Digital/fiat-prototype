@@ -407,7 +407,31 @@
   }
 }
 
-// Export menu is rendered outside the chart container
+// Export menu is rendered as a dropdown; chart containers clip it by default
+#pupil-numbers-chart-view,
+#details-chart-view,
+#pupil-numbers-chart,
+#pupil-numbers-stacked-chart,
+#details-chart,
+#details-la-chart {
+  overflow: visible;
+}
+
+#pupil-numbers-chart,
+#pupil-numbers-stacked-chart,
+#details-chart,
+#details-la-chart {
+  .highcharts-container {
+    overflow: visible !important;
+  }
+}
+
+// Tab panels also clip absolutely positioned export menus
+.govuk-tabs__panel:has(#pupil-numbers-chart-view),
+.govuk-tabs__panel:has(#details-chart-view) {
+  overflow: visible;
+}
+
 .highcharts-menu-item {
   @include govuk-font-size($size: 16);
 }
