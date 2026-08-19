@@ -1,0 +1,21 @@
+<div id="pupil-numbers-chart-view" hidden>
+  {{ govukButton({
+    text: "View data in a table",
+    classes: "govuk-button--secondary",
+    attributes: {
+      id: "pupil-numbers-show-table",
+      type: "button"
+    }
+  }) }}
+
+  <div id="pupil-numbers-chart" class="highcharts-light" style="width: 100%; height: 400px;"></div>
+
+  <div class="govuk-inset-text govuk-!-margin-bottom-0 govuk-!-margin-top-3">
+    <p id="pupil-numbers-description" class="govuk-body highcharts-description">
+      Bar chart comparing pupil numbers and pupil capacity for each academy in this trust.
+      <span class="govuk-!-font-weight-bold">Super sweet biscuit academy</span> is over capacity;
+      <span class="govuk-!-font-weight-bold">Scottish shortbread school</span> has the most spare places.
+    </p>
+  </div>
+
+</div>

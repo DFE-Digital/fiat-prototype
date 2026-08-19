@@ -3,6 +3,7 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 // 
 
+@import url("https://code.highcharts.com/css/highcharts.css");
 @import 'node_modules/dfe-frontend/packages/dfefrontend';
 
 // Changes the container width from 960px to 1200px
@@ -316,4 +317,153 @@
 .govuk-header__link:focus .govuk-header__logotype {
     content: url("/public/images/department-for-education_black.png");
     height: 30px;
+}
+
+// Highcharts exploration (styled mode — colours and type via CSS)
+#pupil-numbers-chart {
+  --highcharts-color-1: #0F385C; // GOV.UK blue — pupil capacity
+  --highcharts-color-0: #5694CA; // lighter blue — pupil numbers
+
+  // 24 — govuk-heading-m / govuk-body-l
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  // 19 — govuk-heading-s / govuk-body
+  .highcharts-subtitle,
+  .highcharts-axis-title,
+  .highcharts-legend-item {
+    @include govuk-font-size($size: 19);
+  }
+
+  // 16 — govuk-body-s
+  .highcharts-axis-labels,
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+#pupil-numbers-stacked-chart {
+  --highcharts-color-0: #1D70B8; // pupil numbers (darker) — first in stack
+  --highcharts-color-1: #8EB8DC; // capacity (light blue)
+  --highcharts-color-2: #d4351c; // over capacity — GOV.UK red
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-subtitle,
+  .highcharts-axis-title,
+  .highcharts-legend-item,
+  .highcharts-stack-label {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-axis-labels,
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+#details-chart {
+  --highcharts-color-0: #1D70B8; // academy sponsor led
+  --highcharts-color-1: #CA357C; // free schools
+  --highcharts-color-2: #F7996A; // academy converter
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-legend-item,
+  .highcharts-data-label {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+#details-la-chart {
+  --highcharts-color-0: #1D70B8; // North East
+  --highcharts-color-1: #CA357C; // London
+  --highcharts-color-2: #F7996A; // Darlington
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-legend-item,
+  .highcharts-data-label {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+#fsm-chart {
+  --highcharts-color-0: #1D70B8; // FSM eligibility
+  --highcharts-color-1: #CA357C; // LA average
+  --highcharts-color-2: #F7996A; // national average
+
+  .highcharts-title {
+    @include govuk-font-size($size: 24);
+  }
+
+  .highcharts-subtitle,
+  .highcharts-axis-title,
+  .highcharts-legend-item {
+    @include govuk-font-size($size: 19);
+  }
+
+  .highcharts-axis-labels,
+  .highcharts-tooltip,
+  .highcharts-credits {
+    @include govuk-font-size($size: 16);
+  }
+}
+
+// Export menu is rendered as a dropdown; chart containers clip it by default
+#pupil-numbers-chart-view,
+#details-chart-view,
+#fsm-chart-view,
+#pupil-numbers-chart,
+#pupil-numbers-stacked-chart,
+#details-chart,
+#details-la-chart,
+#fsm-chart {
+  overflow: visible;
+}
+
+#pupil-numbers-chart,
+#pupil-numbers-stacked-chart,
+#details-chart,
+#details-la-chart,
+#fsm-chart {
+  .highcharts-container {
+    overflow: visible !important;
+  }
+}
+
+// Tab panels also clip absolutely positioned export menus
+.govuk-tabs__panel:has(#pupil-numbers-chart-view),
+.govuk-tabs__panel:has(#details-chart-view),
+.govuk-tabs__panel:has(#fsm-chart-view) {
+  overflow: visible;
+}
+
+.highcharts-menu-item {
+  @include govuk-font-size($size: 16);
+}
+
+.highcharts-focus-border {
+  stroke: #0b0c0c;
+  stroke-width: 3px;
+// @include govuk-focused-text;
 }

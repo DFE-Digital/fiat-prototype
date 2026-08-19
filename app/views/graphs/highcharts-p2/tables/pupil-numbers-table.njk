@@ -1,0 +1,200 @@
+<div id="pupil-numbers-table-view">
+  {{ govukButton({
+    text: "View data as a chart",
+    classes: "govuk-button--secondary",
+    attributes: {
+      id: "pupil-numbers-show-chart",
+      type: "button"
+    }
+  }) }}
+
+  {# Table itself #}
+  {{ govukTable({
+    attributes: {
+      'data-module': 'moj-sortable-table'
+    },
+    classes: "si-row-colours-table",
+    caption: "Pupil numbers and capacity",
+    captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-2",
+    head: [
+      {
+        text: "School name",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "URN",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Phase and age range",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Pupil numbers",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Pupil capacity",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "% full",
+        attributes: {
+          "aria-sort": "none"
+        }
+      }
+    ],
+    rows: [
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Super sweet biscuit academy</a>"
+        },
+        {
+          text: "12453",
+          attributes: {
+            "data-sort-value": "12453"
+          }
+        },
+        {
+          text: "Secondary 11-16",
+          attributes: {
+            "data-sort-value": "Secondary 11-16"
+          }
+        },
+        {
+          text: "675",
+          attributes: {
+            "data-sort-value": "675"
+          }
+        },
+        {
+          text: "502",
+          attributes: {
+            "data-sort-value": "502"
+          }
+        },
+        {
+          text: "134%",
+          attributes: {
+            "data-sort-value": "134"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Crunchy ginger nut school</a>"
+        },
+        {
+          text: "36483",
+          attributes: {
+            "data-sort-value": "36483"
+          }
+        },
+        {
+          text: "Secondary 11-16",
+          attributes: {
+            "data-sort-value": "Secondary 11-16"
+          }
+        },
+        {
+          text: "993",
+          attributes: {
+            "data-sort-value": "993"
+          }
+        },
+        {
+          text: "1,150",
+          attributes: {
+            "data-sort-value": "1150"
+          }
+        },
+        {
+          text: "86%",
+          attributes: {
+            "data-sort-value": "86"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Double chocolate bourbon academy</a>"
+        },
+        {
+          text: "53762",
+          attributes: {
+            "data-sort-value": "53762"
+          }
+        },
+        {
+          text: "Primary 3-11",
+          attributes: {
+            "data-sort-value": "Primary 3-11"
+          }
+        },
+        {
+          text: "840",
+          attributes: {
+            "data-sort-value": "840"
+          }
+        },
+        {
+          text: "900",
+          attributes: {
+            "data-sort-value": "900"
+          }
+        },
+        {
+          text: "93%",
+          attributes: {
+            "data-sort-value": "93"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Scottish shortbread school</a>"
+        },
+        {
+          text: "35162",
+          attributes: {
+            "data-sort-value": "35162"
+          }
+        },
+        {
+          text: "Primary 3-11",
+          attributes: {
+            "data-sort-value": "Primary 3-11"
+          }
+        },
+        {
+          text: "481",
+          attributes: {
+            "data-sort-value": "481"
+          }
+        },
+        {
+          text: "1,538",
+          attributes: {
+            "data-sort-value": "1538"
+          }
+        },
+        {
+          text: "77%",
+          attributes: {
+            "data-sort-value": "77"
+          }
+        }
+      ]
+    ]
+  }) }}
+</div>

@@ -1,0 +1,39 @@
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Graphs and charts exploration
+</h2>
+
+<p class="govuk-caption-m">
+    Prototypes exploring the use of graphs and charts as alterantive views of date.
+</p>
+
+{% set highchartsP1 %}
+    {# graphs-highcharts #}
+    {% include "/graphs/index-content/highcharts-p1.njk" %}
+{% endset %} 
+
+{% set highchartsP2 %}
+    {# graphs-highcharts #}
+    {% include "/graphs/index-content/highcharts-p2.njk" %}
+{% endset %} 
+
+{{ govukAccordion({
+    id: "accordion-graphs-index",
+    items: [
+    {
+        heading: {
+        text: "Highcharts P1 - Pupil numbers - Bar chart"
+        },
+        content: {
+        html: highchartsP1
+        }
+    },
+    {
+        heading: {
+        text: "Highcharts P2 - Pupil numbers - Stacked comparison bar chart"
+        },
+        content: {
+        html: highchartsP2
+        }
+    }
+    ]
+}) }}

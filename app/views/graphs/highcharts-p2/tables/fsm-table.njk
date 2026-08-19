@@ -1,0 +1,169 @@
+<div id="fsm-table-view">
+  {{ govukButton({
+    text: "View data as a chart",
+    classes: "govuk-button--secondary",
+    attributes: {
+      id: "fsm-show-chart",
+      type: "button"
+    }
+  }) }}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  classes: "si-row-colours-table",
+  caption: "Free school meal eligibility",
+  captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-2",
+  head: [
+    {
+      text: "School name",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "URN",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Pupils eligible for free school meals",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Local authority average 2023/24",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "National average 2023/24",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Super sweet biscuit academy</a>"
+      },
+      {
+        text: "12453",
+        attributes: {
+          "data-sort-value": "12453"
+        }
+      },
+      {
+        text: "61.3%",
+        attributes: {
+          "data-sort-value": "61.3"
+        }
+      },
+      {
+        text: "43.7%",
+        attributes: {
+          "data-sort-value": "43.7"
+        }
+      },
+      {
+        text: "24.9%",
+        attributes: {
+          "data-sort-value": "24.9"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Crunchy ginger nut school</a>"
+      },
+      {
+        text: "36483",
+        attributes: {
+          "data-sort-value": "36483"
+        }
+      },
+      {
+        text: "42.0%",
+        attributes: {
+          "data-sort-value": "42.0"
+        }
+      },
+      {
+        text: "24.2%",
+        attributes: {
+          "data-sort-value": "24.2"
+        }
+      },
+      {
+        text: "25.6%",
+        attributes: {
+          "data-sort-value": "25.6"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Double chocolate bourbon academy</a>"
+      },
+      {
+        text: "53762",
+        attributes: {
+          "data-sort-value": "53762"
+        }
+      },
+      {
+        text: "27.8%",
+        attributes: {
+          "data-sort-value": "27.8"
+        }
+      },
+      {
+        text: "19.6%",
+        attributes: {
+          "data-sort-value": "19.6"
+        }
+      },
+      {
+        text: "25.6%",
+        attributes: {
+          "data-sort-value": "25.6"
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='#' class='govuk-link'>Scottish shortbread school</a>"
+      },
+      {
+        text: "35162",
+        attributes: {
+          "data-sort-value": "35162"
+        }
+      },
+      {
+        text: "24.3%",
+        attributes: {
+          "data-sort-value": "24.3"
+        }
+      },
+      {
+        text: "19.6%",
+        attributes: {
+          "data-sort-value": "19.6"
+        }
+      },
+      {
+        text: "25.6%",
+        attributes: {
+          "data-sort-value": "25.6"
+        }
+      }
+    ]
+  ]
+}) }}
+</div>
