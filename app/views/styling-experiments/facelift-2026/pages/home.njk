@@ -1,0 +1,32 @@
+{% extends "/styling-experiments/facelift-2026/layouts/home-page_layout.njk" %}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set primNavActive = "home" %}
+
+{% set pageTitle = "Find information about schools and trusts" %}
+{% set pageHeading = pageTitle %}
+
+{% block beforeContent %}
+  
+  {# Blue bit #}
+  <div class="fiat-top--blue govuk-!-padding-top-3 govuk-!-padding-bottom-5">
+    <div class="govuk-width-container">
+
+      {# Content #}
+      {% include "/styling-experiments/facelift-2026/parts/home/hero.njk" %}
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{# Custom block for the main content area of a home page #}
+{% block homeContent %}
+
+<div class="govuk-width-container">
+
+    {# Signposts #}
+    {% include "/styling-experiments/facelift-2026/parts/home/signposts.njk" %}
+
+</div>
+{% endblock %}

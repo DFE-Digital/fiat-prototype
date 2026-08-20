@@ -1,0 +1,26 @@
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Styling experiments
+</h2>
+
+<p class="govuk-caption-m">
+    Experimenting with new styling updates, more in keeping with the wider DfE brand.
+</p>
+
+{% set facelift2026 %}
+    {# hero #}
+    {% include "/styling-experiments/index-content/facelift-2026.njk" %}
+{% endset %} 
+
+{{ govukAccordion({
+    id: "styling-experiments-index",
+    items: [
+    {
+        heading: {
+        text: "Facelift 2026"
+        },
+        content: {
+        html: facelift2026
+        }
+    }
+    ]
+}) }}

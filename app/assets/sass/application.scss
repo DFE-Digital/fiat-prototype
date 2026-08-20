@@ -24,6 +24,13 @@
     background-color: tint($color_dfe-secondary-blue, 90%);
 }
 
+.fiat-top--alternate1 {
+    // border-left: 5px solid govuk-colour("blue");
+    // padding-left: 2rem;
+    // margin: 1rem 0;
+    background-color: govuk-functional-colour("surface-background");
+}
+
 .fiat-top--ala {
     background-color: tint(govuk-colour("purple"), 90%);
     // background-color: govuk-colour("purple");
@@ -37,9 +44,36 @@
     background-color: govuk-colour("yellow", $variant: "tint-80");
 }
 
+.fiat-top--blue {
+    background-color: govuk-colour("blue");
+
+    .fiat-top-content p, 
+    .fiat-trust-heading,
+    .govuk-details__summary,
+    .govuk-list,
+    .govuk-label,
+    .govuk-hint {
+        color: govuk-colour("white");
+    }
+
+    .govuk-details__text {
+        border-left-color: govuk-colour("white");
+    }
+}
+
+.fiat-top--light-blue {
+    background-color: govuk-colour("blue", $variant: "tint-95");
+}
+
 // Container for Trust heading and caption
 .fiat-top-content {
     padding: 1rem 0 1rem 0;
+}
+
+.fiat-top-content--alternate1 {
+    // border-left: 5px solid govuk-colour("blue");
+    // padding-left: 2rem;
+    // margin: 1rem 0;
 }
 
 // Trust heading title
@@ -60,9 +94,10 @@
 }
 
 // 171804 Primary navigation
-.govuk-service-navigation__list {
-    font-weight: 600;
-}
+// Commented out 19/08/2026 - not sure if we need this anymore
+// .govuk-service-navigation__list {
+//     font-weight: 600;
+// }
 
 // 171804 RSD Footer
 .rsd-footer-phase {
