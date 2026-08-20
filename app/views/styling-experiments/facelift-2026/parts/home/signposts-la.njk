@@ -1,0 +1,24 @@
+<h2 class="govuk-heading-l">Other tools and products (links open in a new tab)</h2>
+
+{# Set up the macro by including the recurring bits for each item. HTMl may be easier than Nunjucks here. #}
+{% macro signpostItem(title="'title'", description="'description'") %} 
+
+<div class="dfe-card">
+    <div class="dfe-card-container">
+    <h3 class="govuk-heading-m">
+        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">{{title}}</a>
+    </h3>
+    <p>{{description}}</p>
+    </div>
+</div>
+
+{% endmacro %}
+
+<div class="dfe-grid-container">
+    {{signpostItem(title="Useful thing here", description="It would have a brief description and a link.")}}
+    {{signpostItem(title="Useful thing here", description="It would have a brief description and a link.")}}
+    {{signpostItem(title="Useful thing here", description="It would have a brief description and a link.")}}
+    {{signpostItem(title="Useful thing here", description="It would have a brief description and a link.")}}
+    {{signpostItem(title="Useful thing here", description="It would have a brief description and a link.")}}
+    {{signpostItem(title="Useful thing here", description="It would have a brief description and a link.")}}
+</div>
