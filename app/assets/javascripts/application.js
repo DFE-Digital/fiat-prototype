@@ -34,10 +34,17 @@ window.GOVUKPrototypeKit.documentReady(() => {
       });
     }
 
-  const homeSearchSelect = document.querySelector('#search-field')
-  if (homeSearchSelect && homeSearchSelect.tagName === 'SELECT' && window.accessibleAutocomplete) {
+  document.querySelectorAll('.fiat-home-search select').forEach((select) => {
+    if (!window.accessibleAutocomplete) {
+      return
+    }
+
+    const inputId = select.id
+    const emptyOption = [...select.options].find(option => !option.value)
+    const placeholder = emptyOption ? emptyOption.text.trim() : ''
+
     const goToPage = (text) => {
-      const option = [...homeSearchSelect.options].find(o => o.text.trim() === (text || '').trim())
+      const option = [...select.options].find(o => o.text.trim() === (text || '').trim())
       if (option && option.dataset.url) {
         window.location.href = option.dataset.url
         return true
@@ -45,10 +52,10 @@ window.GOVUKPrototypeKit.documentReady(() => {
     }
 
     window.accessibleAutocomplete.enhanceSelectElement({
-      selectElement: homeSearchSelect,
+      selectElement: select,
       defaultValue: '',
       name: 'q',
-      placeholder: "e.g. st mary's primary school",
+      placeholder,
       displayMenu: 'overlay',
       minLength: 2,
       autoselect: false,
@@ -57,11 +64,11 @@ window.GOVUKPrototypeKit.documentReady(() => {
       onConfirm: goToPage
     })
 
-    homeSearchSelect.form?.addEventListener('submit', (event) => {
-      if (goToPage(document.getElementById('search-field')?.value)) {
+    select.form?.addEventListener('submit', (event) => {
+      if (goToPage(document.getElementById(inputId)?.value)) {
         event.preventDefault()
       }
     })
-  }
+  })
 });
 
