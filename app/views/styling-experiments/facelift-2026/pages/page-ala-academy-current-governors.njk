@@ -1,0 +1,31 @@
+{% extends "/styling-experiments/facelift-2026/layouts/academy_layout.njk" %}
+
+{% set pageTitle = "Abbey Academies Trust" %}
+{% set pageHeading = pageTitle %}
+
+{% set primNavActive = "home" %}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set navActive = "academies" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subPageHeading = "In this trust" %}
+{% set subNavActive = "current" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block schoolContent %}
+
+  <h2 class="govuk-heading-l">
+      Governance
+  </h2>
+
+  {# Sub-nav to flick through data sets #}
+  {% include "../parts/ala-sub_nav-academy.njk" %}
+
+  {# Current governors table #}
+  {% include "/small-iterations-old/231513-row-colours/tables/academy-current-governors" %}
+
+  {# Sources and updates #}
+  {% include "/small-iterations-old/231513-row-colours/parts/ala-component-academy-sources-updates" %}
+
+{% endblock %}
