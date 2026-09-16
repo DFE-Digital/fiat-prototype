@@ -36,6 +36,14 @@ window.GOVUKPrototypeKit.documentReady(() => {
 
   const homeSearchSelect = document.querySelector('#search-field')
   if (homeSearchSelect && homeSearchSelect.tagName === 'SELECT' && window.accessibleAutocomplete) {
+    const goToPage = (text) => {
+      const option = [...homeSearchSelect.options].find(o => o.text.trim() === (text || '').trim())
+      if (option && option.dataset.url) {
+        window.location.href = option.dataset.url
+        return true
+      }
+    }
+
     window.accessibleAutocomplete.enhanceSelectElement({
       selectElement: homeSearchSelect,
       defaultValue: '',
@@ -45,7 +53,14 @@ window.GOVUKPrototypeKit.documentReady(() => {
       minLength: 2,
       autoselect: false,
       confirmOnBlur: false,
-      inputClasses: 'dfe-search__input'
+      inputClasses: 'dfe-search__input',
+      onConfirm: goToPage
+    })
+
+    homeSearchSelect.form?.addEventListener('submit', (event) => {
+      if (goToPage(document.getElementById('search-field')?.value)) {
+        event.preventDefault()
+      }
     })
   }
 });
