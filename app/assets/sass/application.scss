@@ -5,6 +5,7 @@
 
 @import url("https://code.highcharts.com/css/highcharts.css");
 @import 'node_modules/dfe-frontend/packages/dfefrontend';
+@import "node_modules/accessible-autocomplete/dist/accessible-autocomplete.min";
 
 // Changes the container width from 960px to 1200px
 .govuk-width-container { @include govuk-width-container; }
@@ -61,6 +62,56 @@
     }
 }
 
+// Homepage search: keep the existing field + icon, with accessible autocomplete
+.fiat-home-search {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+
+    .autocomplete__wrapper {
+        width: 30em;
+        max-width: 100%;
+        background-color: govuk-colour("white");
+    }
+
+    .autocomplete__hint,
+    .autocomplete__input,
+    .autocomplete__input--default {
+        height: auto;
+        box-sizing: border-box;
+        padding: govuk-spacing(2) govuk-spacing(3);
+        font-family: $govuk-font-family;
+    }
+
+    .autocomplete__input {
+        background-color: transparent;
+    }
+
+    .autocomplete__menu {
+        font-family: $govuk-font-family;
+        width: 100%;
+    }
+
+    .dfe-search__submit {
+        box-sizing: border-box;
+        border: 2px solid govuk-colour("black");
+        background-color: govuk-colour("white");
+        margin-left: -2px;
+        width: 3em;
+        height: auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        .dfe-icon {
+            fill: govuk-colour("blue");
+        }
+    }
+}
+
 .fiat-top--light-blue {
     background-color: govuk-colour("blue", $variant: "tint-95");
 }
@@ -79,6 +130,9 @@
 // Trust heading title
 .fiat-trust-heading {
     color: $color_dfe-blue;
+}
+
+.fiat-trust-heading--trust {
     text-transform: uppercase;
 }
 

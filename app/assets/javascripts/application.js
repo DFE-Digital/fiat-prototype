@@ -33,5 +33,42 @@ window.GOVUKPrototypeKit.documentReady(() => {
         console.log('it works!');
       });
     }
+
+  document.querySelectorAll('.fiat-home-search select').forEach((select) => {
+    if (!window.accessibleAutocomplete) {
+      return
+    }
+
+    const inputId = select.id
+    const emptyOption = [...select.options].find(option => !option.value)
+    const placeholder = emptyOption ? emptyOption.text.trim() : ''
+
+    const goToPage = (text) => {
+      const option = [...select.options].find(o => o.text.trim() === (text || '').trim())
+      if (option && option.dataset.url) {
+        window.location.href = option.dataset.url
+        return true
+      }
+    }
+
+    window.accessibleAutocomplete.enhanceSelectElement({
+      selectElement: select,
+      defaultValue: '',
+      name: 'q',
+      placeholder,
+      displayMenu: 'overlay',
+      minLength: 2,
+      autoselect: false,
+      confirmOnBlur: false,
+      inputClasses: 'dfe-search__input',
+      onConfirm: goToPage
+    })
+
+    select.form?.addEventListener('submit', (event) => {
+      if (goToPage(document.getElementById(inputId)?.value)) {
+        event.preventDefault()
+      }
+    })
+  })
 });
 
