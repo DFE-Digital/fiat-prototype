@@ -27,9 +27,18 @@
                     Enter a URN (unique reference number), TRN (trust reference number), or name. Include any punctuation in names.
                 </div>
 
-                <div class="search-area" style="display: flex;">
-                    <input class="dfe-search__input" id="search-field" name="q" type="search" placeholder="e.g. st mary's primary school" autocomplete="off" spellcheck="false" data-ms-editor="true" style="border: 2px solid #0b0c0c; width: 30em; height: 3em;">
-                    <button class="dfe-search__submit " type="submit" style="border: 2px solid #0b0c0c; background-color: #ffffff; margin-left: -1px; height: auto; width: 3em;">
+                <div class="search-area fiat-home-search">
+                    {# Accessible autocomplete reads these <option>s as suggestions #}
+                    <select class="govuk-select" id="search-field" name="q">
+                        <option value=""></option>
+                        <option value="abbey-academies-trust">Abbey Academies Trust</option>
+                        <option value="abbey-catholic-primary-school">Abbey Catholic Primary School</option>
+                        <option value="bourne-abbey-church-of-england-primary-academy">Bourne Abbey Church of England Primary Academy</option>
+                        <option value="colsterworth-church-of-england-primary-school">Colsterworth Church of England Primary School</option>
+                        <option value="st-marys-primary-school">St Mary's Primary School</option>
+                        <option value="walton-high">Walton High</option>
+                    </select>
+                    <button class="dfe-search__submit" type="submit">
                         <svg class="dfe-icon dfe-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="27" height="27" style="fill: #background-color: #1d70b8;">
                             <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
                         </svg>

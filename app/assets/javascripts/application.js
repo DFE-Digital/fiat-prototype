@@ -33,5 +33,20 @@ window.GOVUKPrototypeKit.documentReady(() => {
         console.log('it works!');
       });
     }
+
+  const homeSearchSelect = document.querySelector('#search-field')
+  if (homeSearchSelect && homeSearchSelect.tagName === 'SELECT' && window.accessibleAutocomplete) {
+    window.accessibleAutocomplete.enhanceSelectElement({
+      selectElement: homeSearchSelect,
+      defaultValue: '',
+      name: 'q',
+      placeholder: "e.g. st mary's primary school",
+      displayMenu: 'overlay',
+      minLength: 2,
+      autoselect: false,
+      confirmOnBlur: false,
+      inputClasses: 'dfe-search__input'
+    })
+  }
 });
 
