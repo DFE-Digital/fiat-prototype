@@ -556,3 +556,22 @@
   stroke-width: 3px;
 // @include govuk-focused-text;
 }
+
+// Facelift 2026 
+.styling-experiments-facelift-2026 {
+    .fiat-trust-heading {
+        border-left: 6px solid govuk-colour("teal");
+        padding-left: 1rem;
+    }
+    .fiat-school-heading {
+        border-left: 6px solid govuk-colour("magenta");
+        padding-left: 1rem;
+    }
+
+    .si-row-colours-table .govuk-table__head {
+        background: #ebf2f6;
+    }
+    // .si-row-colours-table .govuk-table__head {
+    //     background-color: govuk-colour("teal", $variant: "tint-80");
+    // }
+}
