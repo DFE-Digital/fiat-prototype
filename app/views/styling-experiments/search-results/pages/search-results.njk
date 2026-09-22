@@ -1,0 +1,21 @@
+{% extends "/styling-experiments/search-results/layouts/home-page_layout.njk" %}
+
+{% set primNavActive = "" %}
+{% set pageTitle = "Search results" %}
+
+{% block homeContent %}
+    {% include "/styling-experiments/search-results/parts/form.njk" %}
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        {% include "/styling-experiments/search-results/parts/filters.njk" %}
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        {% include "/styling-experiments/search-results/parts/results.njk" %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

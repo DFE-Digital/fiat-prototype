@@ -2,6 +2,10 @@
 @import url('https://rsms.me/inter/inter.css');
 $govuk-font-family: 'Inter', sans-serif;
 
+// MOJ Frontend defaults to /assets/, but the prototype kit serves plugin
+// files under /plugin-assets/<urlencoded-package-name>/...
+$moj-assets-path: "/plugin-assets/%40ministryofjustice%2Ffrontend/moj/assets/";
+
 // User Inter in tables (you need to apply the classes too)
 .tableNumbers{
     font-feature-settings: 'tnum' 1, 'ss01' 1, 'zero' 1;

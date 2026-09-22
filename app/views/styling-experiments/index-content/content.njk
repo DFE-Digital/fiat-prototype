@@ -3,12 +3,19 @@
 </h2>
 
 <p class="govuk-caption-m">
-    Experimenting with new styling updates, more in keeping with the wider DfE brand. Also, introduction of an LA "Homepage" and search.
+    Experimenting with new styling updates, more in keeping with the wider DfE brand.
+    <br>Introduction of an LA "Homepage" and search.
+    <br>Updated 'Search' results page to include filters.
 </p>
 
 {% set facelift2026 %}
     {# hero #}
     {% include "/styling-experiments/index-content/facelift-2026.njk" %}
+{% endset %} 
+
+{% set searchresults %}
+    {# hero #}
+    {% include "/styling-experiments/index-content/search-results.njk" %}
 {% endset %} 
 
 {{ govukAccordion({
@@ -20,6 +27,14 @@
         },
         content: {
         html: facelift2026
+        }
+    },
+    {
+        heading: {
+        text: "Search results page"
+        },
+        content: {
+        html: searchresults
         }
     }
     ]

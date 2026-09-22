@@ -1,0 +1,74 @@
+{% set schoolHref = "/styling-experiments/facelift-2026/pages/page-ala-academy-current-governors" %}
+{% set trustHref = "/styling-experiments/facelift-2026/pages/page-academies-trust" %}
+{% set laHref = "/styling-experiments/facelift-2026/pages/home-la" %}
+{% set searchResultsData = [
+  { name: "TRUST-EDUCATION GROUP LTD", href: trustHref, address: "Miles House, Blackburn Road, Preston, PR3 3ZQ", idLabel: "TRN", id: "TR52369", type: "Multi-academy trust" },
+  { name: "Selly Oak Trust School", href: schoolHref, address: "Oak Tree Lane, Birmingham, B29 6HZ", idLabel: "URN", id: "103613", type: "Foundation special school" },
+  { name: "City of Bradford Metropolitan District Council", href: laHref, address: "Centenary Square, Bradford, West Yorkshire, BD1 1HY", idLabel: "LA Code", id: "380", type: "Local authority" },
+  { name: "ST JOSEPH'S SPECIALIST TRUST", href: trustHref, address: "Amlets Lane, Cranleigh, GU6 7DH", idLabel: "TRN", id: "TR25456", type: "Multi-academy trust" },
+  { name: "UNDERSHAW EDUCATION TRUST", href: trustHref, address: "Portsmouth Road, Surrey, GU26 6AQ", idLabel: "TRN", id: "TR34833", type: "Multi-academy trust" },
+  { name: "The Children's Trust School", href: schoolHref, address: "Tadworth Court, Tadworth, KT20 5RU", idLabel: "URN", id: "134902", type: "Non-maintained special school" },
+  { name: "North Huddersfield Trust School", href: schoolHref, address: "Woodhouse Hall Road, Huddersfield, HD2 1DJ", idLabel: "URN", id: "136502", type: "Foundation school" },
+  { name: "NORTHGATE SCHOOL ACADEMY TRUST", href: trustHref, address: "Queen's Park Parade, Northampton, NN2 6LR", idLabel: "TRN", id: "TR37767", type: "Multi-academy trust" },
+  { name: "MEADOWHEAD SCHOOL ACADEMY TRUST", href: trustHref, address: "Dyche Lane, Sheffield, S8 8BR", idLabel: "TRN", id: "TR38545", type: "Multi-academy trust" },
+  { name: "Bromley Trust Alternative Provision Academy", href: schoolHref, address: "Hayes Lane, Bromley, BR2 9EA", idLabel: "URN", id: "141116", type: "Academy alternative provision sponsor led" }
+] %}
+
+<section aria-labelledby="results-details">
+  <h2 id="results-details" class="govuk-heading-m">
+    Found 46 results
+  </h2>
+
+  <ul class="govuk-list">
+    {% for result in searchResultsData %}
+      <li class="govuk-!-margin-bottom-6">
+        <a href="{{ result.href }}" class="govuk-!-font-weight-bold govuk-link govuk-!-font-size-24">{{ result.name }}</a>
+
+        <dl class="govuk-summary-list govuk-summary-list--no-border app-search-results-summary-list">
+          <div class="govuk-summary-list__row govuk-body app-search-results-summary-list__row">
+            <dt class="govuk-summary-list__key app-search-results-summary-list__key app-search-results-summary-list__item">
+              Address:
+            </dt>
+            <dd class="govuk-summary-list__value app-search-results-summary-list__item">
+              {{ result.address }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-body app-search-results-summary-list__row">
+            <dt class="govuk-summary-list__key app-search-results-summary-list__key app-search-results-summary-list__item">
+              {{ result.idLabel }}:
+            </dt>
+            <dd class="govuk-summary-list__value app-search-results-summary-list__item">
+              {{ result.id }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-body app-search-results-summary-list__row">
+            <dt class="govuk-summary-list__key app-search-results-summary-list__key app-search-results-summary-list__item">
+              Type:
+            </dt>
+            <dd class="govuk-summary-list__value app-search-results-summary-list__item">
+              {{ result.type }}
+            </dd>
+          </div>
+        </dl>
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6">
+      </li>
+    {% endfor %}
+  </ul>
+
+  {{ govukPagination({
+    next: {
+      href: "#"
+    },
+    items: [
+      {
+        number: 1,
+        current: true,
+        href: "#"
+      },
+      {
+        number: 2,
+        href: "#"
+      }
+    ]
+  }) }}
+</section>

@@ -575,3 +575,193 @@
     //     background-color: govuk-colour("teal", $variant: "tint-80");
     // }
 }
+
+// Search results (FIAT live search + filters)
+.app-search {
+  .app-search__button {
+    border-left: none;
+    border-color: govuk-colour("black");
+    border-radius: 0 4px 4px 0;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    min-height: 3rem;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .app-search__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: govuk-colour("white");
+  }
+
+  .app-search__button--blue {
+    background-color: $govuk-link-colour;
+
+    &:hover {
+      background-color: #002644;
+      border-color: govuk-colour("black");
+      box-shadow: none;
+    }
+
+    &:focus {
+      background-color: govuk-colour("yellow");
+
+      .app-search__icon {
+        fill: govuk-colour("black");
+      }
+    }
+  }
+}
+
+.app-search__wrapper {
+  display: flex;
+
+  & > div {
+    width: 100%;
+  }
+
+  .app-search__input {
+    border-right: none;
+    border-color: govuk-colour("black");
+    height: 3rem;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .app-search__input:focus {
+    z-index: 2;
+    height: 3rem;
+    box-shadow: 0 0 0 4px govuk-colour("yellow");
+  }
+}
+
+.app-search-results-summary-list {
+  @include govuk-responsive-margin(4, "top");
+  display: block;
+
+  .app-search-results-summary-list__row {
+    display: flex;
+    margin: 0;
+  }
+
+  .app-search-results-summary-list__item {
+    display: block;
+    padding: 0;
+    width: auto;
+    border-bottom: 0;
+  }
+
+  .app-search-results-summary-list__key {
+    @include govuk-responsive-padding(2, "right");
+  }
+}
+
+.app-search-filter {
+  .moj-filter__options {
+    display: flex;
+    flex-direction: column;
+
+    > .govuk-button {
+      order: 1;
+      margin-top: govuk-spacing(2);
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Header search toggle (search results)
+.app-header {
+  .app-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.app-header__search-toggle {
+  background-color: transparent;
+  border: 0;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  color: govuk-colour("white");
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0;
+  min-height: 50px;
+  min-width: 50px;
+  padding: 0 govuk-spacing(3);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:focus {
+    background-color: govuk-colour("yellow");
+    box-shadow: none;
+    outline: 3px solid transparent;
+
+    .app-header__search-toggle-icon--search {
+      fill: govuk-colour("black");
+    }
+
+    .app-header__search-toggle-close {
+      color: govuk-colour("black");
+      border-bottom-color: govuk-colour("black");
+    }
+  }
+}
+
+.app-header__search-toggle-icon--search {
+  display: block;
+  fill: govuk-colour("white");
+  height: 24px;
+  width: 24px;
+}
+
+.app-header__search-toggle-close {
+  display: none;
+  border-bottom: 2px solid govuk-colour("white");
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+.app-header__search-toggle[aria-expanded="true"] {
+  background-color: govuk-colour("blue");
+  border-left-color: govuk-colour("white");
+  border-right-color: govuk-colour("white");
+
+  .app-header__search-toggle-icon--search {
+    display: none;
+  }
+
+  .app-header__search-toggle-close {
+    display: inline-block;
+  }
+}
+
+.app-header-search {
+  display: block;
+  position: static;
+  background-color: govuk-colour("light-grey");
+  padding-top: govuk-spacing(5);
+  padding-bottom: govuk-spacing(5);
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.app-header-search[hidden] {
+  display: none;
+}

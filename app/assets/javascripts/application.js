@@ -70,5 +70,35 @@ window.GOVUKPrototypeKit.documentReady(() => {
       }
     })
   })
+
+  const headerSearchToggle = document.getElementById('app-header-search-toggle')
+  const headerSearch = document.getElementById('app-header-search')
+
+  if (headerSearchToggle && headerSearch) {
+    const headerSearchInput = headerSearch.querySelector('input')
+
+    const setHeaderSearchOpen = (open) => {
+      headerSearchToggle.setAttribute('aria-expanded', String(open))
+      headerSearchToggle.setAttribute('aria-label', open ? 'Close search' : 'Open search')
+      headerSearch.hidden = !open
+      document.body.classList.toggle('app-header-search-open', open)
+
+      if (open) {
+        headerSearchInput?.focus()
+      }
+    }
+
+    headerSearchToggle.addEventListener('click', () => {
+      const open = headerSearchToggle.getAttribute('aria-expanded') !== 'true'
+      setHeaderSearchOpen(open)
+    })
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && headerSearchToggle.getAttribute('aria-expanded') === 'true') {
+        setHeaderSearchOpen(false)
+        headerSearchToggle.focus()
+      }
+    })
+  }
 });
 

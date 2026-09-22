@@ -1,0 +1,80 @@
+{% set serviceName = "Find information about schools and trusts" %}
+{% set htmlClasses = "govuk-template--rebranded" %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block pageTitle %}
+  {{ pageTitle }} - {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block header %}
+  <header class="govuk-header app-header" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container app-header__container">
+      <div class="govuk-header__logo">
+        <a href="/styling-experiments/facelift-2026/pages/home" class="govuk-header__link govuk-header__link--homepage">
+          <img src="/public/images/department-for-education_white.png" alt="Department for Education" class="govuk-header__logotype">
+        </a>
+      </div>
+      <button class="app-header__search-toggle" type="button" id="app-header-search-toggle" aria-controls="app-header-search" aria-expanded="false">
+        <svg class="app-header__search-toggle-icon app-header__search-toggle-icon--search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+        </svg>
+        <span class="app-header__search-toggle-close" aria-hidden="true">X</span>
+        <span class="govuk-visually-hidden">Search</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="app-header-search" id="app-header-search" hidden>
+    <div class="govuk-width-container">
+      <div class="app-search">
+        <label class="govuk-label govuk-label--m" for="header-keywords">
+          Search for an organisation
+        </label>
+        <div class="app-search__wrapper govuk-!-width-one-half">
+          <div>
+            <input class="govuk-input app-search__input" id="header-keywords" name="header-keywords" type="search" placeholder="e.g. st mary's academy">
+          </div>
+          <button class="govuk-button app-search__button app-search__button--blue" type="button">
+            <svg class="app-search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+            </svg>
+            <span class="govuk-visually-hidden">Search</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ govukServiceNavigation({
+    serviceName: "Find information about schools and trusts",
+    classes: "govuk-service-navigation govuk-service-navigation--inverse",
+    serviceUrl: "/styling-experiments/facelift-2026/pages/home",
+    navigation: [
+      {
+        href: "/styling-experiments/facelift-2026/pages/home",
+        text: "Trusts and schools",
+        active: true if primNavActive == "home"
+      },
+      {
+        href: "/styling-experiments/facelift-2026/pages/home-la",
+        text: "Local authorities",
+        active: true if primNavActive == "home-la"
+      },
+      {
+        href: "#",
+        text: "Watchlist"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% set containerClasses = "fiat-max-width-0 govuk-!-margin-0" %}
+{% set mainClasses = "govuk-width-container govuk-!-padding-left-0 govuk-!-padding-right-0 govuk-!-padding-top-8 govuk-!-padding-bottom-6" %}
+
+{% block content %}
+  {% block homeContent %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+  {% include "/styling-experiments/facelift-2026/parts/rsd-footer.njk" %}
+{% endblock %}
