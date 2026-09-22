@@ -754,12 +754,14 @@
 }
 
 .app-header-search {
+  display: block;
+  position: static;
   background-color: govuk-colour("light-grey");
   padding-top: govuk-spacing(5);
   padding-bottom: govuk-spacing(5);
   border-bottom: 1px solid #b1b4b6;
 }
 
-.app-header-search-open .govuk-service-navigation {
+.app-header-search[hidden] {
   display: none;
 }
