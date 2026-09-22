@@ -1,0 +1,82 @@
+{% set schoolHref = "/styling-experiments/facelift-2026/pages/page-ala-academy-current-governors" %}
+{% set searchResultsData = [
+  { name: "Trust-Education Group Ltd", href: schoolHref, address: "Miles House, Blackburn Road, Preston, PR3 3ZQ", idLabel: "URN", id: "152369", type: "Other independent special school" },
+  { name: "Selly Oak Trust School", href: schoolHref, address: "Oak Tree Lane, Birmingham, B29 6HZ", idLabel: "URN", id: "103613", type: "Foundation special school" },
+  { name: "Royal Deaf Education Trust", href: schoolHref, address: "1 Douglas Avenue, Exmouth, EX8 2AU", idLabel: "URN", id: "113654", type: "Non-maintained special school" },
+  { name: "St Joseph's Specialist Trust", href: schoolHref, address: "Amlets Lane, Cranleigh, GU6 7DH", idLabel: "URN", id: "125456", type: "Non-maintained special school" },
+  { name: "Undershaw Education Trust", href: schoolHref, address: "Portsmouth Road, Surrey, GU26 6AQ", idLabel: "URN", id: "134833", type: "Other independent special school" },
+  { name: "The Children's Trust School", href: schoolHref, address: "Tadworth Court, Tadworth, KT20 5RU", idLabel: "URN", id: "134902", type: "Non-maintained special school" },
+  { name: "North Huddersfield Trust School", href: schoolHref, address: "Woodhouse Hall Road, Huddersfield, HD2 1DJ", idLabel: "URN", id: "136502", type: "Foundation school" },
+  { name: "Northgate School Academy Trust", href: schoolHref, address: "Queen's Park Parade, Northampton, NN2 6LR", idLabel: "URN", id: "137767", type: "Academy special converter" },
+  { name: "Meadowhead School Academy Trust", href: schoolHref, address: "Dyche Lane, Sheffield, S8 8BR", idLabel: "URN", id: "138545", type: "Academy converter" },
+  { name: "Bromley Trust Alternative Provision Academy", href: schoolHref, address: "Hayes Lane, Bromley, BR2 9EA", idLabel: "URN", id: "141116", type: "Academy alternative provision sponsor led" },
+  { name: "Cherry Tree Academy Trust Marham Infant", href: schoolHref, address: "Cedar Road, King's Lynn, PE33 9LT", idLabel: "URN", id: "141161", type: "Academy converter" },
+  { name: "Cherry Tree Academy Trust Marham Junior", href: schoolHref, address: "Hillside, King's Lynn, PE33 9JJ", idLabel: "URN", id: "141227", type: "Academy sponsor led" },
+  { name: "Dean Trust Ardwick", href: schoolHref, address: "345 Stockport Road, Ardwick, Manchester, M13 0LF", idLabel: "URN", id: "141884", type: "Academy sponsor led" },
+  { name: "Parkwood Hall Academy Trust", href: schoolHref, address: "Beechentea Lane, Swanley, BR8 8DR", idLabel: "URN", id: "141957", type: "Academy special converter" },
+  { name: "New Horizons School (Part of The Sabden Multi Academy Trust)", href: schoolHref, address: "Beauchamp Road, St Leonards-on-Sea, TN38 9JU", idLabel: "URN", id: "142151", type: "Academy special converter" },
+  { name: "St Paul's Way Trust School", href: schoolHref, address: "125 St Paul's Way, London, E3 4FT", idLabel: "URN", id: "143379", type: "Academy converter" },
+  { name: "Royal Greenwich Trust School", href: schoolHref, address: "765 Woolwich Road, London, SE7 8LJ", idLabel: "URN", id: "143927", type: "Free schools" },
+  { name: "Dean Trust Wigan", href: schoolHref, address: "Orrell, Wigan, WN5 0DQ", idLabel: "URN", id: "144519", type: "Academy sponsor led" },
+  { name: "Shaftoe Trust Academy", href: schoolHref, address: "Haydon Bridge, Hexham, NE47 6BN", idLabel: "URN", id: "145412", type: "Academy sponsor led" },
+  { name: "Dean Trust Rose Bridge", href: schoolHref, address: "Holt Street, Wigan, WN1 3HD", idLabel: "URN", id: "146797", type: "Academy sponsor led" }
+] %}
+
+<section aria-labelledby="results-details">
+  <h2 id="results-details" class="govuk-heading-m">
+    Found 10 trusts and 23 schools, including academies
+  </h2>
+
+  <ul class="govuk-list">
+    {% for result in searchResultsData %}
+      <li class="govuk-!-margin-bottom-6">
+        <a href="{{ result.href }}" class="govuk-!-font-weight-bold govuk-link govuk-!-font-size-24">{{ result.name }}</a>
+
+        <dl class="govuk-summary-list govuk-summary-list--no-border app-search-results-summary-list">
+          <div class="govuk-summary-list__row govuk-body app-search-results-summary-list__row">
+            <dt class="govuk-summary-list__key app-search-results-summary-list__key app-search-results-summary-list__item">
+              Address:
+            </dt>
+            <dd class="govuk-summary-list__value app-search-results-summary-list__item">
+              {{ result.address }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-body app-search-results-summary-list__row">
+            <dt class="govuk-summary-list__key app-search-results-summary-list__key app-search-results-summary-list__item">
+              {{ result.idLabel }}:
+            </dt>
+            <dd class="govuk-summary-list__value app-search-results-summary-list__item">
+              {{ result.id }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-body app-search-results-summary-list__row">
+            <dt class="govuk-summary-list__key app-search-results-summary-list__key app-search-results-summary-list__item">
+              Type:
+            </dt>
+            <dd class="govuk-summary-list__value app-search-results-summary-list__item">
+              {{ result.type }}
+            </dd>
+          </div>
+        </dl>
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6">
+      </li>
+    {% endfor %}
+  </ul>
+
+  {{ govukPagination({
+    next: {
+      href: "#"
+    },
+    items: [
+      {
+        number: 1,
+        current: true,
+        href: "#"
+      },
+      {
+        number: 2,
+        href: "#"
+      }
+    ]
+  }) }}
+</section>

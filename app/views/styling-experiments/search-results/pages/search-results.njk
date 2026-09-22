@@ -1,0 +1,30 @@
+{% extends "/styling-experiments/search-results/layouts/home-page_layout.njk" %}
+
+{% set primNavActive = "home" %}
+{% set pageTitle = "Search" %}
+
+{% block homeContent %}
+  <div class="govuk-width-container">
+    {{ govukBreadcrumbs({
+      classes: "govuk-!-margin-bottom-4",
+      items: [
+        {
+          text: "Home",
+          href: "/styling-experiments/facelift-2026/pages/home"
+        }
+      ]
+    }) }}
+
+    {% include "/styling-experiments/search-results/parts/search/form.njk" %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        {% include "/styling-experiments/search-results/parts/search/filters.njk" %}
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        {% include "/styling-experiments/search-results/parts/search/results.njk" %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
