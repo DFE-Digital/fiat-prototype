@@ -1,0 +1,24 @@
+<h2 class="govuk-heading-l">Other tools and products (links open in a new tab)</h2>
+
+{# Set up the macro by including the recurring bits for each item. HTMl may be easier than Nunjucks here. #}
+{% macro signpostItem(title="'title'", description="'description'") %} 
+
+<div class="dfe-card">
+    <div class="dfe-card-container">
+    <h3 class="govuk-heading-m">
+        <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">{{title}}</a>
+    </h3>
+    <p>{{description}}</p>
+    </div>
+</div>
+
+{% endmacro %}
+
+<div class="dfe-grid-container">
+    {{signpostItem(title="Prepare conversions and transfers", description="Create a transfer or conversion project document for an advisory board.")}}
+    {{signpostItem(title="Complete conversions, transfers and change", description="Manage a conversion or transfer project after it has been to an advisory board.")}}
+    {{signpostItem(title="Record concerns or support for trusts", description="Add cases or interactions, record risks and log support and concerns for trusts.")}}
+    {{signpostItem(title="Manage free school projects", description="Manage presumption projects in the pre-opening phase.")}}
+    {{signpostItem(title="RSD reporting and data tools", description="Tools to help you gather educational data and create reports.")}}
+    {{signpostItem(title="High quality trust framework", description="Process guidance and tools for making trust-related project decisions.")}}
+</div>

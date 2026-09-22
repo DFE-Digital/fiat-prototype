@@ -1,0 +1,47 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of source and updates content #}
+{% set sourceUpdatesContent %}
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Details:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 25 Mar 2025.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Pupil numbers:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+            All information was taken from Get information about schools on 25 Mar 2025.
+        </li>
+    </ul>
+
+    <p class="govuk-body">
+        <span class='govuk-!-font-weight-bold'>Free school meals:</span>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li class="">
+              Pupils eligible for free school meals taken from Get information about schools on 25 Mar 2025.
+        </li>
+        <li class="">
+              Local authority average 2023/24 taken from Explore education statistics on 06 Aug 2024
+        </li>
+        <li class="">
+              National average 2023/24 taken from Explore education statistics on 06 Aug 2024
+        </li>
+    </ul>
+
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: "Where this information came from",
+  html: sourceUpdatesContent
+}) }}
