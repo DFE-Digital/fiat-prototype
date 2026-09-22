@@ -1,0 +1,94 @@
+{% set filterOptionsHtml %}
+  {{ govukCheckboxes({
+    name: "orgType",
+    classes: "govuk-checkboxes--small",
+    fieldset: {
+      legend: {
+        text: "Type of organisation",
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "trust",
+        text: "Trust (20)",
+        checked: true
+      },
+      {
+        value: "school",
+        text: "School, including academy (23)"
+      },
+      {
+        value: "local-authority",
+        text: "Local authorities (3)"
+      }
+    ]
+  }) }}
+
+  {{ govukCheckboxes({
+    name: "status",
+    classes: "govuk-checkboxes--small",
+    fieldset: {
+      legend: {
+        text: "Status",
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "open",
+        text: "Open",
+        checked: true
+      },
+      {
+        value: "closed",
+        text: "Closed"
+      }
+    ]
+  }) }}
+{% endset %}
+
+<div class="app-search-filter">
+  {{ mojFilter({
+    heading: {
+      text: "Filter"
+    },
+    selectedFilters: {
+      heading: {
+        text: "Selected filters"
+      },
+      clearLink: {
+        text: "Clear filters",
+        href: "#"
+      },
+      categories: [
+        {
+          heading: {
+            text: "Type of organisation"
+          },
+          items: [
+            {
+              href: "#",
+              text: "Trust"
+            }
+          ]
+        },
+        {
+          heading: {
+            text: "Status"
+          },
+          items: [
+            {
+              href: "#",
+              text: "Open"
+            }
+          ]
+        }
+      ]
+    },
+    submit: {
+      text: "Apply filters"
+    },
+    optionsHtml: filterOptionsHtml
+  }) }}
+</div>
