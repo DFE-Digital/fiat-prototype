@@ -15,9 +15,38 @@
 ] %}
 
 <section aria-labelledby="results-details">
-  <h2 id="results-details" class="govuk-heading-m">
-    Found 46 results
-  </h2>
+  <div class="app-search-results-header">
+    <h2 id="results-details" class="govuk-heading-m">
+      Found 46 results
+    </h2>
+
+    {{ govukSelect({
+      id: "sort",
+      name: "sort",
+      formGroup: {
+        classes: "app-search-sort"
+      },
+      label: {
+        text: "Sort by",
+        classes: "govuk-label--s"
+      },
+      items: [
+        {
+          value: "relevance",
+          text: "Relevance",
+          selected: true
+        },
+        {
+          value: "name-asc",
+          text: "Name A to Z"
+        },
+        {
+          value: "name-desc",
+          text: "Name Z to A"
+        }
+      ]
+    }) }}
+  </div>
 
   <ul class="govuk-list">
     {% for result in searchResultsData %}

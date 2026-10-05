@@ -642,6 +642,32 @@
   }
 }
 
+.app-search-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: govuk-spacing(2);
+  @include govuk-responsive-margin(4, "bottom");
+
+  .govuk-heading-m {
+    margin-bottom: 0;
+  }
+}
+
+.app-search-sort {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  margin-left: auto;
+
+  .govuk-label {
+    margin-bottom: 0;
+    margin-right: govuk-spacing(2);
+    white-space: nowrap;
+  }
+}
+
 .app-search-results-summary-list {
   @include govuk-responsive-margin(4, "top");
   display: block;
