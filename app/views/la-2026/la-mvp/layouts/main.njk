@@ -9,6 +9,8 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
 
+{% set htmlClasses = "la-2026-la-mvp" %}
+
 {################################# Page title #################################}
 {% block pageTitle %}
     {% if subPage %}
@@ -33,12 +35,9 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
   {{ govukServiceNavigation({
     serviceName: "Find information about schools and trusts",
+    classes: "govuk-service-navigation govuk-service-navigation--inverse",
     serviceUrl: "/",
     navigation: [
-      {
-        href: "#",
-        text: "Watchlist"
-      },
       {
         href: "home",
         text: "Trusts and schools",
@@ -48,6 +47,10 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
         href: "home-la",
         text: "Local authorities",
         active: true if primNavActive == "home-la"
+      },
+      {
+        href: "#",
+        text: "Watchlist"
       }
     ]
   }) }}
@@ -58,13 +61,33 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% set containerClasses = "fiat-max-width-0 govuk-!-margin-0" %}
 {% set mainClasses = "govuk-width-container" %}
 
-{% block content %}
-  {% block homeContent %} Space for signposts - custom block {% endblock %}
-{% endblock %}
+{# The Phase banner must be within a beforeContent block to butt up next to the DfE Header appropriately #}
+{% block beforeContent %}
+  <div class="fiat-top--alternate1">
+    <div class="govuk-width-container ">
 
-{# RSD Footer #}
-{% block footer %}
-  {% include "/la-2026/needs-a-ticket/parts/rsd-footer.njk" %}
+      {# A check to see if any page outside of Index is being used. If true, show the Heading and Caption #}
+      {% if currentURL !== '/' %}
+        <div class="fiat-top-content fiat-top-content--alternate1">
+
+          {# Breadcrumbs #}
+          {% include "/la-2026/la-mvp/parts/breadcrumbs.njk" %}
+
+          <h1 class="govuk-heading-l fiat-trust-heading fiat-trust-heading--trust govuk-!-display-inline-block govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+            {{ pageHeading | default("Abbey academies trust") }}
+          </h1>
+          <span class="govuk-caption-m">
+            {{ pageCaption | default("Multi-academy trust") }}
+          </span>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {# Primary navigation #}
+  {% include "/la-2026/la-mvp/parts/trust_primary_nav.njk" %}
+
 {% endblock %}
 
 {################################# Bottom of file #################################}
