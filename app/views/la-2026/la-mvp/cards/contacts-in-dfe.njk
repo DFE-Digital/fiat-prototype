@@ -1,0 +1,80 @@
+{# Director of children's services contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Director of children's services"
+    }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            text: "Joe Bloggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='mailto:jayne.bloggs@education.gov.uk'>dcs-leeds@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
+
+{# Assistant director of children's services contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Assistant director of children's services"
+    }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            text: "Jayne Froggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='mailto:jayne.froggs@education.gov.uk'>adcs-leeds@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
+
+{# Regions group local authority lead contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Regions group local authority lead"
+    }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            text: "Billy Groggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='mailto:bill.groggs@education.gov.uk'>bill.groggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}

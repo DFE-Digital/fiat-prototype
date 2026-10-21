@@ -1,0 +1,26 @@
+{# Role here contact #}
+{{ govukSummaryList({
+    card: {
+    title: {
+        text: "Role here"
+    }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            text: "Joe Bloggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='mailto:joe.bloggs@education.gov.uk'>joe.bloggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
