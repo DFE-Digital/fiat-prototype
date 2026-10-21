@@ -568,6 +568,11 @@
         padding-left: 1rem;
     }
 
+    .fiat-la-heading {
+      border-left: 6px solid #f1b100;
+      padding-left: 1rem;
+  }
+
     .si-row-colours-table .govuk-table__head {
         background: #ebf2f6;
     }
@@ -576,7 +581,7 @@
     // }
 }
 
-// Search results (FIAT live search + filters)
+// Search results (FIAT search + filters)
 .app-search {
   .app-search__button {
     border-left: none;

@@ -1,7 +1,8 @@
 {% extends "/la-2026/la-mvp/layouts/main.njk" %}
 
-{% set pageTitle = "Abbey Academies Trust" %}
+{% set pageTitle = "Leeds City Council" %}
 {% set pageHeading = pageTitle %}
+{% set primNavActive = "home-la" %}
 
 {% block content %} 
 
@@ -9,13 +10,14 @@
 
     <div class="govuk-grid-column-full">
 
-      {# Start of school content block #}
+      {# Start of content block #}
 
-      {% block trustContent %}
-        Text goes here, override this by overriding the block
-      {% endblock %}
+        {% block laContent %}
+          Text goes here, override this by overriding the block
+        {% endblock %}
 
     </div>
+
   </div>
 
 {% endblock %}
