@@ -1,0 +1,43 @@
+{% from "../includes/uir-footer-macro.njk" import uirFooter %}
+
+{% block govukFooter %}
+
+  {% set getStartedHtml %}
+    <p class="govuk-body govuk-!-margin-bottom-4">
+      Tell us if something is broken or could be improved.
+    </p>
+    {{ govukButton({
+      text: "Report a problem or give feedback",
+      href: "what-you-need",
+      classes: "govuk-button--secondary govuk-!-margin-bottom-2"
+    }) }}
+  {% endset %}
+
+  {{ uirFooter({
+    navigation: [
+      {
+        title: "Problems and feedback",
+        headingClasses: "govuk-heading-m",
+        width: "one-half",
+        html: getStartedHtml | trim
+      }
+    ],
+    meta: {
+      items: [
+        {
+          href: "#",
+          text: "Accessibility"
+        },
+        {
+          href: "#",
+          text: "Cookies"
+        },
+        {
+          href: "#",
+          text: "Privacy"
+        }
+      ]
+    }
+  }) }}
+
+{% endblock %}

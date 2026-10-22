@@ -10,7 +10,7 @@
   <header class="govuk-header app-header" data-module="govuk-header">
     <div class="govuk-header__container govuk-width-container app-header__container">
       <div class="govuk-header__logo">
-        <a href="/styling-experiments/facelift-2026/pages/home" class="govuk-header__link govuk-header__link--homepage">
+        <a href="/search-results/search-results-filters/pages/home" class="govuk-header__link govuk-header__link--homepage">
           <img src="/public/images/department-for-education_white.png" alt="Department for Education" class="govuk-header__logotype">
         </a>
       </div>
@@ -48,15 +48,15 @@
   {{ govukServiceNavigation({
     serviceName: "Find information about schools and trusts",
     classes: "govuk-service-navigation govuk-service-navigation--inverse",
-    serviceUrl: "/styling-experiments/facelift-2026/pages/home",
+    serviceUrl: "/search-results/search-results-filters/pages/home",
     navigation: [
       {
-        href: "/styling-experiments/facelift-2026/pages/home",
+        href: "/search-results/search-results-filters/pages/home",
         text: "Trusts and schools",
         active: true if primNavActive == "home"
       },
       {
-        href: "/styling-experiments/facelift-2026/pages/home-la",
+        href: "/search-results/search-results-filters/pages/home-la",
         text: "Local authorities",
         active: true if primNavActive == "home-la"
       },
@@ -76,5 +76,5 @@
 {% endblock %}
 
 {% block footer %}
-  {% include "/styling-experiments/facelift-2026/parts/rsd-footer.njk" %}
+  {% include "/search-results/search-results-filters/parts/rsd-footer.njk" %}
 {% endblock %}

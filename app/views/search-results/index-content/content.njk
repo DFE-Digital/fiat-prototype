@@ -1,0 +1,26 @@
+<h2 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Search results page
+</h2>
+
+<p class="govuk-caption-m">
+    Iterating on the existing search results page to include filters.
+</p>
+
+{% set searchresults %}
+    {# hero #}
+    {% include "/search-results/index-content/search-results.njk" %}
+{% endset %} 
+
+{{ govukAccordion({
+    id: "search-results-index",
+    items: [
+    {
+        heading: {
+        text: "Search results page"
+        },
+        content: {
+        html: searchresults
+        }
+    }
+    ]
+}) }}
