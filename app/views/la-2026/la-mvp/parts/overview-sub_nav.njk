@@ -1,0 +1,22 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [{
+    text: 'Local authority details',
+    href: 'page-local-authorities-details',
+    active: true if subNavActive == "la-details"
+  },
+  {
+    text: 'Local authority area summary',
+    href: 'page-local-authorities-summary',
+    active: true if subNavActive == "la-summary"
+  } 
+  ]
+}) }}
+{# 
+
+
+   {# {
+    text: 'Reference numbers',
+    href: 'page-local-authorities-references',
+    active: true if subNavActive == "la-reference-numbers"
+  } #}

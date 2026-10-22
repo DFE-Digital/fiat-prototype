@@ -1,0 +1,14 @@
+{{ mojSubNavigation({
+  label: 'Sub navigation',
+  items: [
+  {
+    text: 'In DfE',
+    href: 'page-local-authorities-contacts-dfe',
+    active: true if subNavActive == "la-contacts-dfe"
+  }, {
+    text: 'In this local authority',
+    href: 'page-local-authorities-contacts-la',
+    active: true if subNavActive == "la-contacts-la"
+  }
+  ]
+}) }}

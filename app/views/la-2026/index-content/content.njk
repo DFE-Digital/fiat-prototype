@@ -6,9 +6,9 @@
     Prototypes covering the work relating to the introduction of Local Authorities.
 </p>
 
-{% set needsaticket %}
-    {# needsaticket #}
-    {% include "/la-2026/index-content/needs-a-ticket.njk" %}
+{% set laMvP %}
+    {# laMvP #}
+    {% include "/la-2026/index-content/la-mvp.njk" %}
 {% endset %} 
 
 {{ govukAccordion({
@@ -19,7 +19,7 @@
         text: "LA Homepage"
         },
         content: {
-        html: needsaticket
+        html: laMvP
         }
     }
     ]

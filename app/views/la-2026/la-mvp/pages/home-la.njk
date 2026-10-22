@@ -1,4 +1,4 @@
-{% extends "/la-2026/needs-a-ticket/layouts/home-page_layout.njk" %}
+{% extends "/la-2026/la-mvp/layouts/home-page_layout.njk" %}
 
 {# Set an active state on the appropraite primary nav item #}
 {% set primNavActive = "home-la" %}
@@ -8,12 +8,12 @@
 
 {% block beforeContent %}
   
-  {# Yellow bit #}
-  <div class="fiat-top fiat-top--la govuk-!-padding-top-3 govuk-!-padding-bottom-5">
+  {# Blue bit #}
+  <div class="fiat-top--blue govuk-!-padding-top-3 govuk-!-padding-bottom-5">
     <div class="govuk-width-container">
 
       {# Content #}
-      {% include "/la-2026/needs-a-ticket/parts/home/hero-la.njk" %}
+      {% include "/la-2026/la-mvp/parts/home/hero-la.njk" %}
 
     </div>
   </div>
@@ -26,7 +26,7 @@
 <div class="govuk-width-container">
 
     {# Signposts #}
-    {% include "/la-2026/needs-a-ticket/parts/home/signposts-la.njk" %}
+    {% include "/la-2026/la-mvp/parts/home/signposts-la.njk" %}
 
 </div>
 {% endblock %}

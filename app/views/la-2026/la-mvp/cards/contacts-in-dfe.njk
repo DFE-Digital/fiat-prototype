@@ -1,0 +1,34 @@
+{# Regions group local authority lead contact #}
+{{ govukSummaryList({
+    card: {
+        title: {
+            text: "Regions group local authority lead"
+        },
+        actions: {
+            items: [
+                {
+                    href: "#",
+                    text: "Change"
+                }
+            ]
+        }
+    },
+    rows: [
+    {
+        key: {
+            text: "Name"
+        },
+        value: {
+            text: "Billy Groggs"
+        }
+    },
+    {
+        key: {
+            text: "Email address"
+        },
+        value: {
+            html: "<a href='mailto:bill.groggs@education.gov.uk'>bill.groggs@education.gov.uk</a>"
+        }
+    }
+    ]
+}) }}
