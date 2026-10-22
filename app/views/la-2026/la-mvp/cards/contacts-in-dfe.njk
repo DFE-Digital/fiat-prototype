@@ -1,11 +1,17 @@
-
-
 {# Regions group local authority lead contact #}
 {{ govukSummaryList({
     card: {
-    title: {
-        text: "Regions group local authority lead"
-    }
+        title: {
+            text: "Regions group local authority lead"
+        },
+        actions: {
+            items: [
+                {
+                    href: "#",
+                    text: "Change"
+                }
+            ]
+        }
     },
     rows: [
     {
