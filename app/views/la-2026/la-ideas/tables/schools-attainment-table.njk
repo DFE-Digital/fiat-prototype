@@ -1,0 +1,160 @@
+<div id="attainment-table-view">
+  {{ govukTable({
+    attributes: {
+      'data-module': 'moj-sortable-table'
+    },
+    classes: "si-row-colours-table",
+    caption: "Attainment 2024/25",
+    captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-2",
+    head: [
+      {
+        text: "School name",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "URN",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Key stage",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Measure",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Result",
+        attributes: {
+          "aria-sort": "none"
+        }
+      }
+    ],
+    rows: [
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Super sweet biscuit academy</a>"
+        },
+        {
+          text: "12453",
+          attributes: {
+            "data-sort-value": "12453"
+          }
+        },
+        {
+          text: "Key stage 4",
+          attributes: {
+            "data-sort-value": "4"
+          }
+        },
+        {
+          text: "Attainment 8 score",
+          attributes: {
+            "data-sort-value": "a"
+          }
+        },
+        {
+          text: "44.8",
+          attributes: {
+            "data-sort-value": "44.8"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Crunchy ginger nut school</a>"
+        },
+        {
+          text: "36483",
+          attributes: {
+            "data-sort-value": "36483"
+          }
+        },
+        {
+          text: "Key stage 4",
+          attributes: {
+            "data-sort-value": "4"
+          }
+        },
+        {
+          text: "Attainment 8 score",
+          attributes: {
+            "data-sort-value": "a"
+          }
+        },
+        {
+          text: "47.3",
+          attributes: {
+            "data-sort-value": "47.3"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Double chocolate bourbon academy</a>"
+        },
+        {
+          text: "53762",
+          attributes: {
+            "data-sort-value": "53762"
+          }
+        },
+        {
+          text: "Key stage 2",
+          attributes: {
+            "data-sort-value": "2"
+          }
+        },
+        {
+          text: "Meeting expected standard in reading, writing and maths",
+          attributes: {
+            "data-sort-value": "b"
+          }
+        },
+        {
+          text: "63%",
+          attributes: {
+            "data-sort-value": "63"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Scottish shortbread school</a>"
+        },
+        {
+          text: "35162",
+          attributes: {
+            "data-sort-value": "35162"
+          }
+        },
+        {
+          text: "Key stage 2",
+          attributes: {
+            "data-sort-value": "2"
+          }
+        },
+        {
+          text: "Meeting expected standard in reading, writing and maths",
+          attributes: {
+            "data-sort-value": "b"
+          }
+        },
+        {
+          text: "58%",
+          attributes: {
+            "data-sort-value": "58"
+          }
+        }
+      ]
+    ]
+  }) }}
+</div>

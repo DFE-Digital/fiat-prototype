@@ -1,0 +1,31 @@
+{% extends "la-2026/la-ideas/layouts/trust_layout.njk" %}
+
+{# Set sub page word to use in pageTitle (e.g. tab title) #}
+{# {% set subPage = "Academies details" %} #}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set navActive = "local_authority" %}
+
+{# Set an active state on the appropraite secondary nav item #}
+{% set subNavActive = "overview" %}
+
+{# Custom block for the main content area of a trust page #}
+{% block trustContent %}
+
+  <h2 class="govuk-heading-l">
+      Local authority
+  </h2>
+
+  {# LA details #}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% include "la-2026/la-ideas/lists/la-details.njk" %}
+
+      <div class="app-review-date">
+        <p class="govuk-body-s">Page last reviewed: 09 October 2026</p>
+        <p class="govuk-body-s">Next review due: 09 October 2029</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

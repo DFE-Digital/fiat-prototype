@@ -11,6 +11,11 @@
     {% include "/la-2026/index-content/la-mvp.njk" %}
 {% endset %} 
 
+{% set laIdeas %}
+    {# laIdeas #}
+    {% include "/la-2026/index-content/la-ideas.njk" %}
+{% endset %}
+
 {{ govukAccordion({
     id: "la-2026-index",
     items: [
@@ -20,6 +25,14 @@
         },
         content: {
         html: laMvP
+        }
+    },
+    {
+        heading: {
+        text: "LA record ideas"
+        },
+        content: {
+        html: laIdeas
         }
     }
     ]

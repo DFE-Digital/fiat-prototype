@@ -796,3 +796,13 @@
 .app-header-search[hidden] {
   display: none;
 }
+// Review date (LA ideas)
+.app-review-date {
+  background-color: #f0f4f5;
+  padding: govuk-spacing(3) govuk-spacing(4);
+  margin-bottom: govuk-spacing(6);
+
+  p {
+    margin: 0;
+  }
+}

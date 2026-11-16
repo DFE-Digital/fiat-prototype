@@ -1,0 +1,130 @@
+<div id="attendance-table-view">
+  {{ govukTable({
+    attributes: {
+      'data-module': 'moj-sortable-table'
+    },
+    classes: "si-row-colours-table",
+    caption: "Attendance 2024/25",
+    captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-2",
+    head: [
+      {
+        text: "School name",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "URN",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Overall absence",
+        attributes: {
+          "aria-sort": "none"
+        }
+      },
+      {
+        text: "Persistent absence",
+        attributes: {
+          "aria-sort": "none"
+        }
+      }
+    ],
+    rows: [
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Super sweet biscuit academy</a>"
+        },
+        {
+          text: "12453",
+          attributes: {
+            "data-sort-value": "12453"
+          }
+        },
+        {
+          text: "7.9%",
+          attributes: {
+            "data-sort-value": "7.9"
+          }
+        },
+        {
+          text: "24.1%",
+          attributes: {
+            "data-sort-value": "24.1"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Crunchy ginger nut school</a>"
+        },
+        {
+          text: "36483",
+          attributes: {
+            "data-sort-value": "36483"
+          }
+        },
+        {
+          text: "8.6%",
+          attributes: {
+            "data-sort-value": "8.6"
+          }
+        },
+        {
+          text: "27.3%",
+          attributes: {
+            "data-sort-value": "27.3"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Double chocolate bourbon academy</a>"
+        },
+        {
+          text: "53762",
+          attributes: {
+            "data-sort-value": "53762"
+          }
+        },
+        {
+          text: "5.2%",
+          attributes: {
+            "data-sort-value": "5.2"
+          }
+        },
+        {
+          text: "14.8%",
+          attributes: {
+            "data-sort-value": "14.8"
+          }
+        }
+      ],
+      [
+        {
+          html: "<a href='#' class='govuk-link'>Scottish shortbread school</a>"
+        },
+        {
+          text: "35162",
+          attributes: {
+            "data-sort-value": "35162"
+          }
+        },
+        {
+          text: "4.6%",
+          attributes: {
+            "data-sort-value": "4.6"
+          }
+        },
+        {
+          text: "12.5%",
+          attributes: {
+            "data-sort-value": "12.5"
+          }
+        }
+      ]
+    ]
+  }) }}
+</div>

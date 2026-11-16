@@ -1,0 +1,26 @@
+{% set after %}
+    {% include "../../data/colsterworth-church/ala-ofsted-olderInspections_after.njk" %}
+{% endset -%}
+
+{% set before %}
+    {% include "../../data/colsterworth-church/ala-ofsted-olderInspections_before.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "After September 2024",
+      id: "ala-ofsted-olderInspections_after",
+      panel: {
+        html: after
+      }
+    },
+    {
+      label: "Before September 2024",
+      id: "ala-ofsted-olderInspections_before",
+      panel: {
+        html: before
+      }
+    }
+  ]
+}) }}

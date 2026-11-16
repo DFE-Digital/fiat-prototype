@@ -1,0 +1,35 @@
+{% extends "/la-2026/la-ideas/layouts/la_layout.njk" %}
+
+{% set pageTitle = "Leeds city council" %}
+{% set pageHeading = pageTitle %}
+
+{% set primNavActive = "home" %}
+
+{# Set an active state on the appropraite primary nav item #}
+{% set navActive = "people" %}
+
+{# Set an appropriate page caption #}
+{% set pageCaption = "Local authority" %}
+
+{# Custom block for the main content area of an LA page #}
+{% block laContent %}
+
+  <h2 class="govuk-heading-l">
+      People
+  </h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {# Directors of children's services #}
+      {% include "/la-2026/la-ideas/cards/people-dcs.njk" %}
+
+    </div>
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--m">
+
+  {# Sources and updates #}
+  {% include "/la-2026/la-mvp/parts/sourcesUpdates.njk" %}
+
+{% endblock %}

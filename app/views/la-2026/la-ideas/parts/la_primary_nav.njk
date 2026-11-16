@@ -1,0 +1,19 @@
+{{ govukServiceNavigation({
+    navigation: [
+        {
+        href: "page-local-authorities-details",
+        text: "Overview",
+        active: true if navActive == "overview"
+        },
+        {
+        href: "page-local-authorities-people",
+        text: "People",
+        active: true if navActive == "people"
+        },
+        {
+        href: "page-local-authorities-schools",
+        text: "Schools the LA supports",
+        active: true if navActive == "schools"
+        }
+    ]
+}) }}

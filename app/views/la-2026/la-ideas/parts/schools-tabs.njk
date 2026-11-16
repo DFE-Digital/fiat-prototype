@@ -1,0 +1,70 @@
+{% set detailsTable %}
+    {% include "/la-2026/la-ideas/tables/schools-details-table.njk" %}
+{% endset -%}
+
+{% set pupilNumbersTable %}
+    {% include "/la-2026/la-ideas/tables/schools-pupil-numbers-table.njk" %}
+{% endset -%}
+
+{% set fsmTable %}
+    {% include "/la-2026/la-ideas/tables/schools-fsm-table.njk" %}
+{% endset -%}
+
+{% set attendanceTable %}
+    {% include "/la-2026/la-ideas/tables/schools-attendance-table.njk" %}
+{% endset -%}
+
+{% set suspensionsTable %}
+    {% include "/la-2026/la-ideas/tables/schools-suspensions-table.njk" %}
+{% endset -%}
+
+{% set attainmentTable %}
+    {% include "/la-2026/la-ideas/tables/schools-attainment-table.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Details",
+      id: "details",
+      panel: {
+        html: detailsTable
+      }
+    },
+    {
+      label: "Pupil numbers",
+      id: "pupil-numbers",
+      panel: {
+        html: pupilNumbersTable
+      }
+    },
+    {
+      label: "Free school meals",
+      id: "free-schools",
+      panel: {
+        html: fsmTable
+      }
+    },
+    {
+      label: "Attendance",
+      id: "attendance",
+      panel: {
+        html: attendanceTable
+      }
+    },
+    {
+      label: "Suspensions",
+      id: "suspensions",
+      panel: {
+        html: suspensionsTable
+      }
+    },
+    {
+      label: "Attainment",
+      id: "attainment",
+      panel: {
+        html: attainmentTable
+      }
+    }
+  ]
+}) }}
