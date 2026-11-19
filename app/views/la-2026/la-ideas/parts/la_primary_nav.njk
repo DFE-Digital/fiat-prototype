@@ -1,19 +1,21 @@
-{{ govukServiceNavigation({
-    navigation: [
+{# Overview tab hidden for now. To bring it back, add this back into the navigation list:
         {
         href: "page-local-authorities-details",
         text: "Overview",
         active: true if navActive == "overview"
         },
-        {
-        href: "page-local-authorities-people",
-        text: "People",
-        active: true if navActive == "people"
-        },
+#}
+{{ govukServiceNavigation({
+    navigation: [
         {
         href: "page-local-authorities-schools",
         text: "Schools the LA supports",
         active: true if navActive == "schools"
+        },
+        {
+        href: "page-local-authorities-people",
+        text: "People",
+        active: true if navActive == "people"
         }
     ]
 }) }}

@@ -22,22 +22,8 @@
     {% include "/la-2026/la-ideas/tables/schools-attainment-table.njk" %}
 {% endset -%}
 
-{{ govukTabs({
-  items: [
-    {
-      label: "Details",
-      id: "details",
-      panel: {
-        html: detailsTable
-      }
-    },
-    {
-      label: "Pupil numbers",
-      id: "pupil-numbers",
-      panel: {
-        html: pupilNumbersTable
-      }
-    },
+{# Tabs hidden for now. To bring one back, add it back into the items list below:
+
     {
       label: "Free school meals",
       id: "free-schools",
@@ -64,6 +50,24 @@
       id: "attainment",
       panel: {
         html: attainmentTable
+      }
+    }
+#}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Details",
+      id: "details",
+      panel: {
+        html: detailsTable
+      }
+    },
+    {
+      label: "Pupil numbers",
+      id: "pupil-numbers",
+      panel: {
+        html: pupilNumbersTable
       }
     }
   ]
