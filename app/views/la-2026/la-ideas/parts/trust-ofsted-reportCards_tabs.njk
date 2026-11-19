@@ -1,0 +1,26 @@
+{% set current %}
+    {% include "../data/trust-ofsted-reportCard_current_table.njk" %}
+{% endset -%}
+
+{% set previous %}
+    {% include "../data/trust-ofsted-reportCard_previous_table.njk" %}
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Current report card",
+      id: "trust-ofsted-reportCard_current",
+      panel: {
+        html: current
+      }
+    },
+    {
+      label: "Previous report card",
+      id: "trust-ofsted-reportCard_previous",
+      panel: {
+        html: previous
+      }
+    }
+  ]
+}) }}

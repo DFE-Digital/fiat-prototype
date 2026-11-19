@@ -1,0 +1,17 @@
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{# Set up a bunch of content #}
+{% set shortInspectionGuidance %}
+  <p class="govuk-body">If a school has a short Ofsted inspection followed by a full one, data about the short inspection may not appear on this page.</p>
+  <p class="govuk-body">Ofsted's inspection report will contain this data.</p>
+{% endset %}
+
+{# Display it all in a details component #}
+{{ govukDetails({
+  summaryText: 'Why short inspection data might not be available',
+  html: shortInspectionGuidance
+}) }}
+
+
+
+
