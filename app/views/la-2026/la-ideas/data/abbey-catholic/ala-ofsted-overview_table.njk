@@ -1,0 +1,70 @@
+{# Set before joining tag #}
+{% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--orange govuk-!-margin-top-2 govuk-!-margin-bottom-2"
+  }) }}
+{% endset %}
+
+{# Set After joining tag #}
+{% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining",
+    classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-2"
+  }) }}
+{% endset %}
+
+{{ govukTable({
+  head: [
+    {
+      text: ""
+    },
+    {
+      text: "Inspection type",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Date of inspection",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<strong>Current inspection</strong>"
+      },
+      {
+        text: "Older inspection"
+      },
+      {
+        html: "12 December 2025" + "<br>" + afterJoiningTag
+      }
+    ],
+    [
+      {
+        html: "<strong>Short inspection</strong>"
+      },
+      {
+        html: "Yes" + "<br>" + "School remains good"
+      },
+      {
+        html: "21 May 2025" + "<br>" + afterJoiningTag
+      }
+    ],
+    [
+      {
+        html: "<strong>Previous inspection</strong>"
+      },
+      {
+        text: "Older inspection"
+      },
+      {
+        html: "15 November 2020" + "<br>" + afterJoiningTag
+      }
+    ]
+  ]
+}) }} 

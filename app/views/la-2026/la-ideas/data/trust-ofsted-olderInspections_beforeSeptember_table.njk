@@ -1,0 +1,235 @@
+{# Set before joining tag #}
+{# {% set beforeJoiningTag %}
+  {{ govukTag({
+    text: "Before joining",
+    classes: "govuk-tag--orange govuk-!-margin-top-1"
+  }) }}
+{% endset %} #}
+
+{# Set After joining tag #}
+{# {% set afterJoiningTag %}
+  {{ govukTag({
+    text: "After joining",
+    classes: "govuk-!-margin-top-1"
+  }) }}
+{% endset %} #}
+
+{{ govukTable({
+  attributes: {
+    'data-module': 'moj-sortable-table'
+  },
+  caption: "Inspections after September 2024",
+  captionClasses: "govuk-table__caption--s govuk-!-margin-bottom-5",
+  classes: "si-row-colours-table",
+  head: [
+    {
+      text: "School name",
+      classes: "table-col--20",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Quality of education",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Behaviour and attitudes",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Personal development",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Leadership and management",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Effective safeguarding",
+      attributes: {
+        "aria-sort": "none"
+      }
+    },
+    {
+      text: "Category of concern",
+      attributes: {
+        "aria-sort": "none"
+      }
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<a href='abbey-catholic/ala-ofsted-olderInspections' class='govuk-link'>Abbey Catholic Primary School</a>"
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      },
+      {
+        text: "Requires improvement",
+        attributes: {
+          "data-sort-value": "Requires improvement"
+        }
+      },
+      {
+        html: 'Good',
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: 'Good',
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: 'Good',
+        attributes: {
+          "data-sort-value": "Good" 
+        }
+      },
+      {
+        html: 'Good',
+         attributes: {
+          "data-sort-value": "Good" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='bourne-abbey/ala-ofsted-olderInspections' class='govuk-link'>Bourne Abbey Church of England Primary Academy</a>"
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        text: "Not applicable",
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: 'Not applicable',
+        attributes: {
+          "data-sort-value": 'Not applicable'
+        }
+      },
+      {
+        html: 'Not applicable',
+        attributes: {
+          "data-sort-value": "Not applicable"
+        }
+      },
+      {
+        html: 'Not applicable',
+        attributes: {
+          "data-sort-value": 'Not applicable'
+        }
+      },
+      {
+        html: 'Not applicable',
+         attributes: {
+          "data-sort-value": "Not applicable" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='colsterworth-church/ala-ofsted-olderInspections' class='govuk-link'>Colsterworth Church of England Primary School</a>"
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        text: "Outstanding",
+        attributes: {
+          "data-sort-value": "Outstanding"
+        }
+      },
+      {
+        text: "Good",
+        attributes: {
+          "data-sort-value": "Good"
+        }
+      },
+      {
+        html: 'Good',
+        attributes: {
+          "data-sort-value": 'Good'
+        }
+      },
+      {
+        html: 'Good',
+         attributes: {
+          "data-sort-value": "Good" 
+        }
+      }
+    ],
+    [
+      {
+        html: "<a href='brabins-endowed/ala-ofsted-olderInspections' class='govuk-link'>Brabins Endowed School</a>"
+      },
+      {
+        html: 'Not applicable',
+        attributes: {
+          "data-sort-value": 'Not applicable'
+        }
+      },
+      {
+        html: 'Not applicable',
+         attributes: {
+          "data-sort-value": "Not applicable" 
+        }
+      },
+      {
+        html: 'Not applicable',
+         attributes: {
+          "data-sort-value": "Not applicable" 
+        }
+      },
+      {
+        html: 'Not applicable',
+         attributes: {
+          "data-sort-value": "Not applicable" 
+        }
+      },
+      {
+        html: 'Not applicable',
+        attributes: {
+          "data-sort-value": 'Not applicable'
+        }
+      },
+      {
+        html: 'Not applicable',
+         attributes: {
+          "data-sort-value": "Not applicable" 
+        }
+      }
+    ]
+  ]
+}) }}
